@@ -1,6 +1,6 @@
 import { ImageWithFallback } from "../ImageWithFallback";
 
-function ImageMosaic({ imgs, alt }: { imgs: string[]; alt: string }) {
+export function ImageMosaic({ imgs, alt }: { imgs: string[]; alt: string }) {
     return (
         <div className="grid grid-cols-2 gap-2 h-full min-h-[280px]" >
             <div className="rounded-2xl overflow-hidden row-span-2" >
