@@ -1,9 +1,10 @@
+import Navbar from '@/components/sections/Navbar'
 import React from 'react'
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
-      {/* <Navbar /> */}
+      <Navbar />
       <main>
         {/* <Hero /> */}
         {/* <Institution /> */}
