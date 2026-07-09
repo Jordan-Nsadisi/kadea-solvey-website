@@ -1,4 +1,5 @@
 import Hero from '@/components/sections/Hero'
+import Institution from '@/components/sections/Institution'
 import Navbar from '@/components/sections/Navbar'
 import Partners from '@/components/sections/Partners'
 import React from 'react'
@@ -10,7 +11,7 @@ export default function Home() {
       <main>
         <Hero />
         <Partners />
-        {/* <Institution /> */}
+        <Institution />
         {/* <Programme /> */}
         {/* <Sessions /> */}
         {/* <Admission /> */}
