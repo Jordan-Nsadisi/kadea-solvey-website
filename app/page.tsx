@@ -1,3 +1,4 @@
+import Admission from '@/components/sections/Admission'
 import Hero from '@/components/sections/Hero'
 import Institution from '@/components/sections/Institution'
 import Navbar from '@/components/sections/Navbar'
@@ -16,7 +17,7 @@ export default function Home() {
         <Institution />
         <Programme />
         <Sessions />
-        {/* <Admission /> */}
+        <Admission />
       </main>
       {/* <Footer /> */}
     </div>
