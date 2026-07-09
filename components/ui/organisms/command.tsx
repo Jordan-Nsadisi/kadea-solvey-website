@@ -3,15 +3,13 @@
 import * as React from "react";
 import { Command as CommandPrimitive } from "cmdk";
 import { SearchIcon } from "lucide-react";
-
-import { cn } from "./utils";
+import { cn } from "@/utils/cn";
 import {
-    Dialog,
-    DialogContent,
+    Dialog, DialogContent,
     DialogDescription,
     DialogHeader,
     DialogTitle,
-} from "./dialog";
+} from "../molecules/dialog";
 
 function Command({
     className,
