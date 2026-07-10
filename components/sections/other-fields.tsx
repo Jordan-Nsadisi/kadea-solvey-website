@@ -48,11 +48,11 @@ const items = [
 const stagger = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
-};
+} as const;
 const cardVariant = {
     hidden: { opacity: 0, y: 36 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
-};
+} as const;
 
 export default function OtherFieldsSection() {
     return (
