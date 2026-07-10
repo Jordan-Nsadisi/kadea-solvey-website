@@ -28,28 +28,10 @@ export default function Hero() {
             {/* ── Main grid ── */}
             <div className="w-full container mx-auto px-5 text-white pt-10 md:pt-16 grid grid-cols-1 md:grid-cols-2 gap-5 items-end">
 
-                {/* Left — portrait */}
+                {/* Left — content */}
                 <motion.div
-                    className="relative w-full h-[400px] md:h-[620px] flex items-end"
+                    className="flex flex-col justify-center gap-6 pb-10 md:pb-16 pr-0 md:pr-8"
                     initial={{ opacity: 0, x: -40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.55, ease: "easeOut" }}
-                >
-                    <Image
-                        src={heroImg}
-                        alt="Dirigeant exécutif africain"
-                        fill
-                        priority
-                        className="object-cover object-top rounded-t-3xl"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0A2540]/50 rounded-t-3xl pointer-events-none" />
-                </motion.div>
-
-                {/* Right — content */}
-                <motion.div
-                    className="flex flex-col gap-6 pb-14 md:pb-20 pl-0 md:pl-8"
-                    initial={{ opacity: 0, x: 40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.55, ease: "easeOut" }}
                 >
@@ -127,6 +109,23 @@ export default function Hero() {
                             </motion.div>
                         ))}
                     </motion.div>
+                </motion.div>
+
+                {/* Right — portrait */}
+                <motion.div
+                    className="relative w-full h-[400px] md:h-[620px] flex items-end justify-center md:justify-end"
+                    initial={{ opacity: 0, x: 40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.55, ease: "easeOut" }}
+                >
+                    <Image
+                        src={heroImg}
+                        alt="Dirigeant exécutif africain"
+                        fill
+                        priority
+                        className="object-contain object-bottom md:object-right-bottom"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                    />
                 </motion.div>
             </div>
 
