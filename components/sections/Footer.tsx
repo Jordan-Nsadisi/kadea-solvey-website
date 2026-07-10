@@ -26,7 +26,7 @@ export default function Footer() {
                         />
                     </div>
 
-                    <div className="w-fit flex text-secondary items-center gap-5 text-2xl">
+                    <div className="w-fit flex items-center gap-5 text-2xl">
                         <Link target="_blank" href={'https://web.facebook.com/kadea.academy'}>
                             <FaFacebookF />
                         </Link>
