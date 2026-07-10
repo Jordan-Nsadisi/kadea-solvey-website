@@ -37,12 +37,12 @@ export default function Institution() {
                         transition={{ duration: 0.55, ease: "easeOut" }}
                     >
                         <div>
-                            <span className="text-[#7C3AED] font-bold text-sm uppercase tracking-widest mb-4 block">
+                            <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest mb-4 block">
                                 02 · L&apos;Institution
                             </span>
                             <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A2540] leading-tight">
                                 ULB-Solvay Lifelong Learning :{" "}
-                                <span className="text-[#7C3AED]">l&apos;excellence qui arrive en RDC</span>
+                                <span className="text-[#f6a822]">l&apos;excellence qui arrive en RDC</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 leading-relaxed text-base">
@@ -85,7 +85,7 @@ export default function Institution() {
                                 <motion.span
                                     key={label}
                                     variants={fadeUp}
-                                    className="bg-[#7C3AED]/15 text-[#7C3AED] text-sm font-bold px-3 py-1 rounded-full"
+                                    className="bg-[#f6a822]/15 text-[#f6a822] text-sm font-bold px-3 py-1 rounded-full"
                                 >
                                     {label}
                                 </motion.span>

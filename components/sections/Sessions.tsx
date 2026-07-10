@@ -7,9 +7,9 @@ import { MapPin, Calendar, Clock, ChevronRight, ClipboardList } from "lucide-rea
 const SESSIONS = [
     {
         id: "01",
-        accentBg: "bg-[#7C3AED]",
-        accentText: "text-[#7C3AED]",
-        accentBorder: "border-t-4 border-[#7C3AED]",
+        accentBg: "bg-[#f6a822]",
+        accentText: "text-[#f6a822]",
+        accentBorder: "border-t-4 border-[#f6a822]",
         title: "Diagnostic & Stratégie Digitale",
         location: "Kinshasa · Hôtel Pullman",
         date: "Septembre 2026",
@@ -33,7 +33,7 @@ const SESSIONS = [
             },
         ],
         deliverable: "L1 — Diagnostic FARI + Business Case institutionnel",
-        chipBg: "bg-[#7C3AED]/15 text-[#78350f]",
+        chipBg: "bg-[#f6a822]/15 text-[#78350f]",
     },
     {
         id: "02",
@@ -119,7 +119,7 @@ export default function Sessions() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <span className="text-[#7C3AED] font-bold text-sm uppercase tracking-widest block mb-3">
+                    <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
                         04 · Les Sessions
                     </span>
                     <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A2540] leading-tight mb-4">
@@ -173,15 +173,15 @@ export default function Sessions() {
                                         <p className="text-gray-500 text-base leading-relaxed">{session.intro}</p>
 
                                         {/* Livrable badge */}
-                                        <div className="flex items-start gap-2 text-sm font-semibold px-3 py-2 rounded-lg bg-gray-50 text-[#0A2540] border-l-2 border-[#7C3AED] leading-relaxed">
-                                            <ClipboardList size={16} className="shrink-0 mt-[2px] text-[#7C3AED]" />
+                                        <div className="flex items-start gap-2 text-sm font-semibold px-3 py-2 rounded-lg bg-gray-50 text-[#0A2540] border-l-2 border-[#f6a822] leading-relaxed">
+                                            <ClipboardList size={16} className="shrink-0 mt-[2px] text-[#f6a822]" />
                                             <span>{session.deliverable}</span>
                                         </div>
 
                                         <div className="flex gap-3 flex-wrap pt-1">
                                             <a
                                                 href="#admission"
-                                                className="inline-flex items-center gap-1.5 bg-[#7C3AED] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#6D28D9] transition shrink-0"
+                                                className="inline-flex items-center gap-1.5 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#6D28D9] transition shrink-0"
                                             >
                                                 S&apos;inscrire
                                                 <ChevronRight size={14} />
@@ -212,7 +212,7 @@ export default function Sessions() {
                                                 <ul className="space-y-1 mt-1">
                                                     {day.items.map((it) => (
                                                         <li key={it} className="text-gray-500 text-sm flex items-start gap-1.5">
-                                                            <span className="text-[#7C3AED] shrink-0 mt-0.5">›</span>
+                                                            <span className="text-[#f6a822] shrink-0 mt-0.5">›</span>
                                                             {it}
                                                         </li>
                                                     ))}

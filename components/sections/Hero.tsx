@@ -36,7 +36,7 @@ export default function Hero() {
                     transition={{ duration: 0.55, ease: "easeOut" }}
                 >
                     <motion.span
-                        className="inline-block bg-[#7C3AED]/20 text-[#7C3AED] text-sm font-bold uppercase tracking-widest px-3 py-1 rounded-full w-fit"
+                        className="inline-block bg-[#f6a822]/20 text-[#f6a822] text-sm font-bold uppercase tracking-widest px-3 py-1 rounded-full w-fit"
                         initial={{ y: 15, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.1, duration: 0.4 }}
@@ -72,7 +72,7 @@ export default function Hero() {
                     >
                         <a
                             href="#admission"
-                            className="inline-flex items-center gap-2 bg-[#7C3AED] text-white font-semibold px-5 py-2 text-base md:text-xl rounded-md hover:bg-[#6D28D9] transition-all hover:gap-3 shadow-lg shadow-purple-900/30 shrink-0"
+                            className="inline-flex items-center gap-2 bg-[#f6a822] text-white font-semibold px-5 py-2 text-base md:text-xl rounded-md hover:bg-[#6D28D9] transition-all hover:gap-3 shadow-lg shadow-purple-900/30 shrink-0"
                         >
                             Rejoindre la Promo 2026 <ArrowRight size={16} />
                         </a>
@@ -141,7 +141,7 @@ export default function Hero() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.55 + i * 0.1, duration: 0.4 }}
                             >
-                                <div className="text-[#7C3AED] font-extrabold text-xl">{val}</div>
+                                <div className="text-[#f6a822] font-extrabold text-xl">{val}</div>
                                 <div className="text-white/60 text-sm mt-0.5">{label}</div>
                             </motion.div>
                         ))}

@@ -43,7 +43,7 @@ export default function Programme() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <span className="text-[#7C3AED] font-bold text-sm uppercase tracking-widest block mb-3">
+                    <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
                         03 · Le Programme
                     </span>
                     <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A2540] leading-tight max-w-2xl mb-4">
@@ -80,8 +80,8 @@ export default function Programme() {
                         </div>
 
                         {/* Public cible */}
-                        <div className="border-l-4 border-[#7C3AED] pl-4 py-1">
-                            <span className="text-[#7C3AED] font-bold text-sm uppercase tracking-widest block mb-2">
+                        <div className="border-l-4 border-[#f6a822] pl-4 py-1">
+                            <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-2">
                                 Public cible
                             </span>
                             <ul className="text-[#0A2540] text-base space-y-1">
@@ -92,7 +92,7 @@ export default function Programme() {
                                     "C-Level des entreprises privées de la RDC",
                                 ].map((item) => (
                                     <li key={item} className="flex items-start gap-2">
-                                        <span className="text-[#7C3AED] mt-0.5 shrink-0">·</span>
+                                        <span className="text-[#f6a822] mt-0.5 shrink-0">·</span>
                                         <span className="text-gray-600 text-base leading-relaxed">{item}</span>
                                     </li>
                                 ))}
@@ -111,7 +111,7 @@ export default function Programme() {
                         {/* Cadre FARI */}
                         <div className="border border-gray-100 rounded-2xl p-6 bg-white shadow-sm">
                             <div className="flex items-center gap-2 mb-4">
-                                <div className="w-1 h-5 bg-[#7C3AED] rounded-full" />
+                                <div className="w-1 h-5 bg-[#f6a822] rounded-full" />
                                 <span className="text-[#0A2540] font-extrabold text-sm uppercase tracking-widest">
                                     Cadre de Maturité FARI — 6 Dimensions Clés
                                 </span>
@@ -125,7 +125,7 @@ export default function Programme() {
                             >
                                 {FARI_DIMENSIONS.map(({ n, label }) => (
                                     <motion.div key={n} variants={fadeUp} className="flex items-center gap-2">
-                                        <span className="text-[#7C3AED] font-extrabold text-sm w-6">{n}</span>
+                                        <span className="text-[#f6a822] font-extrabold text-sm w-6">{n}</span>
                                         <span className="text-[#0A2540] text-sm font-medium">{label}</span>
                                     </motion.div>
                                 ))}
@@ -155,7 +155,7 @@ export default function Programme() {
                                         className="bg-gray-50 border border-gray-100 rounded-xl p-4 flex gap-4 items-center"
                                     >
                                         <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center shrink-0">
-                                            <Icon size={18} className="text-[#7C3AED]" />
+                                            <Icon size={18} className="text-[#f6a822]" />
                                         </div>
                                         <div className="flex flex-col">
                                             <span className="text-[#0A2540] font-bold text-base">{label}</span>
@@ -175,14 +175,14 @@ export default function Programme() {
                         >
                             <a
                                 href="#admission"
-                                className="inline-flex items-center gap-2 bg-[#7C3AED] text-white font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#6D28D9] transition shrink-0"
+                                className="inline-flex items-center gap-2 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#6D28D9] transition shrink-0"
                             >
                                 S&apos;inscrire
                             </a>
                             <a
                                 href="/docs/Programme_Executive_Transformation_Digitale_IA_Solvay-ULB_2026_compressed.pdf"
                                 target="_blank"
-                                className="inline-flex items-center gap-2 border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#7C3AED] hover:text-white transition shrink-0"
+                                className="inline-flex items-center gap-2 border border-[#f6a822] text-[#f6a822] font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#f6a822] hover:text-white transition shrink-0"
                             >
                                 <FileDown size={15} />
                                 Brochure PDF

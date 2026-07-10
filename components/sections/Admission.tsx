@@ -37,7 +37,7 @@ export default function Admission() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <span className="text-[#7C3AED] font-bold text-sm uppercase tracking-widest block mb-3">
+                    <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
                         06 · Certification &amp; Admission
                     </span>
                     <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
@@ -61,7 +61,7 @@ export default function Admission() {
                         {/* Certification ULB */}
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                             <div className="flex items-center gap-3 mb-4">
-                                <Award size={20} className="text-[#7C3AED]" />
+                                <Award size={20} className="text-[#f6a822]" />
                                 <span className="text-white font-extrabold text-base">Micro-Accréditation ULB</span>
                             </div>
                             <p className="text-white/60 text-sm leading-relaxed mb-3">
@@ -71,7 +71,7 @@ export default function Admission() {
                             </p>
                             <div className="flex flex-wrap gap-2">
                                 {["EQUIS", "AMBA", "ULB"].map((b) => (
-                                    <span key={b} className="bg-[#7C3AED]/15 text-[#7C3AED] text-sm font-bold px-3 py-1 rounded-full">
+                                    <span key={b} className="bg-[#f6a822]/15 text-[#f6a822] text-sm font-bold px-3 py-1 rounded-full">
                                         {b}
                                     </span>
                                 ))}
@@ -160,7 +160,7 @@ export default function Admission() {
                         {/* CTA principal */}
                         <a
                             href="mailto:thomas@kadea.co?subject=Candidature%20Programme%20Executive%202026"
-                            className="block bg-[#7C3AED] text-white font-extrabold text-center px-7 py-4 rounded-2xl hover:bg-[#6D28D9] transition shadow-lg shadow-black/20 text-lg"
+                            className="block bg-[#f6a822] text-white font-extrabold text-center px-7 py-4 rounded-2xl hover:bg-[#6D28D9] transition shadow-lg shadow-black/20 text-lg"
                         >
                             Candidater à la Promotion 2026 →
                         </a>
