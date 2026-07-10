@@ -17,7 +17,7 @@ export default function Hero() {
                     {/* Left: portrait */}
                     <div className="relative flex items-end">
                         <ImageWithFallback
-                            src={HERO_PORTRAIT}
+                            src="/assets/images/hero.png"
                             alt="Dirigeant exécutif africain"
                             className="w-full max-w-[420px] h-[680px] object-cover object-top rounded-t-3xl"
                         />
