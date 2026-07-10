@@ -5,31 +5,30 @@ import { ImageWithFallback } from "../ui/ImageWithFallback";
 export default function Footer() {
     return (
         <>
-            <footer className="py-8 border-t border-black/8 bg-white">
-                <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <footer className="w-full">
+                <div className="container mx-auto px-5 py-10 md:py-14 flex flex-col items-center justify-center gap-5 md:gap-8">
 
                     <div className="flex items-center gap-4">
                         <ImageWithFallback
                             src="/logos/Black.png"
                             alt="ULB-Solvay Lifelong Learning"
-                            className="h-7 object-contain opacity-60"
+                            width={160}
+                            height={32}
+                            className="md:w-40 w-28 h-auto"
                         />
                         <div className="w-px h-5 bg-gray-200" />
                         <ImageWithFallback
-                            src="/logos/kadea.png"
+                            src="/logos/Logo_Kadea_Exe.png"
                             alt="Kadea Executive"
-                            className="h-6 object-contain opacity-60"
+                            width={160}
+                            height={32}
+                            className="md:w-40 w-28 h-auto"
                         />
                     </div>
 
-                    <p className="text-gray-400 text-xs text-center">
+                    <p className="text-gray-600 text-sm text-center">
                         © 2026 Kadea Executive × ULB-Solvay Lifelong Learning. All rights reserved.
                     </p>
-
-                    <div className="flex gap-4 text-xs text-gray-400">
-                        <a href="#" className="hover:text-gray-600 transition">Mentions légales</a>
-                        <a href="#" className="hover:text-gray-600 transition">Politique de confidentialité</a>
-                    </div>
 
                 </div>
             </footer>
