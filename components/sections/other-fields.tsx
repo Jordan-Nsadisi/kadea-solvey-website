@@ -5,10 +5,12 @@ import Link from "next/link"
 
 import academy from "@/public/logos/academy.png"
 import software from "@/public/logos/software.png"
+import executive from "@/public/logos/Logo_Kadea_Exe.png"
 import Image from "next/image"
 
 import academyCover from "@/public/assets/images/academy.jpg"
 import softwareCover from "@/public/assets/images/software.png"
+import executiveCover from "@/public/assets/images/executive.jpeg"
 
 export default function OtherFieldsSection() {
   const items = [
@@ -29,6 +31,15 @@ export default function OtherFieldsSection() {
       link: "https://kadea.co",
       logo: software,
       cover: softwareCover
+    },
+    {
+      color: "bg-[#0084ff] text-white",
+      title: "Kadea Executive",
+      description:
+        "Nos programmes Executive & Certifiants pour les organisations. Façonnez les leaders de demain grâce à nos formations continues haut de gamme, conçues pour répondre aux enjeux stratégiques des entreprises modernes.",
+      link: "https://executive.kadea.academy/",
+      logo: executive,
+      cover: executiveCover
     },
   ]
 
