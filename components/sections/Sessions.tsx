@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "motion/react";
 import { MapPin, Target, FileText } from "lucide-react";
 import { ImageMosaic } from "../ui/molecules/image-mosaic";
 
@@ -7,13 +10,11 @@ const S1_IMGS = [
     "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=300&h=200&fit=crop&auto=format",
     "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=300&h=200&fit=crop&auto=format",
 ];
-
 const S2_IMGS = [
     "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=300&h=200&fit=crop&auto=format",
     "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=300&h=200&fit=crop&auto=format",
     "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=300&h=200&fit=crop&auto=format",
 ];
-
 const S3_IMGS = [
     "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop&auto=format",
     "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=300&h=200&fit=crop&auto=format",
@@ -23,21 +24,50 @@ const S3_IMGS = [
 function Chip({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
     return (
         <span
-            className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold ${light
-                ? "bg-white/20 text-white border border-white/30"
-                : "bg-black/10 text-inherit border border-black/15"
-                }`}
+            className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold ${
+                light
+                    ? "bg-white/20 text-white border border-white/30"
+                    : "bg-black/10 text-inherit border border-black/15"
+            }`}
         >
             {children}
         </span>
     );
 }
 
+function Deliverable({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
+    return (
+        <div className={`text-xs font-semibold px-2 py-1 rounded border-l-2 ${
+            light
+                ? "border-white/60 text-white/80 bg-white/10"
+                : "border-[#0A2540]/40 text-[#0A2540]/70 bg-black/5"
+        }`}>
+            📋 {children}
+        </div>
+    );
+}
+
+const chipStagger = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.07 } },
+};
+const chipItem = {
+    hidden: { opacity: 0, scale: 0.85 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
+};
+
 export default function Sessions() {
     return (
         <section id="sessions" className="py-5 flex flex-col gap-5">
 
-            <div className="w-full container mx-auto px-5">
+            {/* Session 1 — Amber */}
+            <motion.div
+                className="w-full container mx-auto px-5"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.55, ease: "easeOut" }}
+            >
                 <div className="bg-[#F59E0B] rounded-3xl overflow-hidden p-8 md:p-12">
                     <div className="grid md:grid-cols-2 gap-10 items-start">
                         <ImageMosaic imgs={S1_IMGS} alt="Ateliers stratégie digitale" />
@@ -50,60 +80,100 @@ export default function Sessions() {
                                 Kinshasa Hôtel Pullman &nbsp;|&nbsp; Septembre 2026 &nbsp;·&nbsp; 3 jours
                             </p>
                             <p className="text-[#0A2540]/80 text-sm leading-relaxed">
-                                Ancrer une vision stratégique commune, appréhender la valeur publique de l'IA it structurer votre premier business case. Un premier sprint d'immersion intensive pour aligner toute votre organisation.
+                                Ancrer une vision stratégique commune, appréhender la valeur publique de l&apos;IA
+                                et structurer votre premier business case. Un premier sprint d&apos;immersion intensive
+                                pour aligner toute votre organisation.
                             </p>
-                            <div className="flex flex-wrap gap-2 text-[#0A2540]">
-                                <Chip><MapPin size={11} /> Pullman</Chip>
-                                <Chip><Target size={11} /> Stratégie</Chip>
-                                <Chip><FileText size={11} /> Diagnostic de Maturité</Chip>
-                            </div>
-                            <div className="flex gap-3 flex-wrap mt-2">
+                            <motion.div
+                                className="flex flex-wrap gap-2 text-[#0A2540]"
+                                variants={chipStagger}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                            >
+                                {[
+                                    <><MapPin size={11} /> Pullman</>,
+                                    <><Target size={11} /> Stratégie</>,
+                                    <><FileText size={11} /> Diagnostic FARI</>,
+                                ].map((c, i) => (
+                                    <motion.span key={i} variants={chipItem}><Chip>{c}</Chip></motion.span>
+                                ))}
+                            </motion.div>
+                            <Deliverable>Livrable : Diagnostic FARI + Business Case IA</Deliverable>
+                            <div className="flex gap-3 flex-wrap mt-1">
                                 <a href="#" className="border-2 border-[#0A2540] text-[#0A2540] font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#0A2540] hover:text-white transition text-center shrink-0">
                                     Programme détaillé
                                 </a>
                                 <a href="#admission" className="bg-[#0A2540] text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#0d3060] transition text-center shrink-0">
-                                    S'inscrire à la Session 1
+                                    S&apos;inscrire à la Session 1
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="mw-full container mx-auto px-5">
+            {/* Session 2 — Pink */}
+            <motion.div
+                className="w-full container mx-auto px-5"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.55, ease: "easeOut" }}
+            >
                 <div className="bg-[#EC4899] rounded-3xl overflow-hidden p-8 md:p-12">
                     <div className="grid md:grid-cols-2 gap-10 items-start">
                         <ImageMosaic imgs={S2_IMGS} alt="IA et données" />
                         <div className="flex flex-col gap-5">
                             <span className="text-white/60 font-bold text-xs uppercase tracking-widest">Session 02</span>
                             <h3 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
-                                IA, Données &amp; Cas d'Usage
+                                IA, Données &amp; Cas d&apos;Usage
                             </h3>
                             <p className="text-white/70 font-semibold text-sm">
                                 Kinshasa Hôtel Pullman &nbsp;|&nbsp; Octobre 2026 &nbsp;·&nbsp; 3 jours
                             </p>
                             <p className="text-white/90 text-sm leading-relaxed">
-                                Maîtriser les technologies de pointe (Copilot, Power Platform, Azure AI), poser les fondations de la gouvernance des données et bâtir votre portefeuille de cas d'usage scorés et prêts à déployer.
+                                Maîtriser les technologies de pointe (Copilot, Power Platform, Azure AI), poser les
+                                fondations de la gouvernance des données et bâtir votre portefeuille de cas
+                                d&apos;usage scorés et prêts à déployer.
                             </p>
-                            <div className="flex flex-wrap gap-2">
-                                <Chip light><MapPin size={11} /> Pullman</Chip>
-                                <Chip light><Target size={11} /> Outils &amp; Data</Chip>
-                                <Chip light><FileText size={11} /> Portefeuille IA Scoré</Chip>
-                            </div>
-                            <div className="flex gap-3 flex-wrap mt-2">
+                            <motion.div
+                                className="flex flex-wrap gap-2"
+                                variants={chipStagger}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                            >
+                                {[
+                                    <><MapPin size={11} /> Pullman</>,
+                                    <><Target size={11} /> Outils &amp; Data</>,
+                                    <><FileText size={11} /> Portefeuille IA Scoré</>,
+                                ].map((c, i) => (
+                                    <motion.span key={i} variants={chipItem}><Chip light>{c}</Chip></motion.span>
+                                ))}
+                            </motion.div>
+                            <Deliverable light>Livrable : Portefeuille IA Scoré prêt au déploiement</Deliverable>
+                            <div className="flex gap-3 flex-wrap mt-1">
                                 <a href="#" className="border-2 border-white text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-white hover:text-[#EC4899] transition text-center shrink-0">
                                     Programme détaillé
                                 </a>
                                 <a href="#admission" className="bg-[#0A2540] text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#0d3060] transition text-center shrink-0">
-                                    S'inscrire à la Session 2
+                                    S&apos;inscrire à la Session 2
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="w-full container mx-auto px-5">
+            {/* Session 3 — Emerald */}
+            <motion.div
+                className="w-full container mx-auto px-5"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.55, ease: "easeOut" }}
+            >
                 <div className="bg-[#10B981] rounded-3xl overflow-hidden p-8 md:p-12">
                     <div className="grid md:grid-cols-2 gap-10 items-start">
                         <ImageMosaic imgs={S3_IMGS} alt="Leadership Bruxelles" />
@@ -116,25 +186,38 @@ export default function Sessions() {
                                 Bruxelles Campus ULB &nbsp;|&nbsp; Novembre 2026 &nbsp;·&nbsp; 3 jours
                             </p>
                             <p className="text-white/90 text-sm leading-relaxed">
-                                Piloter la conduite du changement, s'immerger au cœur de l'écosystème tech européen (FARI, Odoo, Google) et soutenir votre feuille de route finale. Une immersion bruxelloise culminant en soutenance de votre Digital Roadmap.
+                                Piloter la conduite du changement, s&apos;immerger au cœur de l&apos;écosystème
+                                tech européen (FARI, Odoo, Google) et soutenir votre feuille de route finale.
+                                Une immersion bruxelloise culminant en soutenance de votre Digital Roadmap.
                             </p>
-                            <div className="flex flex-wrap gap-2">
-                                <Chip light><MapPin size={11} /> Bruxelles</Chip>
-                                <Chip light><Target size={11} /> Leadership</Chip>
-                                <Chip light><FileText size={11} /> Plan de Route 2-3 ans</Chip>
-                            </div>
-                            <div className="flex gap-3 flex-wrap mt-2">
+                            <motion.div
+                                className="flex flex-wrap gap-2"
+                                variants={chipStagger}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                            >
+                                {[
+                                    <><MapPin size={11} /> Bruxelles</>,
+                                    <><Target size={11} /> Leadership</>,
+                                    <><FileText size={11} /> Digital Roadmap</>,
+                                ].map((c, i) => (
+                                    <motion.span key={i} variants={chipItem}><Chip light>{c}</Chip></motion.span>
+                                ))}
+                            </motion.div>
+                            <Deliverable light>Livrable : Digital Roadmap 2–3 ans soutenue devant jury</Deliverable>
+                            <div className="flex gap-3 flex-wrap mt-1">
                                 <a href="#" className="border-2 border-white text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-white hover:text-[#10B981] transition text-center shrink-0">
                                     Programme détaillé
                                 </a>
                                 <a href="#admission" className="bg-[#0A2540] text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#0d3060] transition text-center shrink-0">
-                                    S'inscrire à la Session 3
+                                    S&apos;inscrire à la Session 3
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
         </section>
     );
