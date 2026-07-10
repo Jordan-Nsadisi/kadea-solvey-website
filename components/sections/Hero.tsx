@@ -5,7 +5,8 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import heroImg from "@/public/assets/images/hero.png";
 import microsoftLogo from "@/public/assets/partners/microsoft.png";
-import solvayLogo from "@/public/assets/partners/solvay-black.png";
+import gizLogo from "@/public/assets/partners/giz.png";
+import wbiLogo from "@/public/assets/partners/wallonie.png";
 
 const stats = [
     { val: "9 Jours", label: "de Formation Intensive" },
@@ -15,8 +16,9 @@ const stats = [
 ];
 
 const partners = [
-    { name: "ULB-Solvay Lifelong Learning", logo: solvayLogo, w: 160, h: 40 },
-    { name: "Microsoft", logo: microsoftLogo, w: 140, h: 36 },
+    { name: "Microsoft", logo: microsoftLogo, w: 200, h: 60 },
+    { name: "GIZ", logo: gizLogo, w: 200, h: 60 },
+    { name: "wbi", logo: wbiLogo, w: 200, h: 60 },
 ];
 
 export default function Hero() {
