@@ -70,7 +70,7 @@ export default function Sessions() {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 w-full">
+            <div className="mw-full container mx-auto px-5">
                 <div className="bg-[#EC4899] rounded-3xl overflow-hidden p-8 md:p-12">
                     <div className="grid md:grid-cols-2 gap-10 items-start">
                         <ImageMosaic imgs={S2_IMGS} alt="IA et données" />
@@ -103,7 +103,7 @@ export default function Sessions() {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 w-full">
+            <div className="w-full container mx-auto px-5">
                 <div className="bg-[#10B981] rounded-3xl overflow-hidden p-8 md:p-12">
                     <div className="grid md:grid-cols-2 gap-10 items-start">
                         <ImageMosaic imgs={S3_IMGS} alt="Leadership Bruxelles" />
