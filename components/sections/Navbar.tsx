@@ -16,9 +16,9 @@ export default function Navbar() {
                     <ImageWithFallback
                         src="/logos/Black.png"
                         alt="ULB-Solvay Lifelong Learning"
-                        width={160}
-                        height={32}
-                        className="w-28 md:w-40 h-auto object-contain"
+                        width={180}
+                        height={36}
+                        className="md:w-48 w-32 object-contain"
                     />
                     <div className="w-px h-6 bg-gray-200" />
                     <ImageWithFallback

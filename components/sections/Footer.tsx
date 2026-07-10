@@ -12,9 +12,9 @@ export default function Footer() {
                         <ImageWithFallback
                             src="/logos/Black.png"
                             alt="ULB-Solvay Lifelong Learning"
-                            width={160}
-                            height={32}
-                            className="md:w-40 w-28 h-auto"
+                            width={180}
+                            height={36}
+                            className="md:w-48 w-32 h-auto"
                         />
                         <div className="w-px h-5 bg-gray-200" />
                         <ImageWithFallback
