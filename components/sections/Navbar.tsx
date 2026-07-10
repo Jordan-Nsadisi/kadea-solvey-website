@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { ImageWithFallback } from "../ui/ImageWithFallback";
-import { Menu, X } from "lucide-react";
 import { Button } from "../ui/atoms/button";
 
 export default function Navbar() {

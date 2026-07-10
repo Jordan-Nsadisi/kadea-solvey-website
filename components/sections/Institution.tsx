@@ -1,4 +1,3 @@
-import React from "react";
 import { ImageWithFallback } from "../ui/ImageWithFallback";
 
 const INSTITUTION_PHOTO = "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&h=500&fit=crop&auto=format";
@@ -49,7 +48,6 @@ export default function Institution() {
                         </div>
                     </div>
 
-                    {/* Droite : Illustration photo */}
                     <div className="relative min-h-[320px]">
                         <ImageWithFallback
                             src={INSTITUTION_PHOTO}
