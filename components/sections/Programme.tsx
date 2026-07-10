@@ -57,7 +57,7 @@ export default function Programme() {
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-start">
 
                     {/* Gauche — grande image + Public cible */}
                     <motion.div
@@ -117,7 +117,7 @@ export default function Programme() {
                                 </span>
                             </div>
                             <motion.div
-                                className="grid grid-cols-2 gap-3"
+                                className="grid grid-cols-1 sm:grid-cols-2 gap-3"
                                 variants={stagger}
                                 initial="hidden"
                                 whileInView="visible"
