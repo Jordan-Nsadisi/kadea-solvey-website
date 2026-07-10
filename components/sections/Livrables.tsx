@@ -57,12 +57,12 @@ const fadeUp = {
 
 export default function Livrables() {
     return (
-        <section id="livrables" className="py-16 bg-[#0A2540]">
+        <section id="livrables" className="py-16 md:py-24 bg-[#0A2540]">
             <div className="w-full container mx-auto px-5">
 
                 {/* Header */}
                 <motion.div
-                    className="text-center mb-12"
+                    className="text-center mb-12 md:mb-16"
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -82,7 +82,7 @@ export default function Livrables() {
 
                 {/* Cards */}
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-5"
+                    className="grid grid-cols-1 md:grid-cols-2 gap-6"
                     variants={stagger}
                     initial="hidden"
                     whileInView="visible"
@@ -112,7 +112,7 @@ export default function Livrables() {
 
                 {/* Format note */}
                 <motion.div
-                    className="mt-8 border border-white/10 rounded-xl px-6 py-4 text-center"
+                    className="mt-10 border border-white/10 rounded-xl px-6 py-4 text-center"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}

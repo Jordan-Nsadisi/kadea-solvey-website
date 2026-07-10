@@ -24,7 +24,7 @@ const fadeUp = {
 
 export default function Institution() {
     return (
-        <section id="institution" className="py-16 md:py-20 bg-white">
+        <section id="institution" className="py-16 md:py-24 bg-white">
             <div className="w-full container mx-auto px-5">
                 <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
 
@@ -59,7 +59,7 @@ export default function Institution() {
 
                         {/* Stats animées */}
                         <motion.div
-                            className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-100 mt-2"
+                            className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-100"
                             variants={stagger}
                             initial="hidden"
                             whileInView="visible"
@@ -75,7 +75,7 @@ export default function Institution() {
 
                         {/* Accréditations */}
                         <motion.div
-                            className="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100 flex-wrap"
+                            className="flex items-center gap-3 pt-4 border-t border-gray-100 flex-wrap"
                             variants={stagger}
                             initial="hidden"
                             whileInView="visible"

@@ -56,8 +56,8 @@ const cardVariant = {
 
 export default function OtherFieldsSection() {
     return (
-        <section className="w-full bg-[#F8FAFC] py-16">
-            <div className="container mx-auto px-5 flex flex-col gap-8">
+        <section className="w-full bg-[#F8FAFC] py-16 md:py-24">
+            <div className="container mx-auto px-5 flex flex-col gap-12">
 
                 <motion.div
                     className="text-center"
@@ -66,10 +66,10 @@ export default function OtherFieldsSection() {
                     viewport={{ once: true, amount: 0.4 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <h2 className="font-extrabold text-2xl md:text-3xl text-[#0A2540]">
+                    <h2 className="font-extrabold text-2xl md:text-3xl text-[#0A2540] mb-4">
                         Kadea, c&apos;est aussi :
                     </h2>
-                    <p className="text-gray-400 text-sm mt-2">
+                    <p className="text-gray-400 text-sm max-w-lg mx-auto">
                         Découvrez l&apos;ensemble de l&apos;écosystème Kadea au service de votre croissance.
                     </p>
                 </motion.div>

@@ -26,12 +26,12 @@ const fadeUp = {
 
 export default function Admission() {
     return (
-        <section id="admission" className="py-16 bg-[#061828]">
+        <section id="admission" className="py-16 md:py-24 bg-[#061828]">
             <div className="w-full container mx-auto px-5">
 
                 {/* Header */}
                 <motion.div
-                    className="text-center mb-12"
+                    className="text-center mb-12 md:mb-16"
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -48,11 +48,11 @@ export default function Admission() {
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-3 gap-6 md:gap-8">
 
                     {/* Col 1 — Certification + Prix */}
                     <motion.div
-                        className="flex flex-col gap-5"
+                        className="flex flex-col gap-6"
                         initial={{ opacity: 0, x: -24 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
@@ -107,7 +107,7 @@ export default function Admission() {
 
                     {/* Col 2 — Places limitées + promotions */}
                     <motion.div
-                        className="flex flex-col gap-5"
+                        className="flex flex-col gap-6"
                         initial={{ opacity: 0, y: 24 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.3 }}

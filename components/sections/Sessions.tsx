@@ -108,7 +108,7 @@ const fadeUp = {
 
 export default function Sessions() {
     return (
-        <section id="sessions" className="py-16 md:py-20 bg-[#F8FAFC]">
+        <section id="sessions" className="py-16 md:py-24 bg-[#F8FAFC]">
             <div className="w-full container mx-auto px-5">
 
                 {/* Header */}

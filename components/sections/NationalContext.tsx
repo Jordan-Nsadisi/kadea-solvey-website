@@ -40,8 +40,8 @@ const fadeUp = {
 
 export default function NationalContext() {
     return (
-        <section id="contexte" className="py-16 md:py-20 bg-[#F8FAFC]">
-            <div className="w-full container mx-auto px-5 flex flex-col gap-16 md:gap-20">
+        <section id="contexte" className="py-16 md:py-24 bg-[#F8FAFC]">
+            <div className="w-full container mx-auto px-5 flex flex-col gap-12 md:gap-16">
 
                 {/* Top Section */}
                 <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
