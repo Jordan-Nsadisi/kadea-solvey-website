@@ -9,23 +9,23 @@ export default function Navbar() {
 
     return (
         <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/8 shadow-sm">
-            <div className="w-full container mx-auto p-5 flex items-center justify-between">
+            <div className="w-full container mx-auto px-4 py-3 md:p-5 flex items-center justify-between gap-2">
                 {/* Logos */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 md:gap-4 shrink-0">
                     <ImageWithFallback
                         src="/logos/Black.png"
                         alt="ULB-Solvay Lifelong Learning"
                         width={180}
                         height={36}
-                        className="md:w-48 w-32 object-contain"
+                        className="w-24 sm:w-32 md:w-48 object-contain"
                     />
-                    <div className="w-px h-6 bg-gray-200" />
+                    <div className="w-px h-4 md:h-6 bg-gray-200" />
                     <ImageWithFallback
                         src="/logos/Logo_Kadea_Exe.png"
                         alt="Kadea Executive"
                         width={160}
                         height={32}
-                        className="w-28 md:w-40 h-auto object-contain"
+                        className="w-20 sm:w-28 md:w-40 object-contain"
                     />
                 </div>
                 {/* Desktop cta */}
