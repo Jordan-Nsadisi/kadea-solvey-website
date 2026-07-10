@@ -2,223 +2,229 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { MapPin, Target, FileText } from "lucide-react";
-import { ImageMosaic } from "../ui/molecules/image-mosaic";
+import { MapPin, Calendar, Clock, ChevronRight } from "lucide-react";
 
-const S1_IMGS = [
-    "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=300&h=200&fit=crop&auto=format",
-    "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=300&h=200&fit=crop&auto=format",
-    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=300&h=200&fit=crop&auto=format",
+const SESSIONS = [
+    {
+        id: "01",
+        accentBg: "bg-[#F59E0B]",
+        accentText: "text-[#F59E0B]",
+        accentBorder: "border-t-4 border-[#F59E0B]",
+        title: "Diagnostic & Stratégie Digitale",
+        location: "Kinshasa · Hôtel Pullman",
+        date: "Septembre 2026",
+        duration: "3 jours",
+        intro: "Ancrer une vision stratégique commune de la transformation digitale et de l'IA. Chaque participant repart avec une première ébauche de roadmap institutionnelle.",
+        days: [
+            {
+                label: "Jour 1",
+                title: "Repenser l'État à l'ère du digital et de l'IA",
+                items: ["Le pourquoi de la transformation", "Valeur publique et panorama des cas d'usage"],
+            },
+            {
+                label: "Jour 2",
+                title: "Comprendre le digital et l'IA — capacités et leviers",
+                items: ["L'essence du digital", "Cartographie des capacités et premiers leviers IA"],
+            },
+            {
+                label: "Jour 3",
+                title: "Diagnostic de maturité et business case",
+                items: ["Le cadre de maturité FARI — 6 dimensions", "Construction du business case et ébauche de roadmap"],
+            },
+        ],
+        deliverable: "L1 — Diagnostic FARI + Business Case institutionnel",
+        chipBg: "bg-[#F59E0B]/15 text-[#78350f]",
+    },
+    {
+        id: "02",
+        accentBg: "bg-[#EC4899]",
+        accentText: "text-[#EC4899]",
+        accentBorder: "border-t-4 border-[#EC4899]",
+        title: "IA, Données & Cas d'Usage",
+        location: "Kinshasa · Hôtel Pullman",
+        date: "Octobre 2026",
+        duration: "3 jours",
+        intro: "Maîtriser les outils IA applicables au secteur public, poser les fondations de gouvernance des données, et définir un portefeuille concret de cas d'usage prêts à expérimenter.",
+        days: [
+            {
+                label: "Jour 4",
+                title: "Modèles opérationnels et architecture digitale",
+                items: ["L'organisation à l'heure du digital et de l'IA", "Architecture et infrastructure digitale"],
+            },
+            {
+                label: "Jour 5",
+                title: "Outils IA secteur public et gouvernance des données",
+                items: ["Copilot, Power Platform, Azure AI", "Gouvernance des données : le prérequis de l'IA"],
+            },
+            {
+                label: "Jour 6",
+                title: "Cas d'usage & conception de solution",
+                items: ["Identifier et prioriser ses cas d'usage IA", "Conception de solution et analyse des exigences du SI"],
+            },
+        ],
+        deliverable: "L2 + L3 — Portefeuille IA Scoré + Feuille de route 2–3 ans",
+        chipBg: "bg-[#EC4899]/15 text-[#9d174d]",
+    },
+    {
+        id: "03",
+        accentBg: "bg-[#10B981]",
+        accentText: "text-[#10B981]",
+        accentBorder: "border-t-4 border-[#10B981]",
+        title: "Leadership & Digital Roadmap",
+        location: "Bruxelles · Campus ULB",
+        date: "Novembre 2026",
+        duration: "3 jours",
+        intro: "Développer les compétences de leadership, finaliser la feuille de route institutionnelle sur 2 à 3 ans, et obtenir la micro-accréditation universitaire ULB après pitch devant le consortium.",
+        days: [
+            {
+                label: "Jour 7",
+                title: "Leadership de la transformation & conduite du changement",
+                items: ["L'organisation derrière la transformation", "Immersion dans l'écosystème IA européen (FARI Lab, Odoo)"],
+            },
+            {
+                label: "Jour 8",
+                title: "Vision à long terme, compétences et immersion terrain",
+                items: ["Prospective stratégique et plan de compétences", "Google Atelier Digital · Benchmark e-gouvernement"],
+            },
+            {
+                label: "Jour 9",
+                title: "Finalisation de la roadmap et pitch de restitution",
+                items: ["Finalisation de la feuille de route 2–3 ans", "Pitch de restitution · Certification ULB · Dîner Gala Atomium"],
+            },
+        ],
+        deliverable: "L4 — Plan de mobilisation + Digital Roadmap · Pitch devant jury",
+        chipBg: "bg-[#10B981]/15 text-[#065f46]",
+    },
 ];
-const S2_IMGS = [
-    "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=300&h=200&fit=crop&auto=format",
-    "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=300&h=200&fit=crop&auto=format",
-    "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=300&h=200&fit=crop&auto=format",
-];
-const S3_IMGS = [
-    "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop&auto=format",
-    "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=300&h=200&fit=crop&auto=format",
-    "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=300&h=200&fit=crop&auto=format",
-];
 
-function Chip({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
-    return (
-        <span
-            className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold ${
-                light
-                    ? "bg-white/20 text-white border border-white/30"
-                    : "bg-black/10 text-inherit border border-black/15"
-            }`}
-        >
-            {children}
-        </span>
-    );
-}
-
-function Deliverable({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
-    return (
-        <div className={`text-xs font-semibold px-2 py-1 rounded border-l-2 ${
-            light
-                ? "border-white/60 text-white/80 bg-white/10"
-                : "border-[#0A2540]/40 text-[#0A2540]/70 bg-black/5"
-        }`}>
-            📋 {children}
-        </div>
-    );
-}
-
-const chipStagger = {
+const stagger = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.07 } },
+    visible: { opacity: 1, transition: { staggerChildren: 0.09 } },
 };
-const chipItem = {
-    hidden: { opacity: 0, scale: 0.85 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
+const fadeUp = {
+    hidden: { opacity: 0, y: 14 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.38 } },
 };
 
 export default function Sessions() {
     return (
-        <section id="sessions" className="py-5 flex flex-col gap-5">
+        <section id="sessions" className="py-12 bg-[#F8FAFC]">
+            <div className="w-full container mx-auto px-5">
 
-            {/* Session 1 — Amber */}
-            <motion.div
-                className="w-full container mx-auto px-5"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.55, ease: "easeOut" }}
-            >
-                <div className="bg-[#F59E0B] rounded-3xl overflow-hidden p-8 md:p-12">
-                    <div className="grid md:grid-cols-2 gap-10 items-start">
-                        <ImageMosaic imgs={S1_IMGS} alt="Ateliers stratégie digitale" />
-                        <div className="flex flex-col gap-5">
-                            <span className="text-[#0A2540]/60 font-bold text-xs uppercase tracking-widest">Session 01</span>
-                            <h3 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight">
-                                Diagnostic &amp; Stratégie Digitale
-                            </h3>
-                            <p className="text-[#78350f] font-semibold text-sm">
-                                Kinshasa Hôtel Pullman &nbsp;|&nbsp; Septembre 2026 &nbsp;·&nbsp; 3 jours
-                            </p>
-                            <p className="text-[#0A2540]/80 text-sm leading-relaxed">
-                                Ancrer une vision stratégique commune, appréhender la valeur publique de l&apos;IA
-                                et structurer votre premier business case. Un premier sprint d&apos;immersion intensive
-                                pour aligner toute votre organisation.
-                            </p>
-                            <motion.div
-                                className="flex flex-wrap gap-2 text-[#0A2540]"
-                                variants={chipStagger}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                            >
-                                {[
-                                    <><MapPin size={11} /> Pullman</>,
-                                    <><Target size={11} /> Stratégie</>,
-                                    <><FileText size={11} /> Diagnostic FARI</>,
-                                ].map((c, i) => (
-                                    <motion.span key={i} variants={chipItem}><Chip>{c}</Chip></motion.span>
-                                ))}
-                            </motion.div>
-                            <Deliverable>Livrable : Diagnostic FARI + Business Case IA</Deliverable>
-                            <div className="flex gap-3 flex-wrap mt-1">
-                                <a href="#" className="border-2 border-[#0A2540] text-[#0A2540] font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#0A2540] hover:text-white transition text-center shrink-0">
-                                    Programme détaillé
-                                </a>
-                                <a href="#admission" className="bg-[#0A2540] text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#0d3060] transition text-center shrink-0">
-                                    S&apos;inscrire à la Session 1
-                                </a>
+                {/* Header */}
+                <motion.div
+                    className="mb-10"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-3">
+                        03 · Les Sessions
+                    </span>
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight">
+                        3 Sessions · 9 Jours · 3 Villes
+                    </h2>
+                    <p className="text-gray-500 text-sm mt-2">
+                        Présence requise aux trois sessions pour l&apos;obtention de la micro-accréditation ULB.
+                    </p>
+                </motion.div>
+
+                {/* Session cards */}
+                <div className="flex flex-col gap-6">
+                    {SESSIONS.map((session, si) => (
+                        <motion.div
+                            key={session.id}
+                            className={`bg-white rounded-2xl shadow-sm overflow-hidden ${session.accentBorder}`}
+                            initial={{ opacity: 0, y: 36 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.15 }}
+                            transition={{ duration: 0.5, delay: si * 0.05, ease: "easeOut" }}
+                        >
+                            <div className="p-8 md:p-10">
+                                <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+
+                                    {/* Meta colonne */}
+                                    <div className="flex flex-col gap-4">
+                                        <div>
+                                            <span className={`font-extrabold text-xs uppercase tracking-widest ${session.accentText}`}>
+                                                Session {session.id}
+                                            </span>
+                                            <h3 className="text-xl md:text-2xl font-extrabold text-[#0A2540] leading-tight mt-1">
+                                                {session.title}
+                                            </h3>
+                                        </div>
+
+                                        <div className="flex flex-col gap-2 text-sm text-gray-500">
+                                            <span className="flex items-center gap-2">
+                                                <MapPin size={13} className={session.accentText} />
+                                                {session.location}
+                                            </span>
+                                            <span className="flex items-center gap-2">
+                                                <Calendar size={13} className={session.accentText} />
+                                                {session.date}
+                                            </span>
+                                            <span className="flex items-center gap-2">
+                                                <Clock size={13} className={session.accentText} />
+                                                {session.duration}
+                                            </span>
+                                        </div>
+
+                                        <p className="text-gray-500 text-sm leading-relaxed">{session.intro}</p>
+
+                                        {/* Livrable badge */}
+                                        <div className={`text-xs font-semibold px-3 py-2 rounded-lg ${session.chipBg} border-l-2 border-current leading-relaxed`}>
+                                            📋 {session.deliverable}
+                                        </div>
+
+                                        <div className="flex gap-3 flex-wrap pt-1">
+                                            <a
+                                                href="#admission"
+                                                className={`inline-flex items-center gap-1.5 ${session.accentBg} text-white font-semibold px-5 py-2 rounded-md text-sm hover:brightness-110 transition shrink-0`}
+                                            >
+                                                S&apos;inscrire
+                                                <ChevronRight size={14} />
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    {/* Contenu jour par jour */}
+                                    <motion.div
+                                        className="grid grid-cols-1 sm:grid-cols-3 gap-4"
+                                        variants={stagger}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                    >
+                                        {session.days.map((day) => (
+                                            <motion.div
+                                                key={day.label}
+                                                variants={fadeUp}
+                                                className="bg-gray-50 rounded-xl p-4 flex flex-col gap-2 border border-gray-100"
+                                            >
+                                                <span className={`text-xs font-bold uppercase tracking-widest ${session.accentText}`}>
+                                                    {day.label}
+                                                </span>
+                                                <span className="text-[#0A2540] font-semibold text-sm leading-snug">
+                                                    {day.title}
+                                                </span>
+                                                <ul className="space-y-1 mt-1">
+                                                    {day.items.map((it) => (
+                                                        <li key={it} className="text-gray-400 text-xs flex items-start gap-1.5">
+                                                            <span className={`${session.accentText} shrink-0 mt-0.5`}>›</span>
+                                                            {it}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </motion.div>
+                                        ))}
+                                    </motion.div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </motion.div>
+                    ))}
                 </div>
-            </motion.div>
-
-            {/* Session 2 — Pink */}
-            <motion.div
-                className="w-full container mx-auto px-5"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.55, ease: "easeOut" }}
-            >
-                <div className="bg-[#EC4899] rounded-3xl overflow-hidden p-8 md:p-12">
-                    <div className="grid md:grid-cols-2 gap-10 items-start">
-                        <ImageMosaic imgs={S2_IMGS} alt="IA et données" />
-                        <div className="flex flex-col gap-5">
-                            <span className="text-white/60 font-bold text-xs uppercase tracking-widest">Session 02</span>
-                            <h3 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
-                                IA, Données &amp; Cas d&apos;Usage
-                            </h3>
-                            <p className="text-white/70 font-semibold text-sm">
-                                Kinshasa Hôtel Pullman &nbsp;|&nbsp; Octobre 2026 &nbsp;·&nbsp; 3 jours
-                            </p>
-                            <p className="text-white/90 text-sm leading-relaxed">
-                                Maîtriser les technologies de pointe (Copilot, Power Platform, Azure AI), poser les
-                                fondations de la gouvernance des données et bâtir votre portefeuille de cas
-                                d&apos;usage scorés et prêts à déployer.
-                            </p>
-                            <motion.div
-                                className="flex flex-wrap gap-2"
-                                variants={chipStagger}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                            >
-                                {[
-                                    <><MapPin size={11} /> Pullman</>,
-                                    <><Target size={11} /> Outils &amp; Data</>,
-                                    <><FileText size={11} /> Portefeuille IA Scoré</>,
-                                ].map((c, i) => (
-                                    <motion.span key={i} variants={chipItem}><Chip light>{c}</Chip></motion.span>
-                                ))}
-                            </motion.div>
-                            <Deliverable light>Livrable : Portefeuille IA Scoré prêt au déploiement</Deliverable>
-                            <div className="flex gap-3 flex-wrap mt-1">
-                                <a href="#" className="border-2 border-white text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-white hover:text-[#EC4899] transition text-center shrink-0">
-                                    Programme détaillé
-                                </a>
-                                <a href="#admission" className="bg-[#0A2540] text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#0d3060] transition text-center shrink-0">
-                                    S&apos;inscrire à la Session 2
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </motion.div>
-
-            {/* Session 3 — Emerald */}
-            <motion.div
-                className="w-full container mx-auto px-5"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.55, ease: "easeOut" }}
-            >
-                <div className="bg-[#10B981] rounded-3xl overflow-hidden p-8 md:p-12">
-                    <div className="grid md:grid-cols-2 gap-10 items-start">
-                        <ImageMosaic imgs={S3_IMGS} alt="Leadership Bruxelles" />
-                        <div className="flex flex-col gap-5">
-                            <span className="text-white/60 font-bold text-xs uppercase tracking-widest">Session 03</span>
-                            <h3 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
-                                Leadership &amp; Digital Roadmap
-                            </h3>
-                            <p className="text-white/70 font-semibold text-sm">
-                                Bruxelles Campus ULB &nbsp;|&nbsp; Novembre 2026 &nbsp;·&nbsp; 3 jours
-                            </p>
-                            <p className="text-white/90 text-sm leading-relaxed">
-                                Piloter la conduite du changement, s&apos;immerger au cœur de l&apos;écosystème
-                                tech européen (FARI, Odoo, Google) et soutenir votre feuille de route finale.
-                                Une immersion bruxelloise culminant en soutenance de votre Digital Roadmap.
-                            </p>
-                            <motion.div
-                                className="flex flex-wrap gap-2"
-                                variants={chipStagger}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                            >
-                                {[
-                                    <><MapPin size={11} /> Bruxelles</>,
-                                    <><Target size={11} /> Leadership</>,
-                                    <><FileText size={11} /> Digital Roadmap</>,
-                                ].map((c, i) => (
-                                    <motion.span key={i} variants={chipItem}><Chip light>{c}</Chip></motion.span>
-                                ))}
-                            </motion.div>
-                            <Deliverable light>Livrable : Digital Roadmap 2–3 ans soutenue devant jury</Deliverable>
-                            <div className="flex gap-3 flex-wrap mt-1">
-                                <a href="#" className="border-2 border-white text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-white hover:text-[#10B981] transition text-center shrink-0">
-                                    Programme détaillé
-                                </a>
-                                <a href="#admission" className="bg-[#0A2540] text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#0d3060] transition text-center shrink-0">
-                                    S&apos;inscrire à la Session 3
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </motion.div>
-
+            </div>
         </section>
     );
 }

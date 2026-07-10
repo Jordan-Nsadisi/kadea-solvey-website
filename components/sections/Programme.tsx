@@ -37,109 +37,142 @@ const fadeUp = {
 
 export default function Programme() {
     return (
-        <section id="programme" className="py-5">
+        <section id="programme" className="py-12 bg-white">
             <div className="w-full container mx-auto px-5">
-                <div className="bg-[#45A29E] rounded-3xl overflow-hidden p-8 md:p-12">
-                    <div className="grid md:grid-cols-2 gap-10 items-start">
 
-                        {/* Gauche — image mosaic */}
+                {/* Section header */}
+                <motion.div
+                    className="mb-10"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-3">
+                        02 · Le Programme
+                    </span>
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight max-w-2xl">
+                        Piloter le digital &amp; l&apos;IA de votre organisation
+                    </h2>
+                    <p className="text-gray-500 text-sm leading-relaxed mt-3 max-w-2xl">
+                        Ce programme intensif est conçu pour le{" "}
+                        <strong className="text-[#0A2540]">Top Management, les DSI et les DRH</strong> des
+                        institutions publiques et entreprises privées de la RDC. Il couvre 4 domaines clés :
+                        Stratégie, Transformation, Processus &amp; Performance, Alignement Métier &amp; IT.
+                    </p>
+                </motion.div>
+
+                <div className="grid md:grid-cols-2 gap-10 items-start">
+
+                    {/* Gauche — image mosaic + 4 domaines */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.55, ease: "easeOut" }}
+                    >
+                        <ImageMosaic imgs={OVERVIEW_IMAGES} alt="Stratégie digitale" />
+
                         <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ duration: 0.55, ease: "easeOut" }}
+                            className="grid grid-cols-2 gap-3 mt-6"
+                            variants={stagger}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
                         >
-                            <ImageMosaic imgs={OVERVIEW_IMAGES} alt="Stratégie digitale" />
+                            {DOMAINS.map(({ icon: Icon, label, desc }) => (
+                                <motion.div
+                                    key={label}
+                                    variants={fadeUp}
+                                    className="bg-gray-50 border border-gray-100 rounded-xl p-4 flex flex-col gap-1"
+                                >
+                                    <Icon size={16} className="text-[#45A29E] mb-1" />
+                                    <span className="text-[#0A2540] font-bold text-xs">{label}</span>
+                                    <span className="text-gray-400 text-xs leading-snug">{desc}</span>
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    </motion.div>
 
-                            {/* 4 domaines clés */}
+                    {/* Droite — FARI + CTA */}
+                    <motion.div
+                        className="flex flex-col gap-6"
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.55, ease: "easeOut" }}
+                    >
+                        {/* Cadre FARI */}
+                        <div className="border border-gray-100 rounded-2xl p-6 bg-white shadow-sm">
+                            <div className="flex items-center gap-2 mb-4">
+                                <div className="w-1 h-5 bg-[#F59E0B] rounded-full" />
+                                <span className="text-[#0A2540] font-extrabold text-xs uppercase tracking-widest">
+                                    Cadre de Maturité FARI — 6 Dimensions Clés
+                                </span>
+                            </div>
                             <motion.div
-                                className="grid grid-cols-2 gap-3 mt-6"
+                                className="grid grid-cols-2 gap-3"
                                 variants={stagger}
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true }}
                             >
-                                {DOMAINS.map(({ icon: Icon, label, desc }) => (
-                                    <motion.div
-                                        key={label}
-                                        variants={fadeUp}
-                                        className="bg-white/15 backdrop-blur-sm rounded-xl p-4 flex flex-col gap-1"
-                                    >
-                                        <Icon size={16} className="text-white mb-1" />
-                                        <span className="text-white font-bold text-xs">{label}</span>
-                                        <span className="text-white/70 text-xs leading-snug">{desc}</span>
+                                {FARI_DIMENSIONS.map(({ n, label }) => (
+                                    <motion.div key={n} variants={fadeUp} className="flex items-center gap-2">
+                                        <span className="text-[#45A29E] font-extrabold text-xs w-6">{n}</span>
+                                        <span className="text-[#0A2540] text-xs font-medium">{label}</span>
                                     </motion.div>
                                 ))}
                             </motion.div>
-                        </motion.div>
-
-                        {/* Droite — texte */}
-                        <motion.div
-                            className="flex flex-col gap-6"
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ duration: 0.55, ease: "easeOut" }}
-                        >
-                            <span className="text-white/70 font-bold text-xs uppercase tracking-widest">
-                                02 · Le Programme
-                            </span>
-                            <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
-                                Piloter le digital &amp; l&apos;IA de votre organisation
-                            </h2>
-                            <p className="text-white/85 text-sm leading-relaxed">
-                                Ce programme intensif est conçu pour le{" "}
-                                <strong className="text-white">Top Management, les DSI et les DRH</strong> des
-                                institutions publiques et entreprises privées de la RDC. Il couvre 4 domaines clés :
-                                Stratégie, Transformation, Processus &amp; Performance, Alignement Métier &amp; IT.
+                            <p className="text-gray-400 text-xs mt-4 leading-relaxed">
+                                Chaque participant produit un <strong className="text-[#0A2540]">radar sur les 6 dimensions</strong> de
+                                son institution — socle du diagnostic stratégique.
                             </p>
+                        </div>
 
-                            {/* Cadre FARI */}
-                            <div className="bg-[#0A2540] rounded-2xl p-6">
-                                <div className="text-[#F59E0B] font-extrabold text-xs uppercase tracking-widest mb-4">
-                                    Cadre de Maturité FARI — 6 Dimensions Clés
-                                </div>
-                                <motion.div
-                                    className="grid grid-cols-2 gap-3"
-                                    variants={stagger}
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                >
-                                    {FARI_DIMENSIONS.map(({ n, label }) => (
-                                        <motion.div key={n} variants={fadeUp} className="flex items-center gap-2">
-                                            <span className="text-[#45A29E] font-extrabold text-xs">{n}</span>
-                                            <span className="text-white text-xs font-medium">{label}</span>
-                                        </motion.div>
-                                    ))}
-                                </motion.div>
-                            </div>
+                        {/* Public cible */}
+                        <div className="border-l-4 border-[#45A29E] pl-4 py-1">
+                            <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-2">
+                                Public cible
+                            </span>
+                            <ul className="text-[#0A2540] text-sm space-y-1">
+                                {[
+                                    "Ministres, Secrétaires Généraux, Directeurs Généraux",
+                                    "DSI / DNUM des institutions publiques",
+                                    "DRH et Directeurs de la Transformation",
+                                    "C-Level des entreprises privées de la RDC",
+                                ].map((item) => (
+                                    <li key={item} className="flex items-start gap-2">
+                                        <span className="text-[#45A29E] mt-0.5 shrink-0">·</span>
+                                        <span className="text-gray-600 text-sm">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
 
-                            <motion.div
-                                className="flex gap-3 flex-wrap"
-                                initial={{ opacity: 0, y: 12 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: 0.2 }}
+                        <motion.div
+                            className="flex gap-3 flex-wrap"
+                            initial={{ opacity: 0, y: 12 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: 0.2 }}
+                        >
+                            <a
+                                href="#admission"
+                                className="inline-flex items-center gap-2 bg-[#0A2540] text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#0d3060] transition shrink-0"
                             >
-                                <a
-                                    href="#admission"
-                                    className="inline-flex items-center gap-2 bg-[#F59E0B] text-[#0A2540] font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:brightness-110 transition text-center shrink-0"
-                                >
-                                    En savoir plus
-                                </a>
-                                <a
-                                    href="/docs/Programme_Executive_Transformation_Digitale_IA_Solvay-ULB_2026_compressed.pdf"
-                                    target="_blank"
-                                    className="inline-flex items-center gap-2 bg-[#EC4899] text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:brightness-110 transition text-center shrink-0"
-                                >
-                                    <FileDown size={15} />
-                                    Brochure PDF
-                                </a>
-                            </motion.div>
+                                S&apos;inscrire
+                            </a>
+                            <a
+                                href="/docs/Programme_Executive_Transformation_Digitale_IA_Solvay-ULB_2026_compressed.pdf"
+                                target="_blank"
+                                className="inline-flex items-center gap-2 border border-[#45A29E] text-[#45A29E] font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#45A29E] hover:text-white transition shrink-0"
+                            >
+                                <FileDown size={15} />
+                                Brochure PDF
+                            </a>
                         </motion.div>
-
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
