@@ -1,23 +1,30 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./styles/globals.css";
 
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-plus-jakarta',
-})
+});
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const titillium = localFont({
+  src: "../app/fonts/titillium/TitilliumWeb-Regular.ttf",
+  variable: "--font-titillium",
+  fallback: ["sans-serif"]
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,11 +38,16 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${plusJakartaSans.className} h-full antialiased`}
-    // className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="fr"
+      className={`
+        ${plusJakartaSans.variable} 
+        ${geistSans.variable} 
+        ${geistMono.variable} 
+        ${titillium.variable} 
+        h-full antialiased
+      `}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col font-jakarta">{children}</body>
     </html>
   );
 }
