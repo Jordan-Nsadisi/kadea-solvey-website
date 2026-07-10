@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { ImageWithFallback } from "../ui/ImageWithFallback";
 import { Menu, X } from "lucide-react";
-import solvayLogo from "../../public/logos/Black.png";
-import kadeaLogo from "../../public/logos/kadea.png";
 import { Button } from "../ui/atoms/button";
 
 export default function Navbar() {
