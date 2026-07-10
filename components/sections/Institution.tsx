@@ -26,18 +26,18 @@ export default function Institution() {
     return (
         <section id="institution" className="py-12 bg-white">
             <div className="w-full container mx-auto px-5">
-                <div className="bg-white rounded-3xl overflow-hidden border border-gray-100 grid md:grid-cols-2 gap-0">
+                <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
 
                     {/* Gauche — contenu textuel */}
                     <motion.div
-                        className="p-10 md:p-14 flex flex-col justify-center"
+                        className="flex flex-col justify-center"
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.55, ease: "easeOut" }}
                     >
                         <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest mb-4 block">
-                            01 · L&apos;Institution
+                            02 · L&apos;Institution
                         </span>
                         <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight mb-5">
                             ULB-Solvay Lifelong Learning :{" "}
@@ -118,9 +118,9 @@ export default function Institution() {
                         </div>
                     </motion.div>
 
-                    {/* Droite — image */}
+                    {/* Droite — image (Avec border-radius indépendant) */}
                     <motion.div
-                        className="relative min-h-[340px]"
+                        className="relative min-h-[340px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100"
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
