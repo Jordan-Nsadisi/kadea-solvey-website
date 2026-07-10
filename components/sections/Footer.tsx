@@ -38,20 +38,6 @@ export default function Footer() {
                         </Link>
                     </div>
 
-                    <div className="flex flex-col items-center gap-2 mt-4 text-center">
-                        <p className="text-[#0A2540] font-extrabold tracking-widest uppercase text-base mb-2 italic">
-                            Dream. Learn. Lead.
-                        </p>
-                        <p className="text-gray-500 text-sm font-semibold">
-                            Thomas Strouvens — CEO Kadea Executive
-                        </p>
-                        <div className="flex items-center gap-4 text-sm text-gray-500">
-                            <a href="mailto:thomas@kadea.co" className="hover:text-[#45A29E] transition">thomas@kadea.co</a>
-                            <span>|</span>
-                            <a href="tel:+32470881395" className="hover:text-[#45A29E] transition">+32.470.88.13.95</a>
-                        </div>
-                    </div>
-
                     <div className="w-full h-px bg-gray-100 my-2 max-w-lg" />
 
                     <p className="text-gray-400 text-xs text-center">

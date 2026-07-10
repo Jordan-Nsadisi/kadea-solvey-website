@@ -40,28 +40,30 @@ const fadeUp = {
 
 export default function NationalContext() {
     return (
-        <section id="contexte" className="py-12 bg-[#F8FAFC]">
-            <div className="w-full container mx-auto px-5 flex flex-col gap-14">
+        <section id="contexte" className="py-16 md:py-20 bg-[#F8FAFC]">
+            <div className="w-full container mx-auto px-5 flex flex-col gap-16 md:gap-20">
 
-                {/* Top Section : Libre, sans carte blanche, pour respirer */}
-                <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+                {/* Top Section */}
+                <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
                     {/* Gauche — Texte */}
                     <motion.div
-                        className="flex flex-col justify-center"
+                        className="flex flex-col justify-center gap-5"
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.55, ease: "easeOut" }}
                     >
-                        <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-4">
-                            01 · Contexte National
-                        </span>
-                        <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight mb-5">
-                            Le numérique & l&apos;IA, <br className="hidden md:block" />
-                            priorité de la <span className="text-[#F59E0B]">Présidence</span> et <br className="hidden md:block" />
-                            <span className="text-[#F59E0B]">Gouvernement de la RDC</span>
-                        </h2>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                        <div>
+                            <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-4">
+                                01 · Contexte National
+                            </span>
+                            <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight">
+                                Le numérique & l&apos;IA, <br className="hidden md:block" />
+                                priorité de la <span className="text-[#F59E0B]">Présidence</span> et <br className="hidden md:block" />
+                                <span className="text-[#F59E0B]">Gouvernement de la RDC</span>
+                            </h2>
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">
                             Sous l&apos;impulsion de la Présidence, la République Démocratique du Congo engage un tournant
                             décisif vers le numérique et l&apos;intelligence artificielle, porté par une nouvelle génération
                             de stratégies nationales.
@@ -94,7 +96,7 @@ export default function NationalContext() {
                 {/* Middle Section : Les 3 cadres nationaux */}
                 <div>
                     <motion.span
-                        className="text-[#F59E0B] font-extrabold text-xs uppercase tracking-widest block mb-6 text-center md:text-left"
+                        className="text-[#F59E0B] font-extrabold text-xs uppercase tracking-widest block mb-8 text-center md:text-left"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -102,7 +104,7 @@ export default function NationalContext() {
                         EN COHÉRENCE AVEC LES CADRES NATIONAUX DU NUMÉRIQUE & DE L&apos;IA
                     </motion.span>
                     <motion.div
-                        className="grid md:grid-cols-3 gap-5"
+                        className="grid md:grid-cols-3 gap-6"
                         variants={stagger}
                         initial="hidden"
                         whileInView="visible"
@@ -115,11 +117,11 @@ export default function NationalContext() {
                                 className="bg-white rounded-2xl p-6 flex flex-col gap-3 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
                             >
                                 {/* Badge unifié type EQUIS/AMBA */}
-                                <div className="bg-[#F59E0B]/15 text-[#F59E0B] text-xs font-bold px-3 py-1 rounded-full w-fit mb-1">
+                                <div className="bg-[#F59E0B]/15 text-[#F59E0B] text-xs font-bold px-3 py-1 rounded-full w-fit">
                                     {n}
                                 </div>
-                                <div>
-                                    <h4 className="text-[#0A2540] font-bold text-[15px] mb-1">{title}</h4>
+                                <div className="mt-1">
+                                    <h4 className="text-[#0A2540] font-bold text-[15px] mb-2">{title}</h4>
                                     <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
                                 </div>
                             </motion.div>
@@ -128,9 +130,9 @@ export default function NationalContext() {
                 </div>
 
                 {/* Bottom Section : Les 4 statistiques */}
-                <div className="mt-2">
+                <div>
                     <motion.span
-                        className="text-[#0A2540]/60 font-extrabold text-xs uppercase tracking-widest block mb-6 text-center md:text-left"
+                        className="text-[#0A2540]/60 font-extrabold text-xs uppercase tracking-widest block mb-8 text-center md:text-left"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -138,7 +140,7 @@ export default function NationalContext() {
                         LA TRANSFORMATION NUMÉRIQUE EN RÉPUBLIQUE DÉMOCRATIQUE DU CONGO
                     </motion.span>
                     <motion.div
-                        className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4 border-t border-gray-200"
+                        className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 pt-6 border-t border-gray-200"
                         variants={stagger}
                         initial="hidden"
                         whileInView="visible"

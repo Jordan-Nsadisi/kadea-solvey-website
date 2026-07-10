@@ -37,12 +37,12 @@ const fadeUp = {
 
 export default function Programme() {
     return (
-        <section id="programme" className="py-12 bg-white">
+        <section id="programme" className="py-16 md:py-20 bg-white">
             <div className="w-full container mx-auto px-5">
 
                 {/* Section header */}
                 <motion.div
-                    className="mb-10"
+                    className="mb-12 md:mb-16"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -51,10 +51,10 @@ export default function Programme() {
                     <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-3">
                         02 · Le Programme
                     </span>
-                    <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight max-w-2xl">
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight max-w-2xl mb-4">
                         Piloter le digital &amp; l&apos;IA de votre organisation
                     </h2>
-                    <p className="text-gray-500 text-sm leading-relaxed mt-3 max-w-2xl">
+                    <p className="text-gray-500 text-sm leading-relaxed max-w-2xl">
                         Ce programme intensif est conçu pour le{" "}
                         <strong className="text-[#0A2540]">Top Management, les DSI et les DRH</strong> des
                         institutions publiques et entreprises privées de la RDC. Il couvre 4 domaines clés :
@@ -62,7 +62,7 @@ export default function Programme() {
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-10 items-start">
+                <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-start">
 
                     {/* Gauche — image mosaic + 4 domaines */}
                     <motion.div
@@ -96,7 +96,7 @@ export default function Programme() {
 
                     {/* Droite — FARI + CTA */}
                     <motion.div
-                        className="flex flex-col gap-6"
+                        className="flex flex-col gap-8"
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}

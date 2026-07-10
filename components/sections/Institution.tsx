@@ -24,32 +24,34 @@ const fadeUp = {
 
 export default function Institution() {
     return (
-        <section id="institution" className="py-12 bg-white">
+        <section id="institution" className="py-16 md:py-20 bg-white">
             <div className="w-full container mx-auto px-5">
-                <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+                <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
 
                     {/* Gauche — contenu textuel */}
                     <motion.div
-                        className="flex flex-col justify-center"
+                        className="flex flex-col justify-center gap-5"
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.55, ease: "easeOut" }}
                     >
-                        <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest mb-4 block">
-                            02 · L&apos;Institution
-                        </span>
-                        <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight mb-5">
-                            ULB-Solvay Lifelong Learning :{" "}
-                            <span className="text-[#45A29E]">l&apos;excellence qui arrive en RDC</span>
-                        </h2>
-                        <p className="text-gray-600 leading-relaxed mb-4 text-sm">
+                        <div>
+                            <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest mb-4 block">
+                                02 · L&apos;Institution
+                            </span>
+                            <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight">
+                                ULB-Solvay Lifelong Learning :{" "}
+                                <span className="text-[#45A29E]">l&apos;excellence qui arrive en RDC</span>
+                            </h2>
+                        </div>
+                        <p className="text-gray-600 leading-relaxed text-sm">
                             Fondée en 1903 par Ernest Solvay, la{" "}
                             <strong>Solvay Brussels School of Economics &amp; Management</strong> figure parmi les
                             écoles de management les plus reconnues d&apos;Europe, et fut la première école de
                             commerce francophone belge accréditée à l&apos;international.
                         </p>
-                        <p className="text-gray-600 leading-relaxed mb-8 text-sm">
+                        <p className="text-gray-600 leading-relaxed text-sm">
                             <strong>Solvay Lifelong Learning</strong> est l&apos;Executive Education de la Solvay
                             Brussels School Economics &amp; Management. Une référence internationale qui se déploie
                             aujourd&apos;hui au service des institutions publiques congolaises.
@@ -57,7 +59,7 @@ export default function Institution() {
 
                         {/* Stats animées */}
                         <motion.div
-                            className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-100"
+                            className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-100 mt-2"
                             variants={stagger}
                             initial="hidden"
                             whileInView="visible"

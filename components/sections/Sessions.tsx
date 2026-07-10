@@ -108,12 +108,12 @@ const fadeUp = {
 
 export default function Sessions() {
     return (
-        <section id="sessions" className="py-12 bg-[#F8FAFC]">
+        <section id="sessions" className="py-16 md:py-20 bg-[#F8FAFC]">
             <div className="w-full container mx-auto px-5">
 
                 {/* Header */}
                 <motion.div
-                    className="mb-10"
+                    className="mb-12 md:mb-16"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -122,16 +122,16 @@ export default function Sessions() {
                     <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-3">
                         03 · Les Sessions
                     </span>
-                    <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight">
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight mb-4">
                         3 Sessions · 9 Jours · 3 Villes
                     </h2>
-                    <p className="text-gray-500 text-sm mt-2">
+                    <p className="text-gray-500 text-sm">
                         Présence requise aux trois sessions pour l&apos;obtention de la micro-accréditation ULB.
                     </p>
                 </motion.div>
 
                 {/* Session cards */}
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-8 lg:gap-10">
                     {SESSIONS.map((session, si) => (
                         <motion.div
                             key={session.id}
@@ -141,8 +141,8 @@ export default function Sessions() {
                             viewport={{ once: true, amount: 0.15 }}
                             transition={{ duration: 0.5, delay: si * 0.05, ease: "easeOut" }}
                         >
-                            <div className="p-8 md:p-10">
-                                <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+                            <div className="p-8 lg:p-10">
+                                <div className="grid md:grid-cols-[1fr_2fr] gap-8 lg:gap-12 items-start">
 
                                     {/* Meta colonne */}
                                     <div className="flex flex-col gap-4">
