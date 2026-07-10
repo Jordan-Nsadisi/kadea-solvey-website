@@ -1,3 +1,4 @@
+import { Button } from "../ui/atoms/button";
 import { ImageWithFallback } from "../ui/ImageWithFallback";
 
 const FOOTER_PHOTO = "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500&h=400&fit=crop&auto=format";
@@ -32,9 +33,9 @@ export default function Footer() {
                                         placeholder="votre@email.com"
                                         className="flex-1 bg-white border border-gray-200 rounded-full px-5 py-2.5 text-sm outline-none focus:border-[#45A29E] transition"
                                     />
-                                    <button className="bg-[#0A2540] text-white font-bold px-5 py-2.5 rounded-full text-sm hover:bg-[#0d3060] transition whitespace-nowrap">
+                                    <Button className="bg-[#0A2540] text-white font-bold px-5 py-2.5 rounded-full text-sm hover:bg-[#0d3060] transition whitespace-nowrap">
                                         S'abonner
-                                    </button>
+                                    </Button>
                                 </div>
                             </div>
 

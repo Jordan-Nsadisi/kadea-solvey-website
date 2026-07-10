@@ -5,6 +5,7 @@ import { ImageWithFallback } from "../ui/ImageWithFallback";
 import { Menu, X } from "lucide-react";
 import solvayLogo from "../../public/logos/Black.png";
 import kadeaLogo from "../../public/logos/kadea.png";
+import { Button } from "../ui/atoms/button";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -33,9 +34,9 @@ export default function Navbar() {
                     </a>
                 </nav>
                 {/* Mobile toggle */}
-                <button className="md:hidden p-2" onClick={() => setMenuOpen(!menuOpen)}>
+                <Button className="md:hidden p-2" onClick={() => setMenuOpen(!menuOpen)}>
                     {menuOpen ? <X size={22} /> : <Menu size={22} />}
-                </button>
+                </Button>
             </div>
             {menuOpen && (
                 <div className="md:hidden bg-white border-t border-black/8 px-6 py-4 flex flex-col gap-3 text-sm font-semibold">
