@@ -2,13 +2,8 @@
 
 import { motion } from "motion/react";
 import { BarChart2, Repeat, TrendingUp, GitMerge, FileDown } from "lucide-react";
-import { ImageMosaic } from "../ui/molecules/image-mosaic";
-
-const OVERVIEW_IMAGES = [
-    "https://images.unsplash.com/photo-1560472354-b33ff0ad5a3b?w=300&h=200&fit=crop&auto=format",
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop&auto=format",
-    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=300&h=200&fit=crop&auto=format",
-];
+import Image from "next/image";
+import executiveImg from "@/public/assets/images/executive.jpeg";
 
 const FARI_DIMENSIONS = [
     { n: "01", label: "Données" },
@@ -49,7 +44,7 @@ export default function Programme() {
                     transition={{ duration: 0.5 }}
                 >
                     <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-3">
-                        02 · Le Programme
+                        03 · Le Programme
                     </span>
                     <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight max-w-2xl mb-4">
                         Piloter le digital &amp; l&apos;IA de votre organisation
@@ -64,37 +59,48 @@ export default function Programme() {
 
                 <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-start">
 
-                    {/* Gauche — image mosaic + 4 domaines */}
+                    {/* Gauche — grande image + Public cible */}
                     <motion.div
+                        className="flex flex-col gap-8"
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.55, ease: "easeOut" }}
                     >
-                        <ImageMosaic imgs={OVERVIEW_IMAGES} alt="Stratégie digitale" />
+                        {/* Image unique unifiée */}
+                        <div className="relative w-full min-h-[380px] rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto">
+                            <Image
+                                src={executiveImg}
+                                alt="Programme Executive Kadea"
+                                fill
+                                className="object-cover object-center"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
+                        </div>
 
-                        <motion.div
-                            className="grid grid-cols-2 gap-3 mt-6"
-                            variants={stagger}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                        >
-                            {DOMAINS.map(({ icon: Icon, label, desc }) => (
-                                <motion.div
-                                    key={label}
-                                    variants={fadeUp}
-                                    className="bg-gray-50 border border-gray-100 rounded-xl p-4 flex flex-col gap-1"
-                                >
-                                    <Icon size={16} className="text-[#45A29E] mb-1" />
-                                    <span className="text-[#0A2540] font-bold text-xs">{label}</span>
-                                    <span className="text-gray-400 text-xs leading-snug">{desc}</span>
-                                </motion.div>
-                            ))}
-                        </motion.div>
+                        {/* Public cible */}
+                        <div className="border-l-4 border-[#45A29E] pl-4 py-1">
+                            <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-2">
+                                Public cible
+                            </span>
+                            <ul className="text-[#0A2540] text-sm space-y-1">
+                                {[
+                                    "Ministres, Secrétaires Généraux, Directeurs Généraux",
+                                    "DSI / DNUM des institutions publiques",
+                                    "DRH et Directeurs de la Transformation",
+                                    "C-Level des entreprises privées de la RDC",
+                                ].map((item) => (
+                                    <li key={item} className="flex items-start gap-2">
+                                        <span className="text-[#45A29E] mt-0.5 shrink-0">·</span>
+                                        <span className="text-gray-600 text-sm leading-relaxed">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </motion.div>
 
-                    {/* Droite — FARI + CTA */}
+                    {/* Droite — FARI + 4 Domaines + CTA */}
                     <motion.div
                         className="flex flex-col gap-8"
                         initial={{ opacity: 0, x: 30 }}
@@ -130,28 +136,38 @@ export default function Programme() {
                             </p>
                         </div>
 
-                        {/* Public cible */}
-                        <div className="border-l-4 border-[#45A29E] pl-4 py-1">
-                            <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-2">
-                                Public cible
+                        {/* 4 Domaines en liste propre */}
+                        <div>
+                            <span className="text-[#0A2540] font-bold text-sm block mb-4">
+                                4 Domaines d&apos;expertise couverts :
                             </span>
-                            <ul className="text-[#0A2540] text-sm space-y-1">
-                                {[
-                                    "Ministres, Secrétaires Généraux, Directeurs Généraux",
-                                    "DSI / DNUM des institutions publiques",
-                                    "DRH et Directeurs de la Transformation",
-                                    "C-Level des entreprises privées de la RDC",
-                                ].map((item) => (
-                                    <li key={item} className="flex items-start gap-2">
-                                        <span className="text-[#45A29E] mt-0.5 shrink-0">·</span>
-                                        <span className="text-gray-600 text-sm">{item}</span>
-                                    </li>
+                            <motion.div
+                                className="flex flex-col gap-3"
+                                variants={stagger}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                            >
+                                {DOMAINS.map(({ icon: Icon, label, desc }) => (
+                                    <motion.div
+                                        key={label}
+                                        variants={fadeUp}
+                                        className="bg-gray-50 border border-gray-100 rounded-xl p-4 flex gap-4 items-center"
+                                    >
+                                        <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center shrink-0">
+                                            <Icon size={18} className="text-[#45A29E]" />
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <span className="text-[#0A2540] font-bold text-sm">{label}</span>
+                                            <span className="text-gray-500 text-xs leading-snug">{desc}</span>
+                                        </div>
+                                    </motion.div>
                                 ))}
-                            </ul>
+                            </motion.div>
                         </div>
 
                         <motion.div
-                            className="flex gap-3 flex-wrap"
+                            className="flex gap-3 flex-wrap mt-2"
                             initial={{ opacity: 0, y: 12 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -159,14 +175,14 @@ export default function Programme() {
                         >
                             <a
                                 href="#admission"
-                                className="inline-flex items-center gap-2 bg-[#0A2540] text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#0d3060] transition shrink-0"
+                                className="inline-flex items-center gap-2 bg-[#EC4899] text-white font-semibold px-5 py-2.5 rounded-md text-sm md:text-[15px] hover:bg-[#db2777] transition shrink-0"
                             >
                                 S&apos;inscrire
                             </a>
                             <a
                                 href="/docs/Programme_Executive_Transformation_Digitale_IA_Solvay-ULB_2026_compressed.pdf"
                                 target="_blank"
-                                className="inline-flex items-center gap-2 border border-[#45A29E] text-[#45A29E] font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#45A29E] hover:text-white transition shrink-0"
+                                className="inline-flex items-center gap-2 border border-[#45A29E] text-[#45A29E] font-semibold px-5 py-2.5 rounded-md text-sm md:text-[15px] hover:bg-[#45A29E] hover:text-white transition shrink-0"
                             >
                                 <FileDown size={15} />
                                 Brochure PDF

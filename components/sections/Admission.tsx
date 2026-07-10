@@ -160,7 +160,7 @@ export default function Admission() {
                         {/* CTA principal */}
                         <a
                             href="mailto:thomas@kadea.co?subject=Candidature%20Programme%20Executive%202026"
-                            className="block bg-[#84cc16] text-[#0A2540] font-extrabold text-center px-7 py-4 rounded-2xl hover:brightness-110 transition shadow-lg shadow-black/20 text-base"
+                            className="block bg-[#EC4899] text-white font-extrabold text-center px-7 py-4 rounded-2xl hover:bg-[#db2777] transition shadow-lg shadow-black/20 text-base"
                         >
                             Candidater à la Promotion 2026 →
                         </a>

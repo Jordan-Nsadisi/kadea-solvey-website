@@ -120,7 +120,7 @@ export default function Sessions() {
                     transition={{ duration: 0.5 }}
                 >
                     <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-3">
-                        03 · Les Sessions
+                        04 · Les Sessions
                     </span>
                     <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight mb-4">
                         3 Sessions · 9 Jours · 3 Villes
@@ -157,15 +157,15 @@ export default function Sessions() {
 
                                         <div className="flex flex-col gap-2 text-sm text-gray-500">
                                             <span className="flex items-center gap-2">
-                                                <MapPin size={13} className={session.accentText} />
+                                                <MapPin size={13} className="text-[#0A2540]" />
                                                 {session.location}
                                             </span>
                                             <span className="flex items-center gap-2">
-                                                <Calendar size={13} className={session.accentText} />
+                                                <Calendar size={13} className="text-[#0A2540]" />
                                                 {session.date}
                                             </span>
                                             <span className="flex items-center gap-2">
-                                                <Clock size={13} className={session.accentText} />
+                                                <Clock size={13} className="text-[#0A2540]" />
                                                 {session.duration}
                                             </span>
                                         </div>
@@ -173,14 +173,14 @@ export default function Sessions() {
                                         <p className="text-gray-500 text-sm leading-relaxed">{session.intro}</p>
 
                                         {/* Livrable badge */}
-                                        <div className={`text-xs font-semibold px-3 py-2 rounded-lg ${session.chipBg} border-l-2 border-current leading-relaxed`}>
+                                        <div className="text-xs font-semibold px-3 py-2 rounded-lg bg-gray-50 text-[#0A2540] border-l-2 border-[#45A29E] leading-relaxed">
                                             📋 {session.deliverable}
                                         </div>
 
                                         <div className="flex gap-3 flex-wrap pt-1">
                                             <a
                                                 href="#admission"
-                                                className={`inline-flex items-center gap-1.5 ${session.accentBg} text-white font-semibold px-5 py-2 rounded-md text-sm hover:brightness-110 transition shrink-0`}
+                                                className="inline-flex items-center gap-1.5 bg-[#EC4899] text-white font-semibold px-5 py-2.5 rounded-md text-sm hover:bg-[#db2777] transition shrink-0"
                                             >
                                                 S&apos;inscrire
                                                 <ChevronRight size={14} />
@@ -202,7 +202,7 @@ export default function Sessions() {
                                                 variants={fadeUp}
                                                 className="bg-gray-50 rounded-xl p-4 flex flex-col gap-2 border border-gray-100"
                                             >
-                                                <span className={`text-xs font-bold uppercase tracking-widest ${session.accentText}`}>
+                                                <span className="text-xs font-bold uppercase tracking-widest text-[#0A2540]">
                                                     {day.label}
                                                 </span>
                                                 <span className="text-[#0A2540] font-semibold text-sm leading-snug">
@@ -210,8 +210,8 @@ export default function Sessions() {
                                                 </span>
                                                 <ul className="space-y-1 mt-1">
                                                     {day.items.map((it) => (
-                                                        <li key={it} className="text-gray-400 text-xs flex items-start gap-1.5">
-                                                            <span className={`${session.accentText} shrink-0 mt-0.5`}>›</span>
+                                                        <li key={it} className="text-gray-500 text-xs flex items-start gap-1.5">
+                                                            <span className="text-[#45A29E] shrink-0 mt-0.5">›</span>
                                                             {it}
                                                         </li>
                                                     ))}

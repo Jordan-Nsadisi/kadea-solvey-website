@@ -76,7 +76,7 @@ export default function NationalContext() {
 
                     {/* Droite — Image (Même hauteur et border-radius que Institution) */}
                     <motion.div
-                        className="relative min-h-[340px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100"
+                        className="relative min-h-[380px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto"
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
