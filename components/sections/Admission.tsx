@@ -8,7 +8,7 @@ const SELECTION_CRITERIA = [
 export default function Admission() {
     return (
         <section id="admission" className="py-5">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="w-full container mx-auto px-5">
                 <div className="bg-[#86198F] rounded-3xl overflow-hidden p-8 md:p-14">
                     <div className="grid md:grid-cols-2 gap-12 items-start">
 

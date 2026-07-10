@@ -12,7 +12,7 @@ const SCHOOL_STATS = [
 export default function Institution() {
     return (
         <section id="institution" className="py-8">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="w-full container mx-auto px-5">
                 <div className="bg-white rounded-3xl overflow-hidden shadow-sm grid md:grid-cols-2 gap-0">
 
                     {/* Gauche : Contenu textuel */}

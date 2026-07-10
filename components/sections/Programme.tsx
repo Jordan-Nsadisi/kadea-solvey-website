@@ -18,7 +18,7 @@ const FARI_DIMENSIONS = [
 export default function Programme() {
     return (
         <section id="programme" className="py-5">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="w-full container mx-auto px-5">
                 <div className="bg-[#45A29E] rounded-3xl overflow-hidden p-8 md:p-12">
                     <div className="grid md:grid-cols-2 gap-10 items-start">
 

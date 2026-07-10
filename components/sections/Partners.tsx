@@ -5,7 +5,7 @@ import { MicrosoftLogo } from "@/components/ui/atoms/PartnerLogos";
 export default function Partners() {
     return (
         <section className="bg-white border-b border-black/8 py-6">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="w-full container mx-auto px-5">
                 <p className="text-center text-xs text-gray-400 font-semibold uppercase tracking-widest mb-6">
                     Partenaires Officiels &amp; Supports Techniques
                 </p>

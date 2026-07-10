@@ -37,7 +37,7 @@ export default function Sessions() {
     return (
         <section id="sessions" className="py-5 flex flex-col gap-5">
 
-            <div className="max-w-7xl mx-auto px-6 w-full">
+            <div className="w-full container mx-auto px-5">
                 <div className="bg-[#F59E0B] rounded-3xl overflow-hidden p-8 md:p-12">
                     <div className="grid md:grid-cols-2 gap-10 items-start">
                         <ImageMosaic imgs={S1_IMGS} alt="Ateliers stratégie digitale" />

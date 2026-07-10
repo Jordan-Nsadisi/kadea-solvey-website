@@ -12,7 +12,7 @@ export default function Hero() {
 
     return (
         <section className="bg-[#0A2540] relative overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="w-full container mx-auto px-5">
                 <div className="grid md:grid-cols-2 gap-0 min-h-[680px]">
                     {/* Left: portrait */}
                     <div className="relative flex items-end">

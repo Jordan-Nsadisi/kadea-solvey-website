@@ -10,7 +10,7 @@ export default function Navbar() {
 
     return (
         <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/8 shadow-sm">
-            <div className="max-w-7xl mx-auto p-5 flex items-center justify-between">
+            <div className="w-full container mx-auto p-5 flex items-center justify-between">
                 {/* Logos */}
                 <div className="flex items-center gap-4">
                     <ImageWithFallback
