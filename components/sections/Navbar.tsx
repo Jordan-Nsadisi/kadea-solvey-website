@@ -29,37 +29,13 @@ export default function Navbar() {
                         className="w-28 md:w-40 h-auto object-contain"
                     />
                 </div>
-                {/* Desktop nav */}
-                <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-[#0A2540]">
-                    {["L'Institution", "Le Programme", "Les Sessions", "Admission"].map((l) => (
-                        <a key={l} href="#" className="hover:text-[#45A29E] transition-colors">
-                            {l}
-                        </a>
-                    ))}
-                    <a
-                        href="#"
-                        className="ml-2 bg-[#EC4899] text-white px-5 py-2 rounded-full hover:bg-[#db2777] transition-colors"
-                    >
-                        S'inscrire
-                    </a>
-                </nav>
-                {/* Mobile toggle */}
-                <Button className="md:hidden p-2" onClick={() => setMenuOpen(!menuOpen)}>
-                    {menuOpen ? <X size={22} /> : <Menu size={22} />}
+                {/* Desktop cta */}
+                <Button
+                    className="ml-2 bg-[#EC4899] text-white px-5 py-2 rounded-full hover:bg-[#db2777] transition-colors"
+                >
+                    S'inscrire
                 </Button>
             </div>
-            {menuOpen && (
-                <div className="md:hidden bg-white border-t border-black/8 px-6 py-4 flex flex-col gap-3 text-sm font-semibold">
-                    {["L'Institution", "Le Programme", "Les Sessions", "Admission"].map((l) => (
-                        <a key={l} href="#" className="text-[#0A2540] hover:text-[#45A29E]">
-                            {l}
-                        </a>
-                    ))}
-                    <a href="#" className="bg-[#EC4899] text-white px-5 py-2 rounded-full text-center">
-                        S'inscrire
-                    </a>
-                </div>
-            )}
         </header>
     )
 }
