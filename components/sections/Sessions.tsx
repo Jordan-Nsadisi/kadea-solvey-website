@@ -180,7 +180,7 @@ export default function Sessions() {
                                         <div className="flex gap-3 flex-wrap pt-1">
                                             <a
                                                 href="#admission"
-                                                className="inline-flex items-center gap-1.5 bg-[#EC4899] text-white font-semibold px-5 py-2.5 rounded-md text-sm hover:bg-[#db2777] transition shrink-0"
+                                                className="inline-flex items-center gap-1.5 bg-[#7C3AED] text-white font-semibold px-5 py-2.5 rounded-md text-sm hover:bg-[#6D28D9] transition shrink-0"
                                             >
                                                 S&apos;inscrire
                                                 <ChevronRight size={14} />

@@ -30,7 +30,7 @@ export default function Navbar() {
                 </div>
                 {/* Desktop cta */}
                 <Button
-                    className="ml-2 bg-[#EC4899] text-white px-5 py-2 font-semibold text-sm md:text-[15px] rounded-md hover:bg-[#db2777] shrink-0 transition-colors"
+                    className="ml-2 bg-[#7C3AED] text-white px-5 py-2 font-semibold text-sm md:text-[15px] rounded-md hover:bg-[#6D28D9] shrink-0 transition-colors"
                 >
                     S'inscrire
                 </Button>

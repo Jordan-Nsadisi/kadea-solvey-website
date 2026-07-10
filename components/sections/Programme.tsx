@@ -175,7 +175,7 @@ export default function Programme() {
                         >
                             <a
                                 href="#admission"
-                                className="inline-flex items-center gap-2 bg-[#EC4899] text-white font-semibold px-5 py-2.5 rounded-md text-sm md:text-[15px] hover:bg-[#db2777] transition shrink-0"
+                                className="inline-flex items-center gap-2 bg-[#7C3AED] text-white font-semibold px-5 py-2.5 rounded-md text-sm md:text-[15px] hover:bg-[#6D28D9] transition shrink-0"
                             >
                                 S&apos;inscrire
                             </a>
