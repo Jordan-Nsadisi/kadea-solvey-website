@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { MapPin, Calendar, Clock, ChevronRight } from "lucide-react";
+import { MapPin, Calendar, Clock, ChevronRight, ClipboardList } from "lucide-react";
 
 const SESSIONS = [
     {
@@ -173,8 +173,9 @@ export default function Sessions() {
                                         <p className="text-gray-500 text-base leading-relaxed">{session.intro}</p>
 
                                         {/* Livrable badge */}
-                                        <div className="text-sm font-semibold px-3 py-2 rounded-lg bg-gray-50 text-[#0A2540] border-l-2 border-[#7C3AED] leading-relaxed">
-                                            📋 {session.deliverable}
+                                        <div className="flex items-start gap-2 text-sm font-semibold px-3 py-2 rounded-lg bg-gray-50 text-[#0A2540] border-l-2 border-[#7C3AED] leading-relaxed">
+                                            <ClipboardList size={16} className="shrink-0 mt-[2px] text-[#7C3AED]" />
+                                            <span>{session.deliverable}</span>
                                         </div>
 
                                         <div className="flex gap-3 flex-wrap pt-1">
