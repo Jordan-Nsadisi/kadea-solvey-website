@@ -41,13 +41,13 @@ const fadeUp = {
 export default function NationalContext() {
     return (
         <section id="contexte" className="py-12 bg-[#F8FAFC]">
-            <div className="w-full container mx-auto px-5 flex flex-col gap-10">
+            <div className="w-full container mx-auto px-5 flex flex-col gap-14">
 
-                {/* Top Section : Split Card (comme Institution) */}
-                <div className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm grid md:grid-cols-2 gap-0">
+                {/* Top Section : Libre, sans carte blanche, pour respirer */}
+                <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
                     {/* Gauche — Texte */}
                     <motion.div
-                        className="p-10 md:p-14 flex flex-col justify-center"
+                        className="flex flex-col justify-center"
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
@@ -72,9 +72,9 @@ export default function NationalContext() {
                         </p>
                     </motion.div>
 
-                    {/* Droite — Image (sans rounded puisque hérité) */}
+                    {/* Droite — Image (Même hauteur et border-radius que Institution) */}
                     <motion.div
-                        className="relative min-h-[340px]"
+                        className="relative min-h-[340px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100"
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
@@ -112,9 +112,10 @@ export default function NationalContext() {
                             <motion.div
                                 key={title}
                                 variants={fadeUp}
-                                className="bg-white rounded-2xl p-6 md:p-8 flex flex-col gap-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                                className="bg-white rounded-2xl p-6 flex flex-col gap-3 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
                             >
-                                <div className="w-10 h-10 bg-[#F59E0B]/10 rounded-lg flex items-center justify-center text-[#F59E0B] font-extrabold text-sm">
+                                {/* Badge unifié type EQUIS/AMBA */}
+                                <div className="bg-[#F59E0B]/15 text-[#F59E0B] text-xs font-bold px-3 py-1 rounded-full w-fit mb-1">
                                     {n}
                                 </div>
                                 <div>
@@ -127,7 +128,7 @@ export default function NationalContext() {
                 </div>
 
                 {/* Bottom Section : Les 4 statistiques */}
-                <div className="mt-4">
+                <div className="mt-2">
                     <motion.span
                         className="text-[#0A2540]/60 font-extrabold text-xs uppercase tracking-widest block mb-6 text-center md:text-left"
                         initial={{ opacity: 0 }}
@@ -137,16 +138,17 @@ export default function NationalContext() {
                         LA TRANSFORMATION NUMÉRIQUE EN RÉPUBLIQUE DÉMOCRATIQUE DU CONGO
                     </motion.span>
                     <motion.div
-                        className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 pt-4 border-t border-gray-200"
+                        className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4 border-t border-gray-200"
                         variants={stagger}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
                     >
                         {STATS.map(({ value, label }) => (
-                            <motion.div key={label} variants={fadeUp} className="flex flex-col gap-1">
-                                <div className="text-[#0A2540] font-extrabold text-2xl md:text-3xl">{value}</div>
-                                <div className="text-gray-500 text-xs md:text-sm">{label}</div>
+                            <motion.div key={label} variants={fadeUp} className="flex flex-col">
+                                {/* Taille exacte calquée sur Institution */}
+                                <div className="text-[#0A2540] font-extrabold text-2xl">{value}</div>
+                                <div className="text-gray-400 text-xs mt-1">{label}</div>
                             </motion.div>
                         ))}
                     </motion.div>
