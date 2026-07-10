@@ -41,7 +41,7 @@ export default function Hero() {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.1, duration: 0.4 }}
                     >
-                        Programme Executive 2026
+                        Programme Executive
                     </motion.span>
 
                     <motion.h1
