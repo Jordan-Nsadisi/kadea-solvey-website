@@ -58,10 +58,10 @@ export default function Sessions() {
                                 <Chip><FileText size={11} /> Diagnostic de Maturité</Chip>
                             </div>
                             <div className="flex gap-3 flex-wrap mt-2">
-                                <a href="#" className="border-2 border-[#0A2540] text-[#0A2540] font-bold px-5 py-2 rounded-full text-sm hover:bg-[#0A2540] hover:text-white transition text-center">
+                                <a href="#" className="border-2 border-[#0A2540] text-[#0A2540] font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#0A2540] hover:text-white transition text-center shrink-0">
                                     Programme détaillé
                                 </a>
-                                <a href="#admission" className="bg-[#0A2540] text-white font-bold px-5 py-2 rounded-full text-sm hover:bg-[#0d3060] transition text-center">
+                                <a href="#admission" className="bg-[#0A2540] text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#0d3060] transition text-center shrink-0">
                                     S'inscrire à la Session 1
                                 </a>
                             </div>
@@ -91,10 +91,10 @@ export default function Sessions() {
                                 <Chip light><FileText size={11} /> Portefeuille IA Scoré</Chip>
                             </div>
                             <div className="flex gap-3 flex-wrap mt-2">
-                                <a href="#" className="border-2 border-white text-white font-bold px-5 py-2 rounded-full text-sm hover:bg-white hover:text-[#EC4899] transition text-center">
+                                <a href="#" className="border-2 border-white text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-white hover:text-[#EC4899] transition text-center shrink-0">
                                     Programme détaillé
                                 </a>
-                                <a href="#admission" className="bg-[#0A2540] text-white font-bold px-5 py-2 rounded-full text-sm hover:bg-[#0d3060] transition text-center">
+                                <a href="#admission" className="bg-[#0A2540] text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#0d3060] transition text-center shrink-0">
                                     S'inscrire à la Session 2
                                 </a>
                             </div>
@@ -124,10 +124,10 @@ export default function Sessions() {
                                 <Chip light><FileText size={11} /> Plan de Route 2-3 ans</Chip>
                             </div>
                             <div className="flex gap-3 flex-wrap mt-2">
-                                <a href="#" className="border-2 border-white text-white font-bold px-5 py-2 rounded-full text-sm hover:bg-white hover:text-[#10B981] transition text-center">
+                                <a href="#" className="border-2 border-white text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-white hover:text-[#10B981] transition text-center shrink-0">
                                     Programme détaillé
                                 </a>
-                                <a href="#admission" className="bg-[#0A2540] text-white font-bold px-5 py-2 rounded-full text-sm hover:bg-[#0d3060] transition text-center">
+                                <a href="#admission" className="bg-[#0A2540] text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:bg-[#0d3060] transition text-center shrink-0">
                                     S'inscrire à la Session 3
                                 </a>
                             </div>

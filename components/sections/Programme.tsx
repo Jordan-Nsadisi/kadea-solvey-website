@@ -51,10 +51,10 @@ export default function Programme() {
                             </div>
 
                             <div className="flex gap-3 flex-wrap">
-                                <a href="#admission" className="bg-[#F59E0B] text-[#0A2540] font-bold px-6 py-2.5 rounded-full text-sm hover:brightness-110 transition text-center">
+                                <a href="#admission" className="bg-[#F59E0B] text-[#0A2540] font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:brightness-110 transition text-center shrink-0">
                                     En savoir plus
                                 </a>
-                                <a href="#" className="bg-[#EC4899] text-white font-bold px-6 py-2.5 rounded-full text-sm hover:brightness-110 transition text-center">
+                                <a href="#" className="bg-[#EC4899] text-white font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:brightness-110 transition text-center shrink-0">
                                     Brochure PDF
                                 </a>
                             </div>
