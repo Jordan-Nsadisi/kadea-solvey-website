@@ -47,7 +47,7 @@ export default function RootLayout({
         h-full antialiased
       `}
     >
-      <body className="min-h-full flex flex-col font-jakarta">{children}</body>
+      <body className="min-h-full flex flex-col font-titillium antialiased">{children}</body>
     </html>
   );
 }
