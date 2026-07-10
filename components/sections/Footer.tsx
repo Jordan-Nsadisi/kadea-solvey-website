@@ -1,6 +1,6 @@
-import { Button } from "../ui/atoms/button";
-import { Input } from "../ui/atoms/input";
+import Link from "next/link";
 import { ImageWithFallback } from "../ui/ImageWithFallback";
+import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa"
 
 export default function Footer() {
     return (
@@ -26,8 +26,20 @@ export default function Footer() {
                         />
                     </div>
 
+                    <div className="w-fit flex text-secondary items-center gap-5 text-xl">
+                        <Link target="_blank" href={'https://web.facebook.com/kadea.academy'}>
+                            <FaFacebookF />
+                        </Link>
+                        <Link target="_blank" href={'https://www.instagram.com/kadea_academy'}>
+                            <FaInstagram />
+                        </Link>
+                        <Link target="_blank" href={'https://www.linkedin.com/company/kadeaacademy/'}>
+                            <FaLinkedin />
+                        </Link>
+                    </div>
+
                     <p className="text-gray-600 text-sm text-center">
-                        © 2026 Kadea Executive × ULB-Solvay Lifelong Learning. All rights reserved.
+                        © 2026 Kadea Executive × ULB-Solvay Lifelong Learning. Tous droits réservés.
                     </p>
 
                 </div>
