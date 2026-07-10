@@ -54,13 +54,13 @@ export default function NationalContext() {
                         transition={{ duration: 0.55, ease: "easeOut" }}
                     >
                         <div>
-                            <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-4">
+                            <span className="text-[#7C3AED] font-bold text-xs uppercase tracking-widest block mb-4">
                                 01 · Contexte National
                             </span>
                             <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight">
                                 Le numérique & l&apos;IA, <br className="hidden md:block" />
-                                priorité de la <span className="text-[#F59E0B]">Présidence</span> et <br className="hidden md:block" />
-                                <span className="text-[#F59E0B]">Gouvernement de la RDC</span>
+                                priorité de la <span className="text-[#7C3AED]">Présidence</span> et <br className="hidden md:block" />
+                                <span className="text-[#7C3AED]">Gouvernement de la RDC</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-sm leading-relaxed">
@@ -96,7 +96,7 @@ export default function NationalContext() {
                 {/* Middle Section : Les 3 cadres nationaux */}
                 <div>
                     <motion.span
-                        className="text-[#F59E0B] font-extrabold text-xs uppercase tracking-widest block mb-8 text-center md:text-left"
+                        className="text-[#7C3AED] font-extrabold text-xs uppercase tracking-widest block mb-8 text-center md:text-left"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}

@@ -37,7 +37,7 @@ export default function Admission() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-3">
+                    <span className="text-[#7C3AED] font-bold text-xs uppercase tracking-widest block mb-3">
                         06 · Certification &amp; Admission
                     </span>
                     <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
@@ -61,7 +61,7 @@ export default function Admission() {
                         {/* Certification ULB */}
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                             <div className="flex items-center gap-3 mb-4">
-                                <Award size={20} className="text-[#F59E0B]" />
+                                <Award size={20} className="text-[#7C3AED]" />
                                 <span className="text-white font-extrabold text-sm">Micro-Accréditation ULB</span>
                             </div>
                             <p className="text-white/60 text-xs leading-relaxed mb-3">
@@ -71,7 +71,7 @@ export default function Admission() {
                             </p>
                             <div className="flex flex-wrap gap-2">
                                 {["EQUIS", "AMBA", "ULB"].map((b) => (
-                                    <span key={b} className="bg-[#F59E0B]/15 text-[#F59E0B] text-xs font-bold px-3 py-1 rounded-full">
+                                    <span key={b} className="bg-[#7C3AED]/15 text-[#7C3AED] text-xs font-bold px-3 py-1 rounded-full">
                                         {b}
                                     </span>
                                 ))}

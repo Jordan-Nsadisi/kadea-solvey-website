@@ -11,8 +11,8 @@ const LIVRABLES = [
         subtitle: "12 pages",
         description:
             "Radar FARI sur les 6 dimensions de votre institution. Identification des 2–3 dimensions les plus critiques, des lacunes qui entravent vos ambitions et des axes prioritaires d'action.",
-        color: "bg-[#F59E0B]/20 text-[#F59E0B]",
-        border: "border-[#F59E0B]/30",
+        color: "bg-[#7C3AED]/20 text-[#7C3AED]",
+        border: "border-[#7C3AED]/30",
     },
     {
         id: "L2",
@@ -21,8 +21,8 @@ const LIVRABLES = [
         subtitle: "2 pages",
         description:
             "Synthèse lisible de votre roadmap : 3–4 chantiers prioritaires avec jalons trimestriels, indicateurs de résultat, structure de gouvernance et options de mitigation des 2–3 risques majeurs.",
-        color: "bg-[#45A29E]/20 text-[#45A29E]",
-        border: "border-[#45A29E]/30",
+        color: "bg-[#7C3AED]/20 text-[#7C3AED]",
+        border: "border-[#7C3AED]/30",
     },
     {
         id: "L3",
@@ -68,7 +68,7 @@ export default function Livrables() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-3">
+                    <span className="text-[#7C3AED] font-bold text-xs uppercase tracking-widest block mb-3">
                         05 · Ce que chaque institution emporte
                     </span>
                     <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">

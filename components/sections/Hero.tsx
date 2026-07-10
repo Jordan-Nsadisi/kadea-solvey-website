@@ -36,7 +36,7 @@ export default function Hero() {
                     transition={{ duration: 0.55, ease: "easeOut" }}
                 >
                     <motion.span
-                        className="inline-block bg-[#45A29E]/20 text-[#45A29E] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full w-fit"
+                        className="inline-block bg-[#7C3AED]/20 text-[#7C3AED] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full w-fit"
                         initial={{ y: 15, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.1, duration: 0.4 }}
@@ -141,7 +141,7 @@ export default function Hero() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.55 + i * 0.1, duration: 0.4 }}
                             >
-                                <div className="text-[#F59E0B] font-extrabold text-lg">{val}</div>
+                                <div className="text-[#7C3AED] font-extrabold text-lg">{val}</div>
                                 <div className="text-white/60 text-xs mt-0.5">{label}</div>
                             </motion.div>
                         ))}
