@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./styles/globals.css";
@@ -47,7 +48,9 @@ export default function RootLayout({
         h-full antialiased
       `}
     >
-      <body className="min-h-full flex flex-col font-titillium antialiased">{children}</body>
+      <body className="min-h-full flex flex-col font-titillium antialiased">
+        <Suspense>{children}</Suspense>
+      </body>
     </html>
   );
 }
