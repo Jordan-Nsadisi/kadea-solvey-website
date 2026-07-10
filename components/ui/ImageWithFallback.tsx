@@ -1,9 +1,13 @@
 "use client";
 
-import React, { useState } from 'react'
+import Image from 'next/image';
+import React, { useState } from 'react';
 
-interface ImageWithFallbackProps extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'src'> {
+interface ImageWithFallbackProps extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'src' | 'width' | 'height'> {
     src: string | { src: string } | any;
+    width?: number | `${number}`;
+    height?: number | `${number}`;
+    fill?: boolean;
 }
 
 const ERROR_IMG_SRC =
@@ -16,20 +20,51 @@ export function ImageWithFallback(props: ImageWithFallbackProps) {
         setDidError(true)
     }
 
-    const { src, alt, style, className, ...rest } = props
+    const { src, alt, style, className, width, height, fill, ...rest } = props
 
     const resolvedSrc = src && typeof src === 'object' && 'src' in src ? src.src : src;
 
-    return didError ? (
-        <div
-            className={`inline-block bg-gray-100 text-center align-middle ${className ?? ''}`}
-            style={style}
-        >
-            <div className="flex items-center justify-center w-full h-full">
-                <img src={ERROR_IMG_SRC} alt="Error loading image" {...rest} data-original-url={resolvedSrc} />
+    if (didError) {
+        return (
+            <div
+                className={`inline-block bg-gray-100 text-center align-middle ${className ?? ''}`}
+                style={style}
+            >
+                <div className="flex items-center justify-center w-full h-full">
+                    <img src={ERROR_IMG_SRC} alt="Error loading image" />
+                </div>
             </div>
-        </div>
-    ) : (
-        <img src={resolvedSrc} alt={alt} className={className} style={style} {...rest} onError={handleError} />
-    )
+        )
+    }
+
+    const canUseNextImage = fill || (width && height);
+
+    if (canUseNextImage) {
+        return (
+            <Image
+                src={resolvedSrc || ERROR_IMG_SRC}
+                alt={alt || ''}
+                className={className}
+                style={style}
+                fill={fill}
+                width={fill ? undefined : (width as any)}
+                height={fill ? undefined : (height as any)}
+                onError={handleError}
+                {...rest}
+            />
+        );
+    }
+
+    return (
+        <img
+            src={resolvedSrc}
+            alt={alt}
+            className={className}
+            style={style}
+            width={width as any}
+            height={height as any}
+            onError={handleError}
+            {...rest}
+        />
+    );
 }
