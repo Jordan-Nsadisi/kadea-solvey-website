@@ -68,13 +68,13 @@ export default function Livrables() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <span className="text-[#7C3AED] font-bold text-xs uppercase tracking-widest block mb-3">
+                    <span className="text-[#7C3AED] font-bold text-sm uppercase tracking-widest block mb-3">
                         05 · Ce que chaque institution emporte
                     </span>
-                    <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
                         4 Livrables Opérationnels
                     </h2>
-                    <p className="text-white/60 text-sm mt-3 max-w-xl mx-auto leading-relaxed">
+                    <p className="text-white/60 text-base mt-3 max-w-xl mx-auto leading-relaxed">
                         Ce ne sont pas des rapports académiques — ce sont des documents de direction que vous
                         défendrez devant un jury jouant le rôle de votre comité ministériel ou de direction.
                     </p>
@@ -99,12 +99,12 @@ export default function Livrables() {
                             </div>
                             <div className="flex flex-col gap-2">
                                 <div className="flex items-center gap-2">
-                                    <span className="text-white/40 font-extrabold text-xs uppercase tracking-widest">{id}</span>
-                                    <span className="text-white/20 text-xs">·</span>
-                                    <span className="text-white/40 text-xs">{subtitle}</span>
+                                    <span className="text-white/40 font-extrabold text-sm uppercase tracking-widest">{id}</span>
+                                    <span className="text-white/20 text-sm">·</span>
+                                    <span className="text-white/40 text-sm">{subtitle}</span>
                                 </div>
-                                <h3 className="text-white font-extrabold text-base leading-tight">{title}</h3>
-                                <p className="text-white/60 text-sm leading-relaxed">{description}</p>
+                                <h3 className="text-white font-extrabold text-lg leading-tight">{title}</h3>
+                                <p className="text-white/60 text-base leading-relaxed">{description}</p>
                             </div>
                         </motion.div>
                     ))}
@@ -118,7 +118,7 @@ export default function Livrables() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    <p className="text-white/50 text-xs leading-relaxed">
+                    <p className="text-white/50 text-sm leading-relaxed">
                         <strong className="text-white/70">Format du dossier :</strong> Word ou PDF · 7 à 12 pages hors annexes · Français ·
                         Rédigé à la première personne · Défendu devant le jury lors du pitch de restitution à Bruxelles.
                     </p>

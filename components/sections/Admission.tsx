@@ -37,13 +37,13 @@ export default function Admission() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <span className="text-[#7C3AED] font-bold text-xs uppercase tracking-widest block mb-3">
+                    <span className="text-[#7C3AED] font-bold text-sm uppercase tracking-widest block mb-3">
                         06 · Certification &amp; Admission
                     </span>
-                    <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
                         Rejoignez la Promotion 2026
                     </h2>
-                    <p className="text-white/60 text-sm mt-3 max-w-xl mx-auto">
+                    <p className="text-white/60 text-base mt-3 max-w-xl mx-auto">
                         40 places · Premier engagé, premier servi. Manifestez dès maintenant l&apos;intérêt de votre organisation.
                     </p>
                 </motion.div>
@@ -62,16 +62,16 @@ export default function Admission() {
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                             <div className="flex items-center gap-3 mb-4">
                                 <Award size={20} className="text-[#7C3AED]" />
-                                <span className="text-white font-extrabold text-sm">Micro-Accréditation ULB</span>
+                                <span className="text-white font-extrabold text-base">Micro-Accréditation ULB</span>
                             </div>
-                            <p className="text-white/60 text-xs leading-relaxed mb-3">
+                            <p className="text-white/60 text-sm leading-relaxed mb-3">
                                 <strong className="text-white/80">University Micro-Credential</strong> — ULB Solvay Lifelong Learning.
                                 Délivré sous condition de présence aux trois sessions et de la présentation du projet
                                 devant le consortium (pitch de restitution).
                             </p>
                             <div className="flex flex-wrap gap-2">
                                 {["EQUIS", "AMBA", "ULB"].map((b) => (
-                                    <span key={b} className="bg-[#7C3AED]/15 text-[#7C3AED] text-xs font-bold px-3 py-1 rounded-full">
+                                    <span key={b} className="bg-[#7C3AED]/15 text-[#7C3AED] text-sm font-bold px-3 py-1 rounded-full">
                                         {b}
                                     </span>
                                 ))}
@@ -80,10 +80,10 @@ export default function Admission() {
 
                         {/* Prix */}
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                            <div className="text-white/50 text-xs font-semibold mb-1">Valeur du programme</div>
-                            <div className="text-[#84cc16] font-extrabold text-4xl">7 500 $</div>
-                            <div className="text-white/40 text-xs mt-1">USD · par participant</div>
-                            <div className="mt-4 pt-4 border-t border-white/10 text-white/50 text-xs leading-relaxed">
+                            <div className="text-white/50 text-sm font-semibold mb-1">Valeur du programme</div>
+                            <div className="text-[#84cc16] font-extrabold text-5xl">7 500 $</div>
+                            <div className="text-white/40 text-sm mt-1">USD · par participant</div>
+                            <div className="mt-4 pt-4 border-t border-white/10 text-white/50 text-sm leading-relaxed">
                                 💡 <strong className="text-white/70">Financement possible :</strong> prise en charge
                                 entreprise, subvention institutionnelle ou paiement échelonné. Contactez-nous.
                             </div>
@@ -91,14 +91,14 @@ export default function Admission() {
 
                         {/* Contact */}
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                            <span className="text-white/50 text-xs font-semibold uppercase tracking-widest block mb-3">Contact</span>
-                            <p className="text-white font-semibold text-sm">Thomas Strouvens</p>
-                            <p className="text-white/50 text-xs mb-3">CEO Kadea Executive</p>
+                            <span className="text-white/50 text-sm font-semibold uppercase tracking-widest block mb-3">Contact</span>
+                            <p className="text-white font-semibold text-base">Thomas Strouvens</p>
+                            <p className="text-white/50 text-sm mb-3">CEO Kadea Executive</p>
                             <div className="flex flex-col gap-2">
-                                <a href="mailto:thomas@kadea.co" className="inline-flex items-center gap-2 text-[#84cc16] text-xs hover:underline">
+                                <a href="mailto:thomas@kadea.co" className="inline-flex items-center gap-2 text-[#84cc16] text-sm hover:underline">
                                     <Mail size={12} /> thomas@kadea.co
                                 </a>
-                                <a href="tel:+32470881395" className="inline-flex items-center gap-2 text-[#84cc16] text-xs hover:underline">
+                                <a href="tel:+32470881395" className="inline-flex items-center gap-2 text-[#84cc16] text-sm hover:underline">
                                     <Phone size={12} /> +32 470 88 13 95
                                 </a>
                             </div>
@@ -115,11 +115,11 @@ export default function Admission() {
                     >
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                             <div className="flex items-center gap-2 mb-4">
-                                <span className="bg-[#EC4899] text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                                <span className="bg-[#EC4899] text-white text-sm font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
                                     ⚠ Places Limitées
                                 </span>
                             </div>
-                            <p className="text-white font-semibold text-sm mb-5 leading-relaxed">
+                            <p className="text-white font-semibold text-base mb-5 leading-relaxed">
                                 <strong className="text-[#fde047]">40 places disponibles maximum.</strong>{" "}
                                 Recrutement sélectif réparti en 2 promotions strictes :
                             </p>
@@ -137,21 +137,21 @@ export default function Admission() {
                                         className="flex items-center justify-between bg-white/5 rounded-xl px-4 py-3 border border-white/10"
                                     >
                                         <div className="flex items-center gap-3">
-                                            <span className="text-lg">{icon}</span>
+                                            <span className="text-xl">{icon}</span>
                                             <div>
-                                                <div className="text-white text-sm font-semibold">{label}</div>
-                                                <div className="text-white/40 text-xs">{places}</div>
+                                                <div className="text-white text-base font-semibold">{label}</div>
+                                                <div className="text-white/40 text-sm">{places}</div>
                                             </div>
                                         </div>
                                         <CheckCircle size={16} className="text-[#84cc16] shrink-0" />
                                     </motion.div>
                                 ))}
                             </motion.div>
-                            <p className="text-white/50 text-xs mt-5 leading-relaxed">
+                            <p className="text-white/50 text-sm mt-5 leading-relaxed">
                                 Règle du <strong className="text-white/70">premier engagé, premier servi</strong>.
                                 Les dossiers sont étudiés par ordre de réception.
                             </p>
-                            <a href="#" className="mt-4 inline-flex items-center gap-1 text-[#fde047] text-xs font-bold hover:underline group">
+                            <a href="#" className="mt-4 inline-flex items-center gap-1 text-[#fde047] text-sm font-bold hover:underline group">
                                 Voir les critères de sélection{" "}
                                 <ArrowRight size={12} className="transform group-hover:translate-x-0.5 transition-transform" />
                             </a>
@@ -160,7 +160,7 @@ export default function Admission() {
                         {/* CTA principal */}
                         <a
                             href="mailto:thomas@kadea.co?subject=Candidature%20Programme%20Executive%202026"
-                            className="block bg-[#7C3AED] text-white font-extrabold text-center px-7 py-4 rounded-2xl hover:bg-[#6D28D9] transition shadow-lg shadow-black/20 text-base"
+                            className="block bg-[#7C3AED] text-white font-extrabold text-center px-7 py-4 rounded-2xl hover:bg-[#6D28D9] transition shadow-lg shadow-black/20 text-lg"
                         >
                             Candidater à la Promotion 2026 →
                         </a>
@@ -174,7 +174,7 @@ export default function Admission() {
                         transition={{ duration: 0.5, delay: 0.15 }}
                     >
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6 h-full">
-                            <span className="text-white/50 text-xs font-semibold uppercase tracking-widest block mb-6">
+                            <span className="text-white/50 text-sm font-semibold uppercase tracking-widest block mb-6">
                                 Processus de candidature
                             </span>
                             <motion.div
@@ -193,8 +193,8 @@ export default function Admission() {
                                             {i < TIMELINE.length - 1 && <div className="w-px h-6 bg-white/10 mt-1.5" />}
                                         </div>
                                         <div className="pt-1.5">
-                                            <div className="text-white text-sm font-semibold">{i + 1}. {label}</div>
-                                            <div className="text-white/50 text-xs mt-0.5">{desc}</div>
+                                            <div className="text-white text-base font-semibold">{i + 1}. {label}</div>
+                                            <div className="text-white/50 text-sm mt-0.5">{desc}</div>
                                         </div>
                                     </motion.div>
                                 ))}
@@ -202,7 +202,7 @@ export default function Admission() {
 
                             {/* Tagline */}
                             <div className="mt-8 pt-6 border-t border-white/10 text-center">
-                                <p className="text-white/30 text-xs italic font-semibold tracking-widest uppercase">
+                                <p className="text-white/30 text-sm italic font-semibold tracking-widest uppercase">
                                     Dream. Learn. Lead.
                                 </p>
                             </div>

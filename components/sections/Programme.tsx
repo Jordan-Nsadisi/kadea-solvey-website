@@ -43,13 +43,13 @@ export default function Programme() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <span className="text-[#7C3AED] font-bold text-xs uppercase tracking-widest block mb-3">
+                    <span className="text-[#7C3AED] font-bold text-sm uppercase tracking-widest block mb-3">
                         03 · Le Programme
                     </span>
-                    <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight max-w-2xl mb-4">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A2540] leading-tight max-w-2xl mb-4">
                         Piloter le digital &amp; l&apos;IA de votre organisation
                     </h2>
-                    <p className="text-gray-500 text-sm leading-relaxed max-w-2xl">
+                    <p className="text-gray-500 text-base leading-relaxed max-w-2xl">
                         Ce programme intensif est conçu pour le{" "}
                         <strong className="text-[#0A2540]">Top Management, les DSI et les DRH</strong> des
                         institutions publiques et entreprises privées de la RDC. Il couvre 4 domaines clés :
@@ -81,10 +81,10 @@ export default function Programme() {
 
                         {/* Public cible */}
                         <div className="border-l-4 border-[#7C3AED] pl-4 py-1">
-                            <span className="text-[#7C3AED] font-bold text-xs uppercase tracking-widest block mb-2">
+                            <span className="text-[#7C3AED] font-bold text-sm uppercase tracking-widest block mb-2">
                                 Public cible
                             </span>
-                            <ul className="text-[#0A2540] text-sm space-y-1">
+                            <ul className="text-[#0A2540] text-base space-y-1">
                                 {[
                                     "Ministres, Secrétaires Généraux, Directeurs Généraux",
                                     "DSI / DNUM des institutions publiques",
@@ -93,7 +93,7 @@ export default function Programme() {
                                 ].map((item) => (
                                     <li key={item} className="flex items-start gap-2">
                                         <span className="text-[#7C3AED] mt-0.5 shrink-0">·</span>
-                                        <span className="text-gray-600 text-sm leading-relaxed">{item}</span>
+                                        <span className="text-gray-600 text-base leading-relaxed">{item}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -112,7 +112,7 @@ export default function Programme() {
                         <div className="border border-gray-100 rounded-2xl p-6 bg-white shadow-sm">
                             <div className="flex items-center gap-2 mb-4">
                                 <div className="w-1 h-5 bg-[#7C3AED] rounded-full" />
-                                <span className="text-[#0A2540] font-extrabold text-xs uppercase tracking-widest">
+                                <span className="text-[#0A2540] font-extrabold text-sm uppercase tracking-widest">
                                     Cadre de Maturité FARI — 6 Dimensions Clés
                                 </span>
                             </div>
@@ -125,12 +125,12 @@ export default function Programme() {
                             >
                                 {FARI_DIMENSIONS.map(({ n, label }) => (
                                     <motion.div key={n} variants={fadeUp} className="flex items-center gap-2">
-                                        <span className="text-[#7C3AED] font-extrabold text-xs w-6">{n}</span>
-                                        <span className="text-[#0A2540] text-xs font-medium">{label}</span>
+                                        <span className="text-[#7C3AED] font-extrabold text-sm w-6">{n}</span>
+                                        <span className="text-[#0A2540] text-sm font-medium">{label}</span>
                                     </motion.div>
                                 ))}
                             </motion.div>
-                            <p className="text-gray-400 text-xs mt-4 leading-relaxed">
+                            <p className="text-gray-400 text-sm mt-4 leading-relaxed">
                                 Chaque participant produit un <strong className="text-[#0A2540]">radar sur les 6 dimensions</strong> de
                                 son institution — socle du diagnostic stratégique.
                             </p>
@@ -138,7 +138,7 @@ export default function Programme() {
 
                         {/* 4 Domaines en liste propre */}
                         <div>
-                            <span className="text-[#0A2540] font-bold text-sm block mb-4">
+                            <span className="text-[#0A2540] font-bold text-base block mb-4">
                                 4 Domaines d&apos;expertise couverts :
                             </span>
                             <motion.div
@@ -158,8 +158,8 @@ export default function Programme() {
                                             <Icon size={18} className="text-[#7C3AED]" />
                                         </div>
                                         <div className="flex flex-col">
-                                            <span className="text-[#0A2540] font-bold text-sm">{label}</span>
-                                            <span className="text-gray-500 text-xs leading-snug">{desc}</span>
+                                            <span className="text-[#0A2540] font-bold text-base">{label}</span>
+                                            <span className="text-gray-500 text-sm leading-snug">{desc}</span>
                                         </div>
                                     </motion.div>
                                 ))}
@@ -175,14 +175,14 @@ export default function Programme() {
                         >
                             <a
                                 href="#admission"
-                                className="inline-flex items-center gap-2 bg-[#7C3AED] text-white font-semibold px-5 py-2.5 rounded-md text-sm md:text-[15px] hover:bg-[#6D28D9] transition shrink-0"
+                                className="inline-flex items-center gap-2 bg-[#7C3AED] text-white font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#6D28D9] transition shrink-0"
                             >
                                 S&apos;inscrire
                             </a>
                             <a
                                 href="/docs/Programme_Executive_Transformation_Digitale_IA_Solvay-ULB_2026_compressed.pdf"
                                 target="_blank"
-                                className="inline-flex items-center gap-2 border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-md text-sm md:text-[15px] hover:bg-[#7C3AED] hover:text-white transition shrink-0"
+                                className="inline-flex items-center gap-2 border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#7C3AED] hover:text-white transition shrink-0"
                             >
                                 <FileDown size={15} />
                                 Brochure PDF

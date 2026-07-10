@@ -66,10 +66,10 @@ export default function OtherFieldsSection() {
                     viewport={{ once: true, amount: 0.4 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <h2 className="font-extrabold text-2xl md:text-3xl text-[#0A2540] mb-4">
+                    <h2 className="font-extrabold text-3xl md:text-4xl text-[#0A2540] mb-4">
                         Kadea, c&apos;est aussi :
                     </h2>
-                    <p className="text-gray-400 text-sm max-w-lg mx-auto">
+                    <p className="text-gray-400 text-base max-w-lg mx-auto">
                         Découvrez l&apos;ensemble de l&apos;écosystème Kadea au service de votre croissance.
                     </p>
                 </motion.div>
@@ -113,13 +113,13 @@ export default function OtherFieldsSection() {
                                             className="h-7 w-auto object-contain"
                                         />
                                     </Link>
-                                    <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                                    <p className="text-gray-600 text-base leading-relaxed">{item.description}</p>
                                 </div>
 
                                 <Link
                                     href={item.link}
                                     target="_blank"
-                                    className={`inline-flex items-center gap-1.5 w-fit ${item.color} font-semibold px-5 py-2 rounded-md text-sm md:text-[15px] hover:brightness-110 transition shrink-0`}
+                                    className={`inline-flex items-center gap-1.5 w-fit ${item.color} font-semibold px-5 py-2 rounded-md text-base md:text-xl hover:brightness-110 transition shrink-0`}
                                 >
                                     En savoir plus
                                 </Link>

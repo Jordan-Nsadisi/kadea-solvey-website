@@ -15,7 +15,7 @@ export default function Partners() {
         <section className="bg-white border-b border-black/8 py-8">
             <div className="w-full container mx-auto px-5">
                 <motion.p
-                    className="text-center text-xs text-gray-400 font-semibold uppercase tracking-widest mb-6"
+                    className="text-center text-sm text-gray-400 font-semibold uppercase tracking-widest mb-6"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

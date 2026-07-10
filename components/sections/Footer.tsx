@@ -26,7 +26,7 @@ export default function Footer() {
                         />
                     </div>
 
-                    <div className="w-fit flex text-secondary items-center gap-5 text-xl">
+                    <div className="w-fit flex text-secondary items-center gap-5 text-2xl">
                         <Link target="_blank" href={'https://web.facebook.com/kadea.academy'}>
                             <FaFacebookF />
                         </Link>
@@ -40,7 +40,7 @@ export default function Footer() {
 
                     <div className="w-full h-px bg-gray-100 my-2 max-w-lg" />
 
-                    <p className="text-gray-400 text-xs text-center">
+                    <p className="text-gray-400 text-sm text-center">
                         © 2026 Kadea Executive × ULB-Solvay Lifelong Learning. Tous droits réservés.
                     </p>
 

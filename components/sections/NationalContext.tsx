@@ -54,21 +54,21 @@ export default function NationalContext() {
                         transition={{ duration: 0.55, ease: "easeOut" }}
                     >
                         <div>
-                            <span className="text-[#7C3AED] font-bold text-xs uppercase tracking-widest block mb-4">
+                            <span className="text-[#7C3AED] font-bold text-sm uppercase tracking-widest block mb-4">
                                 01 · Contexte National
                             </span>
-                            <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight">
+                            <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A2540] leading-tight">
                                 Le numérique & l&apos;IA, <br className="hidden md:block" />
                                 priorité de la <span className="text-[#7C3AED]">Présidence</span> et <br className="hidden md:block" />
                                 <span className="text-[#7C3AED]">Gouvernement de la RDC</span>
                             </h2>
                         </div>
-                        <p className="text-gray-600 text-sm leading-relaxed">
+                        <p className="text-gray-600 text-base leading-relaxed">
                             Sous l&apos;impulsion de la Présidence, la République Démocratique du Congo engage un tournant
                             décisif vers le numérique et l&apos;intelligence artificielle, porté par une nouvelle génération
                             de stratégies nationales.
                         </p>
-                        <p className="text-[#0A2540] font-bold text-sm leading-relaxed">
+                        <p className="text-[#0A2540] font-bold text-base leading-relaxed">
                             ULB-Solvay Lifelong Learning accompagne la Présidence dans cette réflexion et outille ses
                             décideurs pour piloter la transformation digitale & l&apos;IA des institutions publiques.
                         </p>
@@ -96,7 +96,7 @@ export default function NationalContext() {
                 {/* Middle Section : Les 3 cadres nationaux */}
                 <div>
                     <motion.span
-                        className="text-[#7C3AED] font-extrabold text-xs uppercase tracking-widest block mb-8 text-center md:text-left"
+                        className="text-[#7C3AED] font-extrabold text-sm uppercase tracking-widest block mb-8 text-center md:text-left"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -117,8 +117,8 @@ export default function NationalContext() {
                                 className="bg-white rounded-2xl p-6 flex flex-col gap-3 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
                             >
                                 <div className="mt-1">
-                                    <h4 className="text-[#0A2540] font-bold text-[15px] mb-2">{title}</h4>
-                                    <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
+                                    <h4 className="text-[#0A2540] font-bold text-xl mb-2">{title}</h4>
+                                    <p className="text-gray-500 text-base leading-relaxed">{desc}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -128,7 +128,7 @@ export default function NationalContext() {
                 {/* Bottom Section : Les 4 statistiques */}
                 <div>
                     <motion.span
-                        className="text-[#0A2540]/60 font-extrabold text-xs uppercase tracking-widest block mb-8 text-center md:text-left"
+                        className="text-[#0A2540]/60 font-extrabold text-sm uppercase tracking-widest block mb-8 text-center md:text-left"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -145,8 +145,8 @@ export default function NationalContext() {
                         {STATS.map(({ value, label }) => (
                             <motion.div key={label} variants={fadeUp} className="flex flex-col">
                                 {/* Taille exacte calquée sur Institution */}
-                                <div className="text-[#0A2540] font-extrabold text-2xl">{value}</div>
-                                <div className="text-gray-400 text-xs mt-1">{label}</div>
+                                <div className="text-[#0A2540] font-extrabold text-3xl">{value}</div>
+                                <div className="text-gray-400 text-sm mt-1">{label}</div>
                             </motion.div>
                         ))}
                     </motion.div>
