@@ -13,9 +13,21 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
                 {/* Logos */}
                 <div className="flex items-center gap-4">
-                    <ImageWithFallback src="/logos/Black.png" alt="ULB-Solvay Lifelong Learning" className="h-8 object-contain" />
+                    <ImageWithFallback
+                        src="/logos/Black.png"
+                        alt="ULB-Solvay Lifelong Learning"
+                        width={160}
+                        height={32}
+                        className="w-28 md:w-40 h-auto object-contain"
+                    />
                     <div className="w-px h-6 bg-gray-200" />
-                    <ImageWithFallback src="/logos/Logo_Kadea_Exe.png" alt="Kadea Executive" className="h-7 object-contain" />
+                    <ImageWithFallback
+                        src="/logos/Logo_Kadea_Exe.png"
+                        alt="Kadea Executive"
+                        width={160}
+                        height={32}
+                        className="w-28 md:w-40 h-auto object-contain"
+                    />
                 </div>
                 {/* Desktop nav */}
                 <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-[#0A2540]">
