@@ -92,30 +92,6 @@ export default function Institution() {
                                 Double Accréditation Internationale
                             </motion.span>
                         </motion.div>
-
-                        {/* Partenaires locaux */}
-                        <div className="mt-6 pt-4 border-t border-gray-100">
-                            <span className="text-gray-400 text-xs font-semibold uppercase tracking-widest block mb-3">
-                                Partenaires locaux
-                            </span>
-                            <motion.div
-                                className="flex flex-wrap gap-2"
-                                variants={stagger}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                            >
-                                {LOCAL_PARTNERS.map((p) => (
-                                    <motion.span
-                                        key={p}
-                                        variants={fadeUp}
-                                        className="bg-[#0A2540]/8 text-[#0A2540] text-xs font-semibold px-3 py-1 rounded-full border border-[#0A2540]/10"
-                                    >
-                                        {p}
-                                    </motion.span>
-                                ))}
-                            </motion.div>
-                        </div>
                     </motion.div>
 
                     {/* Droite — image (Avec border-radius indépendant) */}
