@@ -110,16 +110,12 @@ export default function NationalContext() {
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
                     >
-                        {FRAMEWORKS.map(({ n, title, desc }) => (
+                        {FRAMEWORKS.map(({ title, desc }) => (
                             <motion.div
                                 key={title}
                                 variants={fadeUp}
                                 className="bg-white rounded-2xl p-6 flex flex-col gap-3 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
                             >
-                                {/* Badge unifié type EQUIS/AMBA */}
-                                <div className="bg-[#F59E0B]/15 text-[#F59E0B] text-xs font-bold px-3 py-1 rounded-full w-fit">
-                                    {n}
-                                </div>
                                 <div className="mt-1">
                                     <h4 className="text-[#0A2540] font-bold text-[15px] mb-2">{title}</h4>
                                     <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
