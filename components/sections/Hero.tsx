@@ -23,7 +23,7 @@ const partners = [
 
 export default function Hero() {
     return (
-        <section className="bg-[#0A2540] relative overflow-hidden">
+        <section className="bg-[#15294e] relative overflow-hidden">
 
             {/* ── Main grid ── */}
             <div className="w-full container mx-auto px-5 text-white pt-10 md:pt-16 grid grid-cols-1 md:grid-cols-2 gap-5 items-end">
