@@ -2,16 +2,15 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
+
+import academy from "@/public/logos/academy.png"
+import software from "@/public/logos/software.png"
 import Image from "next/image"
 
+import academyCover from "@/public/assets/images/academy.jpg"
+import softwareCover from "@/public/assets/images/software.png"
+
 export default function OtherFieldsSection() {
-
-  let academy = "/logo/academy.png"
-  let software = "/logo/software.png"
-
-  let academyCover = "/assets/images/academy.jpg"
-  let softwareCover = "/assets/images/software.png"
-
   const items = [
     {
       color: "bg-[#E5203D] text-white",
