@@ -13,13 +13,13 @@ export default function Hero() {
     return (
         <section className="bg-[#0A2540] relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="grid md:grid-cols-2 gap-0 min-h-[520px]">
+                <div className="grid md:grid-cols-2 gap-0 min-h-[680px]">
                     {/* Left: portrait */}
                     <div className="relative flex items-end">
                         <ImageWithFallback
                             src={HERO_PORTRAIT}
                             alt="Dirigeant exécutif africain"
-                            className="w-full max-w-[420px] h-[520px] object-cover object-top rounded-t-3xl"
+                            className="w-full max-w-[420px] h-[680px] object-cover object-top rounded-t-3xl"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0A2540]/40 rounded-t-3xl" />
                     </div>
