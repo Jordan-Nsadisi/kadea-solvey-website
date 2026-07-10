@@ -1,3 +1,4 @@
+import { homeMetadata } from "@/constants/seo";
 import Admission from '@/components/sections/Admission'
 import Footer from '@/components/sections/Footer'
 import Hero from '@/components/sections/Hero'
@@ -6,6 +7,8 @@ import Navbar from '@/components/sections/Navbar'
 import Partners from '@/components/sections/Partners'
 import Programme from '@/components/sections/Programme'
 import Sessions from '@/components/sections/Sessions'
+
+export const metadata = homeMetadata;
 
 export default function Home() {
   return (
