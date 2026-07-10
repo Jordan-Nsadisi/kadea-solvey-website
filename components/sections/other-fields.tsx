@@ -84,6 +84,7 @@ export default function OtherFieldsSection() {
                     {items.map((item) => (
                         <motion.div
                             key={item.title}
+                            variants={cardVariant}
                             whileHover={{ y: -5 }}
                             transition={{ type: "spring", stiffness: 280, damping: 20 }}
                             className={`relative w-full bg-white rounded-2xl shadow-sm border border-transparent ${item.hoverBorder} hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col`}
