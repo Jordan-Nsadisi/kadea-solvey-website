@@ -1,66 +1,152 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
-import { ImageWithFallback } from "../ui/ImageWithFallback";
+import { motion } from "motion/react";
+import Image from "next/image";
+import heroImg from "@/public/assets/images/hero.png";
+import microsoftLogo from "@/public/assets/partners/microsoft.png";
+import solvayLogo from "@/public/assets/partners/solvay-black.png";
 
-const u = (id: string, w: number, h: number) =>
-    `https://images.unsplash.com/photo-${id}?w=${w}&h=${h}&fit=crop&auto=format`;
+const stats = [
+    { val: "9 Jours", label: "de Formation Intensive" },
+    { val: "3 Sessions", label: "de 3 Jours chacune" },
+    { val: "Kinshasa & Bruxelles", label: "Double immersion" },
+    { val: "Micro-accréditation", label: "Universitaire ULB" },
+];
+
+const partners = [
+    { name: "ULB-Solvay Lifelong Learning", logo: solvayLogo, w: 160, h: 40 },
+    { name: "Microsoft", logo: microsoftLogo, w: 140, h: 36 },
+];
 
 export default function Hero() {
-
-    const HERO_PORTRAIT = u("1507003211169-0a1dd7228f2d", 600, 720);
-
     return (
         <section className="bg-[#0A2540] relative overflow-hidden">
-            <div className="w-full container mx-auto px-5">
-                <div className="grid md:grid-cols-2 gap-0 min-h-[680px]">
-                    {/* Left: portrait */}
-                    <div className="relative flex items-end justify-center md:justify-start">
-                        <ImageWithFallback
-                            src="/assets/images/hero.png"
-                            alt="Dirigeant exécutif africain"
-                            className="w-full max-w-[420px] h-[680px] object-cover object-top rounded-t-3xl"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0A2540]/40 rounded-t-3xl pointer-events-none" />
-                    </div>
-                    {/* Right: content */}
-                    <div className="flex flex-col justify-center py-14 pl-2 pr-0 md:pl-8">
-                        <span className="inline-block bg-[#45A29E]/20 text-[#45A29E] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-5 w-fit">
-                            Programme Executive 2026
-                        </span>
-                        <h1 className="text-3xl md:text-4xl font-extrabold text-white leading-[1.15] mb-6">
-                            Transformation Digitale &amp; IA en République Démocratique du Congo
-                        </h1>
-                        <p className="text-blue-100/80 text-base mb-8 max-w-md">
-                            Un parcours conçu par ULB-Solvay Lifelong Learning pour outiller les dirigeants des Institutions Publiques et les entreprises privées à piloter la transformation digitale et l'adoption de l'IA.
-                        </p>
+
+            {/* ── Main grid ── */}
+            <div className="w-full container mx-auto px-5 text-white pt-10 md:pt-16 grid grid-cols-1 md:grid-cols-2 gap-5 items-end">
+
+                {/* Left — portrait */}
+                <motion.div
+                    className="relative w-full h-[400px] md:h-[620px] flex items-end"
+                    initial={{ opacity: 0, x: -40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.55, ease: "easeOut" }}
+                >
+                    <Image
+                        src={heroImg}
+                        alt="Dirigeant exécutif africain"
+                        fill
+                        priority
+                        className="object-cover object-top rounded-t-3xl"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0A2540]/50 rounded-t-3xl pointer-events-none" />
+                </motion.div>
+
+                {/* Right — content */}
+                <motion.div
+                    className="flex flex-col gap-6 pb-14 md:pb-20 pl-0 md:pl-8"
+                    initial={{ opacity: 0, x: 40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.55, ease: "easeOut" }}
+                >
+                    <motion.span
+                        className="inline-block bg-[#45A29E]/20 text-[#45A29E] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full w-fit"
+                        initial={{ y: 15, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.1, duration: 0.4 }}
+                    >
+                        Programme Executive 2026
+                    </motion.span>
+
+                    <motion.h1
+                        className="font-bold text-3xl md:text-4xl leading-[1.15]"
+                        initial={{ y: 15, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.2, duration: 0.4 }}
+                    >
+                        Transformation Digitale &amp; IA en République Démocratique du Congo
+                    </motion.h1>
+
+                    <motion.p
+                        className="text-blue-100/80 text-base max-w-md leading-relaxed"
+                        initial={{ y: 15, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.3, duration: 0.4 }}
+                    >
+                        Un parcours conçu par ULB-Solvay Lifelong Learning pour outiller les dirigeants des
+                        Institutions Publiques et les entreprises privées à piloter la transformation digitale
+                        et l&apos;adoption de l&apos;IA.
+                    </motion.p>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.45, duration: 0.4 }}
+                        className="w-fit"
+                    >
                         <a
-                            href="#"
-                            className="inline-flex items-center gap-2 bg-[#EC4899] text-white font-semibold px-5 py-2 text-sm md:text-[15px] rounded-md w-fit hover:bg-[#db2777] transition-all hover:gap-3 shadow-lg shadow-pink-900/30"
+                            href="#admission"
+                            className="inline-flex items-center gap-2 bg-[#EC4899] text-white font-semibold px-5 py-2 text-sm md:text-[15px] rounded-md hover:bg-[#db2777] transition-all hover:gap-3 shadow-lg shadow-pink-900/30 shrink-0"
                         >
                             Rejoindre la Promo 2026 <ArrowRight size={16} />
                         </a>
-                    </div>
-                </div>
+                    </motion.div>
+
+                    {/* Partner logos — staggered */}
+                    <motion.div
+                        className="flex items-center gap-5 flex-wrap mt-2"
+                        initial="hidden"
+                        animate="visible"
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: { staggerChildren: 0.12, delayChildren: 0.5 },
+                            },
+                        }}
+                    >
+                        {partners.map((p) => (
+                            <motion.div
+                                key={p.name}
+                                className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2 flex items-center justify-center"
+                                variants={{ hidden: { scale: 0, opacity: 0 }, visible: { scale: 1, opacity: 1 } }}
+                                whileHover={{ scale: 1.06 }}
+                                transition={{ type: "spring", stiffness: 260, damping: 18 }}
+                            >
+                                <Image
+                                    src={p.logo}
+                                    alt={p.name}
+                                    width={p.w}
+                                    height={p.h}
+                                    className="h-7 w-auto object-contain brightness-0 invert"
+                                />
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </motion.div>
             </div>
-            {/* Bottom banner */}
-            <div className="bg-[#061828] py-5">
-                <div className="max-w-7xl mx-auto px-6">
+
+            {/* ── Stats banner ── */}
+            <div className="bg-[#061828] py-5 mt-0">
+                <div className="w-full container mx-auto px-5">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0 md:divide-x md:divide-white/10">
-                        {[
-                            { val: "9 Jours", label: "de Formation Intensive" },
-                            { val: "3 Sessions", label: "de 3 Jours chacune" },
-                            { val: "Kinshasa & Bruxelles", label: "Double immersion" },
-                            { val: "Micro-accréditation", label: "Universitaire ULB" },
-                        ].map(({ val, label }) => (
-                            <div key={val} className="text-center px-4">
+                        {stats.map(({ val, label }, i) => (
+                            <motion.div
+                                key={val}
+                                className="text-center px-4"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.55 + i * 0.1, duration: 0.4 }}
+                            >
                                 <div className="text-[#F59E0B] font-extrabold text-lg">{val}</div>
                                 <div className="text-white/60 text-xs mt-0.5">{label}</div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
             </div>
         </section>
-    )
+    );
 }
