@@ -15,13 +15,13 @@ export default function Hero() {
             <div className="w-full container mx-auto px-5">
                 <div className="grid md:grid-cols-2 gap-0 min-h-[680px]">
                     {/* Left: portrait */}
-                    <div className="relative flex items-end">
+                    <div className="relative flex items-end justify-center md:justify-start">
                         <ImageWithFallback
                             src="/assets/images/hero.png"
                             alt="Dirigeant exécutif africain"
                             className="w-full max-w-[420px] h-[680px] object-cover object-top rounded-t-3xl"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0A2540]/40 rounded-t-3xl" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0A2540]/40 rounded-t-3xl pointer-events-none" />
                     </div>
                     {/* Right: content */}
                     <div className="flex flex-col justify-center py-14 pl-2 pr-0 md:pl-8">
