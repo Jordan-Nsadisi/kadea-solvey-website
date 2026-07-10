@@ -40,37 +40,41 @@ const fadeUp = {
 
 export default function NationalContext() {
     return (
-        <section id="contexte" className="py-16 bg-white">
-            <div className="w-full container mx-auto px-5 flex flex-col gap-12 md:gap-16">
+        <section id="contexte" className="py-12 bg-[#F8FAFC]">
+            <div className="w-full container mx-auto px-5 flex flex-col gap-10">
 
-                {/* Top Section : Texte (gauche) + Image (droite) */}
-                <div className="grid md:grid-cols-2 gap-10 items-center">
+                {/* Top Section : Split Card (comme Institution) */}
+                <div className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm grid md:grid-cols-2 gap-0">
+                    {/* Gauche — Texte */}
                     <motion.div
-                        className="flex flex-col gap-5"
+                        className="p-10 md:p-14 flex flex-col justify-center"
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.55, ease: "easeOut" }}
                     >
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A2540] leading-tight">
-                            Le numérique & l&apos;IA, <br />
-                            priorité de la <span className="text-[#F59E0B]">Présidence</span> et <br />
+                        <span className="text-[#45A29E] font-bold text-xs uppercase tracking-widest block mb-4">
+                            01 · Contexte National
+                        </span>
+                        <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight mb-5">
+                            Le numérique & l&apos;IA, <br className="hidden md:block" />
+                            priorité de la <span className="text-[#F59E0B]">Présidence</span> et <br className="hidden md:block" />
                             <span className="text-[#F59E0B]">Gouvernement de la RDC</span>
                         </h2>
-                        <p className="text-gray-500 text-sm md:text-base leading-relaxed mt-2">
+                        <p className="text-gray-600 text-sm leading-relaxed mb-4">
                             Sous l&apos;impulsion de la Présidence, la République Démocratique du Congo engage un tournant
                             décisif vers le numérique et l&apos;intelligence artificielle, porté par une nouvelle génération
                             de stratégies nationales.
                         </p>
-                        <p className="text-[#0A2540] font-bold text-sm md:text-base leading-relaxed">
+                        <p className="text-[#0A2540] font-bold text-sm leading-relaxed">
                             ULB-Solvay Lifelong Learning accompagne la Présidence dans cette réflexion et outille ses
-                            décideurs pour piloter la transformation digitale & l&apos;IA des institutions publiques et le
-                            développement des usages de l&apos;IA au sein de l&apos;État.
+                            décideurs pour piloter la transformation digitale & l&apos;IA des institutions publiques.
                         </p>
                     </motion.div>
 
+                    {/* Droite — Image (sans rounded puisque hérité) */}
                     <motion.div
-                        className="relative w-full h-[250px] md:h-[350px] rounded-xl overflow-hidden shadow-md"
+                        className="relative min-h-[340px]"
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
@@ -83,13 +87,14 @@ export default function NationalContext() {
                             className="object-cover object-center"
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
                     </motion.div>
                 </div>
 
                 {/* Middle Section : Les 3 cadres nationaux */}
                 <div>
                     <motion.span
-                        className="text-[#F59E0B] font-extrabold text-xs uppercase tracking-widest block mb-6"
+                        className="text-[#F59E0B] font-extrabold text-xs uppercase tracking-widest block mb-6 text-center md:text-left"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -107,13 +112,13 @@ export default function NationalContext() {
                             <motion.div
                                 key={title}
                                 variants={fadeUp}
-                                className="bg-[#F8FAFC] rounded-2xl p-6 md:p-8 flex flex-col gap-4"
+                                className="bg-white rounded-2xl p-6 md:p-8 flex flex-col gap-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
                             >
-                                <div className="w-10 h-10 bg-[#F59E0B] rounded-lg flex items-center justify-center text-white font-extrabold text-sm">
+                                <div className="w-10 h-10 bg-[#F59E0B]/10 rounded-lg flex items-center justify-center text-[#F59E0B] font-extrabold text-sm">
                                     {n}
                                 </div>
                                 <div>
-                                    <h4 className="text-[#0A2540] font-bold text-base mb-1">{title}</h4>
+                                    <h4 className="text-[#0A2540] font-bold text-[15px] mb-1">{title}</h4>
                                     <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
                                 </div>
                             </motion.div>
@@ -122,9 +127,9 @@ export default function NationalContext() {
                 </div>
 
                 {/* Bottom Section : Les 4 statistiques */}
-                <div>
+                <div className="mt-4">
                     <motion.span
-                        className="text-[#F59E0B] font-extrabold text-xs uppercase tracking-widest block mb-6"
+                        className="text-[#0A2540]/60 font-extrabold text-xs uppercase tracking-widest block mb-6 text-center md:text-left"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -132,16 +137,16 @@ export default function NationalContext() {
                         LA TRANSFORMATION NUMÉRIQUE EN RÉPUBLIQUE DÉMOCRATIQUE DU CONGO
                     </motion.span>
                     <motion.div
-                        className="grid grid-cols-2 md:grid-cols-4 gap-6"
+                        className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 pt-4 border-t border-gray-200"
                         variants={stagger}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
                     >
                         {STATS.map(({ value, label }) => (
-                            <motion.div key={label} variants={fadeUp} className="flex flex-col gap-2 border-t-2 border-[#0A2540] pt-4">
-                                <div className="text-[#0A2540] font-extrabold text-3xl md:text-4xl">{value}</div>
-                                <div className="text-gray-500 text-xs md:text-sm font-medium">{label}</div>
+                            <motion.div key={label} variants={fadeUp} className="flex flex-col gap-1">
+                                <div className="text-[#0A2540] font-extrabold text-2xl md:text-3xl">{value}</div>
+                                <div className="text-gray-500 text-xs md:text-sm">{label}</div>
                             </motion.div>
                         ))}
                     </motion.div>
