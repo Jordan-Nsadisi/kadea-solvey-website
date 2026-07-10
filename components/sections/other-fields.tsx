@@ -34,7 +34,7 @@ const items = [
         cover: softwareCover,
     },
     {
-        color: "bg-[#0A2540] text-white",
+        color: "bg-[#00B500] text-white",
         hoverBorder: "hover:border-[#0A2540]/40",
         title: "Kadea Executive",
         description:
