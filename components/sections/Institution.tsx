@@ -2,7 +2,8 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
-import institutionImg from "@/public/assets/images/hero.png";
+
+const INSTITUTION_PHOTO = "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&h=500&fit=crop&auto=format";
 
 const SCHOOL_STATS = [
     { val: "25 000+", label: "Alumni" },
@@ -23,9 +24,9 @@ const fadeUp = {
 
 export default function Institution() {
     return (
-        <section id="institution" className="py-8">
+        <section id="institution" className="py-12 bg-white">
             <div className="w-full container mx-auto px-5">
-                <div className="bg-white rounded-3xl overflow-hidden shadow-sm grid md:grid-cols-2 gap-0">
+                <div className="bg-white rounded-3xl overflow-hidden border border-gray-100 grid md:grid-cols-2 gap-0">
 
                     {/* Gauche — contenu textuel */}
                     <motion.div
@@ -126,7 +127,7 @@ export default function Institution() {
                         transition={{ duration: 0.55, ease: "easeOut" }}
                     >
                         <Image
-                            src={institutionImg}
+                            src={INSTITUTION_PHOTO}
                             alt="Délégation officielle Solvay-Kadea en RDC"
                             fill
                             className="object-cover"

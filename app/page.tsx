@@ -7,6 +7,7 @@ import Navbar from '@/components/sections/Navbar'
 import Partners from '@/components/sections/Partners'
 import Programme from '@/components/sections/Programme'
 import Sessions from '@/components/sections/Sessions'
+import Livrables from '@/components/sections/Livrables'
 import OtherFieldsSection from "@/components/sections/other-fields";
 
 export const metadata = homeMetadata;
@@ -21,6 +22,7 @@ export default function Home() {
         <Institution />
         <Programme />
         <Sessions />
+        <Livrables />
         <Admission />
         <OtherFieldsSection />
       </main>
