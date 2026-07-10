@@ -2,6 +2,7 @@ import { homeMetadata } from "@/constants/seo";
 import Admission from '@/components/sections/Admission'
 import Footer from '@/components/sections/Footer'
 import Hero from '@/components/sections/Hero'
+import NationalContext from '@/components/sections/NationalContext'
 import Institution from '@/components/sections/Institution'
 import Navbar from '@/components/sections/Navbar'
 import Partners from '@/components/sections/Partners'
@@ -19,6 +20,7 @@ export default function Home() {
       <main>
         <Hero />
         {/* <Partners /> */}
+        <NationalContext />
         <Institution />
         <Programme />
         <Sessions />
