@@ -19,7 +19,6 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        {/* <Partners /> */}
         <NationalContext />
         <Institution />
         <Programme />
