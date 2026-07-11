@@ -104,7 +104,7 @@ export default function Hero() {
                                     alt={p.name}
                                     width={p.w}
                                     height={p.h}
-                                    className="h-7 w-auto object-contain brightness-0 invert"
+                                    className="h-8 w-auto object-contain brightness-0 invert"
                                 />
                             </motion.div>
                         ))}
