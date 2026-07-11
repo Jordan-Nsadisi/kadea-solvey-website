@@ -4,7 +4,7 @@ import Footer from '@/components/sections/Footer'
 import Hero from '@/components/sections/Hero'
 import NationalContext from '@/components/sections/NationalContext'
 import Institution from '@/components/sections/Institution'
-import Navbar from '@/components/sections/Navbar'
+import Header from '@/components/sections/Header'
 import Partners from '@/components/sections/Partners'
 import Programme from '@/components/sections/Programme'
 import Sessions from '@/components/sections/Sessions'
@@ -16,7 +16,7 @@ export const metadata = homeMetadata;
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
-      <Navbar />
+      <Header />
       <main>
         <Hero />
         {/* <Partners /> */}

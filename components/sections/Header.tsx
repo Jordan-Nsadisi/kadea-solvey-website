@@ -5,8 +5,7 @@ import { ImageWithFallback } from "../ui/ImageWithFallback";
 import { Button } from "../ui/atoms/button";
 import Link from "next/link";
 
-export default function Navbar() {
-    const [menuOpen, setMenuOpen] = useState(false);
+export default function Header() {
 
     return (
         <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/8 shadow-sm">
