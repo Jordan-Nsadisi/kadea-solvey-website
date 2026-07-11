@@ -8,22 +8,25 @@ export default function Footer() {
             <footer className="w-full bg-white">
                 <div className="container mx-auto px-5 py-10 md:py-14 flex flex-col items-center justify-center gap-5 md:gap-8">
 
-                    <div className="flex items-center gap-4">
-                        <ImageWithFallback
-                            src="/logos/Black.png"
-                            alt="ULB-Solvay Lifelong Learning"
-                            width={180}
-                            height={36}
-                            className="md:w-48 w-32 h-auto"
-                        />
-                        <div className="w-px h-5 bg-gray-200" />
-                        <ImageWithFallback
-                            src="/logos/Logo_Kadea_Exe.png"
-                            alt="Kadea Executive"
-                            width={160}
-                            height={32}
-                            className="md:w-40 w-28 h-auto"
-                        />
+                    <div>
+                        {/* TODO- ajouter l'url sur les logos une fois deployer */}
+                        <Link href={"/"} className="flex items-center gap-2 md:gap-4 shrink-0">
+                            <ImageWithFallback
+                                src="/logos/Black.png"
+                                alt="ULB-Solvay Lifelong Learning"
+                                width={220}
+                                height={46}
+                                className="w-30 sm:w-28 md:w-74 object-contain"
+                            />
+                            <div className="w-px h-4 md:h-6 bg-gray-200" />
+                            <ImageWithFallback
+                                src="/logos/Logo_Kadea_Exe.png"
+                                alt="Kadea Executive"
+                                width={160}
+                                height={32}
+                                className="w-20 sm:w-28 md:w-40 object-contain"
+                            />
+                        </Link>
                     </div>
 
                     <div className="w-fit flex items-center gap-5 text-2xl">
