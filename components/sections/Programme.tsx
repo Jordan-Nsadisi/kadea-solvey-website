@@ -51,7 +51,7 @@ export default function Programme() {
                     </h2>
                     <p className="text-gray-500 text-base leading-relaxed max-w-2xl">
                         Ce programme intensif est conçu pour le{" "}
-                        <strong className="text-[#0A2540]">Top Management, les DSI et les DRH</strong> des
+                        <strong className="text-[#0A2540]">Top Management, les DSI et les DRH </strong> des
                         institutions publiques et entreprises privées de la RDC. Il couvre 4 domaines clés :
                         Stratégie, Transformation, Processus &amp; Performance, Alignement Métier &amp; IT.
                     </p>
