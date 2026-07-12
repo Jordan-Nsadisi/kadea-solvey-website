@@ -75,7 +75,7 @@ export default function Livrables() {
                         4 Livrables Opérationnels
                     </h2>
                     <p className="text-white/60 text-base mt-3 max-w-xl mx-auto leading-relaxed">
-                        Ce ne sont pas des rapports académiques — ce sont des documents de direction que vous
+                        Des documents de direction que vous
                         défendrez devant un jury jouant le rôle de votre comité ministériel ou de direction.
                     </p>
                 </motion.div>
