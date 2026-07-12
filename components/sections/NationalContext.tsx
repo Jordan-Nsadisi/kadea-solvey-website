@@ -43,7 +43,7 @@ export default function NationalContext() {
         <section
             className="py-10   bg-[#F8FAFC]"
         >
-            <div className="w-full container mx-auto px-5 flex flex-col gap-12 md:gap-0">
+            <div className="w-full container mx-auto px-5 flex flex-col gap-12">
 
                 {/* Top Section */}
                 <div className="grid md:grid-cols-2 gap-12 lg:gap-14 items-center">
@@ -101,14 +101,6 @@ export default function NationalContext() {
 
                 {/* Middle Section : Les 3 cadres nationaux */}
                 <div>
-                    <motion.span
-                        className="text-[#f6a822] font-extrabold text-sm uppercase tracking-widest block mb-8 text-center md:text-left"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                    >
-                        EN COHÉRENCE AVEC LES CADRES NATIONAUX DU NUMÉRIQUE & DE L&apos;IA
-                    </motion.span>
                     <motion.div
                         className="grid md:grid-cols-3 gap-6"
                         variants={stagger}
@@ -130,34 +122,6 @@ export default function NationalContext() {
                         ))}
                     </motion.div>
                 </div>
-
-                {/* Bottom Section : Les 4 statistiques */}
-                <div>
-                    <motion.span
-                        className="text-[#0A2540]/60 font-extrabold text-sm uppercase tracking-widest block pt-12 mb-8 text-center md:text-left"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                    >
-                        LA TRANSFORMATION NUMÉRIQUE EN RÉPUBLIQUE DÉMOCRATIQUE DU CONGO
-                    </motion.span>
-                    <motion.div
-                        className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 pt-6 border-t border-gray-200"
-                        variants={stagger}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
-                    >
-                        {STATS.map(({ value, label }) => (
-                            <motion.div key={label} variants={fadeUp} className="flex flex-col">
-                                {/* Taille exacte calquée sur Institution */}
-                                <div className="text-[#0A2540] font-extrabold text-3xl">{value}</div>
-                                <div className="text-gray-400 text-sm mt-1">{label}</div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                </div>
-
             </div>
         </section>
     );
