@@ -59,7 +59,7 @@ export default function NationalContext() {
                             <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-4">
                                 01 · Contexte National
                             </span>
-                            <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A2540] leading-tight">
+                            <h2 className="text-2xl md:text-4xl font-extrabold text-[#0A2540] leading-tight">
                                 Le numérique & l&apos;IA, <br className="hidden md:block" />
                                 priorité de la <span className="text-[#f6a822]">Présidence</span> et <br className="hidden md:block" />
                                 <span className="text-[#f6a822]">Gouvernement de la RDC</span>

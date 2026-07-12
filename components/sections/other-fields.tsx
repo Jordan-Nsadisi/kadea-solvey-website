@@ -66,7 +66,7 @@ export default function OtherFieldsSection() {
                     viewport={{ once: true, amount: 0.4 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <h2 className="font-extrabold text-3xl md:text-4xl text-[#0A2540] mb-4">
+                    <h2 className="font-extrabold text-2xl md:text-4xl text-[#0A2540] mb-4">
                         Kadea, c&apos;est aussi :
                     </h2>
                     <p className="text-gray-400 text-base max-w-lg mx-auto">

@@ -38,7 +38,7 @@ export default function Institution() {
                             <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest mb-4 block">
                                 02 · L&apos;Institution
                             </span>
-                            <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A2540] leading-tight">
+                            <h2 className="text-2xl md:text-4xl font-extrabold text-[#0A2540] leading-tight">
                                 ULB-Solvay Lifelong Learning :{" "}
                                 <span className="text-[#f6a822]">l&apos;excellence qui arrive en RDC</span>
                             </h2>
@@ -65,7 +65,7 @@ export default function Institution() {
                         >
                             {SCHOOL_STATS.map(({ val, label }) => (
                                 <motion.div key={label} variants={fadeUp}>
-                                    <div className="text-[#0A2540] font-extrabold text-3xl">{val}</div>
+                                    <div className="text-[#0A2540] font-extrabold text-2xl">{val}</div>
                                     <div className="text-gray-400 text-sm mt-1">{label}</div>
                                 </motion.div>
                             ))}

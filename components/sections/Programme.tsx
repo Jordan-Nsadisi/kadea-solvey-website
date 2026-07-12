@@ -46,7 +46,7 @@ export default function Programme() {
                     <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
                         03 · Le Programme
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A2540] leading-tight max-w-2xl mb-4">
+                    <h2 className="text-2xl md:text-4xl font-extrabold text-[#0A2540] leading-tight max-w-2xl mb-4">
                         Piloter le digital &amp; l&apos;IA de votre organisation
                     </h2>
                     <p className="text-gray-500 text-base leading-relaxed max-w-2xl">
