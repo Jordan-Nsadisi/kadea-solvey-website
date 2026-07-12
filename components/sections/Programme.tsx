@@ -126,6 +126,7 @@ export default function Programme() {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
+                        whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.55, ease: "easeOut" }}
                     >
                         {/* Image unique unifiée */}
