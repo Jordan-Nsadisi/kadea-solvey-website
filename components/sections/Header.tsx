@@ -19,7 +19,7 @@ export default function Header() {
                             alt="ULB-Solvay Lifelong Learning"
                             width={220}
                             height={46}
-                            className="w-30 sm:w-28 md:w-74 object-contain"
+                            className="w-30 sm:w-28 md:w-74"
                         />
                         <div className="w-px h-4 md:h-6 bg-gray-200" />
                         <ImageWithFallback
@@ -27,7 +27,7 @@ export default function Header() {
                             alt="Kadea Executive"
                             width={160}
                             height={32}
-                            className="w-28 md:w-40 h-auto object-contain"
+                            className="w-28 md:w-40 h-auto"
                         />
                     </Link>
                 </div>
