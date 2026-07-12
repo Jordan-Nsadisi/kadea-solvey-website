@@ -128,20 +128,22 @@ export default function Programme() {
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.55, ease: "easeOut" }}
                     >
-                        <motion.div
-                            className="relative w-full min-h-[380px] rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto cursor-pointer"
-                            whileHover={{ scale: 1.03 }}
-                            transition={{ duration: 0.3, ease: "easeInOut" }}
-                        >
-                            <Image
-                                src={executiveImg}
-                                alt="Programme Executive Kadea"
-                                fill
-                                className="object-cover object-center rounded-xl"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
-                        </motion.div>
+                        <div className="rounded-xl overflow-hidden">
+                            <motion.div
+                                className="relative w-full min-h-[380px] rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto cursor-pointer"
+                                whileHover={{ scale: 1.03 }}
+                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                            >
+                                <Image
+                                    src={executiveImg}
+                                    alt="Programme Executive Kadea"
+                                    fill
+                                    className="object-cover object-center rounded-xl"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
+                            </motion.div>
+                        </div>
 
                         <div className="">
                             {/* Cadre FARI */}
