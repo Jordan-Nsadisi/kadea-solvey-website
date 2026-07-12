@@ -31,7 +31,7 @@ export default function Admission() {
 
                 {/* Header */}
                 <motion.div
-                    className="text-center mb-12 md:mb-16"
+                    className="mb-12 md:mb-16"
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -43,7 +43,7 @@ export default function Admission() {
                     <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
                         Rejoignez la Promotion 2026
                     </h2>
-                    <p className="text-white/60 text-base mt-3 max-w-xl mx-auto">
+                    <p className="text-white/60 text-base mt-3 max-w-xl">
                         40 places · Premier engagé, premier servi. Manifestez dès maintenant l&apos;intérêt de votre organisation.
                     </p>
                 </motion.div>
@@ -61,7 +61,7 @@ export default function Admission() {
                         {/* Certification ULB */}
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                             <div className="flex items-center gap-3 mb-4">
-                                <Award size={20} className="text-[#f6a822]" />
+                                <Award size={18} className="text-[#f6a822]" />
                                 <span className="text-white font-extrabold text-base">Micro-Accréditation ULB</span>
                             </div>
                             <p className="text-white/60 text-sm leading-relaxed mb-3">

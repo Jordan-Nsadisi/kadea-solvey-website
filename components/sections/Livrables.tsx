@@ -62,7 +62,7 @@ export default function Livrables() {
 
                 {/* Header */}
                 <motion.div
-                    className="text-center mb-12 md:mb-16"
+                    className="mb-12 md:mb-16"
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -74,7 +74,7 @@ export default function Livrables() {
                     <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
                         4 Livrables Opérationnels
                     </h2>
-                    <p className="text-white/60 text-base mt-3 max-w-xl mx-auto leading-relaxed">
+                    <p className="text-white/60 text-base mt-3 max-w-xl leading-relaxed">
                         Des documents de direction que vous
                         défendrez devant un jury jouant le rôle de votre comité ministériel ou de direction.
                     </p>
@@ -94,8 +94,8 @@ export default function Livrables() {
                             variants={fadeUp}
                             className={`bg-white/5 border ${border} rounded-2xl p-6 flex gap-5 items-start hover:bg-white/8 transition-colors`}
                         >
-                            <div className={`w-11 h-11 rounded-xl ${color} flex items-center justify-center shrink-0`}>
-                                <Icon size={20} />
+                            <div className={`w-10 h-10 rounded-xl ${color} flex items-center justify-center shrink-0`}>
+                                <Icon size={18} />
                             </div>
                             <div className="flex flex-col gap-2">
                                 <div className="flex items-center gap-2">
@@ -110,7 +110,7 @@ export default function Livrables() {
                     ))}
                 </motion.div>
 
-                {/* Format note */}
+                {/* Format note
                 <motion.div
                     className="mt-10 border border-white/10 rounded-xl px-6 py-4 text-center"
                     initial={{ opacity: 0 }}
@@ -122,7 +122,7 @@ export default function Livrables() {
                         <strong className="text-white/70">Format du dossier :</strong> Word ou PDF · 7 à 12 pages hors annexes · Français ·
                         Rédigé à la première personne · Défendu devant le jury lors du pitch de restitution à Bruxelles.
                     </p>
-                </motion.div>
+                </motion.div> */}
 
             </div>
         </section>
