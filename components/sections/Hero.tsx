@@ -125,7 +125,6 @@ export default function Hero() {
                         fill
                         priority
                         className="object-contain object-bottom md:object-right-bottom"
-                    // sizes="(max-width: 768px) 100vw, 50vw"
                     />
                 </motion.div>
             </div>
