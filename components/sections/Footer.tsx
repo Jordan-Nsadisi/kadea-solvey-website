@@ -16,7 +16,7 @@ export default function Footer() {
                                 alt="ULB-Solvay Lifelong Learning"
                                 width={220}
                                 height={46}
-                                className="w-30 sm:w-28 md:w-74 object-contain"
+                                className="w-26 md:w-74 h-auto"
                             />
                             <div className="w-px h-4 md:h-6 bg-gray-200" />
                             <ImageWithFallback
@@ -24,7 +24,7 @@ export default function Footer() {
                                 alt="Kadea Executive"
                                 width={160}
                                 height={32}
-                                className="w-20 sm:w-28 md:w-40 object-contain"
+                                className="w-22 md:w-40 h-auto"
                             />
                         </Link>
                     </div>
