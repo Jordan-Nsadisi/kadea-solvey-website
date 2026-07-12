@@ -56,7 +56,7 @@ const cardVariant = {
 
 export default function OtherFieldsSection() {
     return (
-        <section className="w-full bg-[#F8FAFC] py-10 md:py-24">
+        <section className="w-full bg-[#F8FAFC] py-10  ">
             <div className="container mx-auto px-5 flex flex-col gap-12">
 
                 <motion.div

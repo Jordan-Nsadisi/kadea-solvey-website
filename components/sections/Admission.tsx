@@ -26,7 +26,7 @@ const fadeUp = {
 
 export default function Admission() {
     return (
-        <section id="admission" className="py-10 md:py-24 bg-[#061828]">
+        <section id="admission" className="py-10   bg-[#061828]">
             <div className="w-full container mx-auto px-5">
 
                 {/* Header */}
