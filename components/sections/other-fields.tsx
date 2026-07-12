@@ -119,7 +119,7 @@ export default function OtherFieldsSection() {
                                 <Link
                                     href={item.link}
                                     target="_blank"
-                                    className={`inline-flex items-center gap-1.5 w-fit ${item.color} font-semibold px-5 py-2 rounded-md text-base md:text-xl hover:brightness-110 transition shrink-0`}
+                                    className={`inline-flex items-center gap-1.5 w-fit ${item.color}  px-5 py-2 rounded-md hover:brightness-110 transition shrink-0`}
                                 >
                                     En savoir plus
                                 </Link>
