@@ -31,8 +31,8 @@ const LIVRABLES = [
         subtitle: "2 pages",
         description:
             "À partir du portefeuille construit en Session 2 : justification de vos 2 cas d'usage prioritaires, valeur publique, séquencement stratégique et prérequis de gouvernance des données.",
-        color: "bg-[#EC4899]/20 text-[#EC4899]",
-        border: "border-[#EC4899]/30",
+        color: "bg-[#f6a822]/20 text-[#f6a822]",
+        border: "border-[#f6a822]/30",
     },
     {
         id: "L4",
@@ -41,8 +41,8 @@ const LIVRABLES = [
         subtitle: "12 pages",
         description:
             "Conduite du changement (cartographie parties prenantes, plan de communication 6 mois) et plan de compétences : rôles clés à créer, profils attendus, horizon de montée en compétences.",
-        color: "bg-[#10B981]/20 text-[#10B981]",
-        border: "border-[#10B981]/30",
+        color: "bg-[#f6a822]/20 text-[#f6a822]",
+        border: "border-[#f6a822]/30",
     },
 ];
 
@@ -57,7 +57,7 @@ const fadeUp = {
 
 export default function Livrables() {
     return (
-        <section id="livrables" className="py-10   bg-[#0A2540]">
+        <section id="livrables" className="py-10   bg-[#15294e]">
             <div className="w-full container mx-auto px-5">
 
                 {/* Header */}
