@@ -72,7 +72,7 @@ export default function Hero() {
                     >
                         <a
                             href="#admission"
-                            className="inline-flex items-center gap-2 bg-[#f6a822] text-white font-semibold px-5 py-2 text-base md:text-xl rounded-md hover:bg-[#6D28D9] transition-all hover:gap-3 shadow-lg shadow-purple-900/30 shrink-0"
+                            className="inline-flex items-center gap-2 bg-[#f6a822] text-white font-semibold px-5 py-2 rounded-md hover:bg-[#6D28D9] transition-all hover:gap-3 shadow-lg shadow-purple-900/30 shrink-0"
                         >
                             Rejoindre la Promo 2026 <ArrowRight size={16} />
                         </a>
