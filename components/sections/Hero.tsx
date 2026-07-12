@@ -59,7 +59,7 @@ export default function Hero() {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.3, duration: 0.4 }}
                     >
-                        Parcours conçu par ULB-Solvay Lifelong Learning pour outiller les dirigeants des
+                        Parcours Conçu par ULB-Solvay Lifelong Learning en partenariat avec Kadea Executive et avec lʼapport technique de Microsoft pour outiller les dirigeants des
                         Institutions Publiques et les entreprises privées à piloter la transformation digitale
                         et l&apos;adoption de l&apos;IA.
                     </motion.p>
