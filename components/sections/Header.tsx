@@ -8,8 +8,8 @@ import Link from "next/link";
 export default function Header() {
 
     return (
-        <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/8 shadow-sm">
-            <div className="w-full container mx-auto p-5 flex items-center justify-between gap-2">
+        <header className="w-full bg-white sticky top-0 left-0 z-50 bg-white/95 backdrop-blur">
+            <div className="w-full container mx-auto p-5 flex items-center justify-between">
                 {/* Logos */}
                 <div>
                     {/* TODO- ajouter l'url sur les logos une fois deployer */}
