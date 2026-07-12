@@ -140,7 +140,9 @@ export default function Programme() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
                         </div>
+                    </motion.div>
 
+                    <div >
                         {/* Cadre FARI */}
                         <div className="border border-gray-100 rounded-2xl p-6 bg-white shadow-sm">
                             <div className="flex items-center gap-2 mb-4">
@@ -192,7 +194,7 @@ export default function Programme() {
                                 Brochure PDF
                             </a>
                         </motion.div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>
