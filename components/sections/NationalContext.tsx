@@ -76,7 +76,7 @@ export default function NationalContext() {
                         </p>
                     </motion.div>
 
-                    {/* Droite — Image (Même hauteur et border-radius que Institution) */}
+                    {/* Droite — Image*/}
                     <motion.div
                         className="relative min-h-[380px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto"
                         initial={{ opacity: 0, x: 30 }}
