@@ -11,8 +11,6 @@ const SCHOOL_STATS = [
     { val: "1er", label: "Choix des recruteurs" },
 ];
 
-const LOCAL_PARTNERS = ["Kadea Executive", "Microsoft", "GIZ", "WBI"];
-
 const stagger = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
@@ -24,7 +22,7 @@ const fadeUp = {
 
 export default function Institution() {
     return (
-        <section id="institution" className="py-10   bg-white">
+        <section className="py-10 bg-white">
             <div className="w-full container mx-auto px-5">
                 <div className="grid md:grid-cols-2 gap-12 lg:gap-14 items-center">
 
