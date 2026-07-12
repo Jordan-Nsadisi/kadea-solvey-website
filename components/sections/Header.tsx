@@ -9,7 +9,7 @@ export default function Header() {
 
     return (
         <header className="w-full bg-white sticky top-0 left-0 z-50 bg-white/95 backdrop-blur">
-            <div className="w-full container mx-auto p-5 flex items-center justify-between">
+            <div className="w-full container mx-auto p-5 md:py-1 flex items-center justify-between">
                 {/* Logos */}
                 <div>
                     {/* TODO- ajouter l'url sur les logos une fois deployer */}
