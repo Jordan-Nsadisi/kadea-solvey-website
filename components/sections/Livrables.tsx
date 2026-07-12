@@ -57,7 +57,7 @@ const fadeUp = {
 
 export default function Livrables() {
     return (
-        <section id="livrables" className="py-16 md:py-24 bg-[#0A2540]">
+        <section id="livrables" className="py-10 md:py-24 bg-[#0A2540]">
             <div className="w-full container mx-auto px-5">
 
                 {/* Header */}

@@ -24,7 +24,7 @@ const fadeUp = {
 
 export default function Institution() {
     return (
-        <section id="institution" className="py-16 md:py-24 bg-white">
+        <section id="institution" className="py-10 md:py-24 bg-white">
             <div className="w-full container mx-auto px-5">
                 <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
 

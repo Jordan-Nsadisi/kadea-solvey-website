@@ -32,7 +32,7 @@ const fadeUp = {
 
 export default function Programme() {
     return (
-        <section id="programme" className="py-16 md:py-24 bg-white">
+        <section id="programme" className="py-10 md:py-24 bg-white">
             <div className="w-full container mx-auto px-5">
 
                 {/* Section header */}
