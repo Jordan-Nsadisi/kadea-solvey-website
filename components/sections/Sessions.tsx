@@ -173,7 +173,7 @@ export default function Sessions() {
                                         <p className="text-gray-500 text-base leading-relaxed">{session.intro}</p>
 
                                         {/* Livrable badge */}
-                                        <div className="flex items-start gap-2 text-sm font-semibold px-3 py-2 rounded-lg bg-gray-50 text-[#0A2540] border-l-2 border-[#f6a822] leading-relaxed">
+                                        <div className="flex items-start gap-2 text-sm font-semibold px-3 py-2 rounded-lg bg-gray-50 text-[#0A2540] leading-relaxed">
                                             <ClipboardList size={16} className="shrink-0 mt-[2px] text-[#f6a822]" />
                                             <span>{session.deliverable}</span>
                                         </div>
