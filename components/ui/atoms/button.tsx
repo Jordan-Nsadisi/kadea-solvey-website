@@ -49,7 +49,7 @@ function Button({
     return (
         <Comp
             data-slot="button"
-            className={"text-sm md:text-[15px]" + cn(buttonVariants({ variant, size, className }))}
+            className={cn(buttonVariants({ variant, size, className }))}
             {...props}
         />
     );
