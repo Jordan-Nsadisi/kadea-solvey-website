@@ -143,11 +143,13 @@ export default function Admission() {
                         </div>
 
                         {/* CTA principal */}
+                        {/* TODO: ajouter le lien d'inscription */}
                         <a
-                            href="mailto:thomas@kadea.co?subject=Candidature%20Programme%20Executive%202026"
-                            className="block bg-[#f6a822] text-white font-extrabold text-center px-7 py-4 rounded-2xl hover:bg-[#6D28D9] transition shadow-lg shadow-black/20 text-lg"
+                            href=""
+                            className="inline-flex items-center gap-1.5 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#6D28D9] transition shrink-0"
                         >
-                            Candidater à la Promotion 2026 →
+                            Candidater à la Promotion 2026
+                            <ArrowRight size={16} />
                         </a>
                     </motion.div>
 
