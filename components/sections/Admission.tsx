@@ -88,21 +88,6 @@ export default function Admission() {
                                 entreprise, subvention institutionnelle ou paiement échelonné. Contactez-nous.
                             </div>
                         </div>
-
-                        {/* Contact */}
-                        <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                            <span className="text-white/50 text-sm font-semibold uppercase tracking-widest block mb-3">Contact</span>
-                            <p className="text-white font-semibold text-base">Thomas Strouvens</p>
-                            <p className="text-white/50 text-sm mb-3">CEO Kadea Executive</p>
-                            <div className="flex flex-col gap-2">
-                                <a href="mailto:thomas@kadea.co" className="inline-flex items-center gap-2 text-[#84cc16] text-sm hover:underline">
-                                    <Mail size={12} /> thomas@kadea.co
-                                </a>
-                                <a href="tel:+32470881395" className="inline-flex items-center gap-2 text-[#84cc16] text-sm hover:underline">
-                                    <Phone size={12} /> +32 470 88 13 95
-                                </a>
-                            </div>
-                        </div>
                     </motion.div>
 
                     {/* Col 2 — Places limitées + promotions */}
@@ -173,7 +158,7 @@ export default function Admission() {
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.5, delay: 0.15 }}
                     >
-                        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 h-full">
+                        <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                             <span className="text-white/50 text-sm font-semibold uppercase tracking-widest block mb-6">
                                 Processus de candidature
                             </span>
@@ -199,16 +184,8 @@ export default function Admission() {
                                     </motion.div>
                                 ))}
                             </motion.div>
-
-                            {/* Tagline */}
-                            <div className="mt-8 pt-6 border-t border-white/10 text-center">
-                                <p className="text-white/30 text-sm italic font-semibold tracking-widest uppercase">
-                                    Dream. Learn. Lead.
-                                </p>
-                            </div>
                         </div>
                     </motion.div>
-
                 </div>
             </div>
         </section>
