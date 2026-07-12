@@ -46,7 +46,7 @@ export default function NationalContext() {
             <div className="w-full container mx-auto px-5 flex flex-col gap-12 md:gap-16">
 
                 {/* Top Section */}
-                <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
+                <div className="grid md:grid-cols-2 gap-12 lg:gap-14 items-center">
                     {/* Gauche — Texte */}
                     <motion.div
                         className="flex flex-col justify-center gap-5"
@@ -77,7 +77,7 @@ export default function NationalContext() {
                     </motion.div>
 
                     {/* Droite — Image*/}
-                    <div className="hidden md:block rounded-xl overflow-hidden">
+                    <div className="rounded-xl overflow-hidden">
                         <motion.div
                             className="relative min-h-[380px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto"
                             initial={{ opacity: 0, x: 30 }}
@@ -90,7 +90,7 @@ export default function NationalContext() {
                                 src={digitalNationImg}
                                 alt="Présidence de la RDC - DRC Digital Nation"
                                 fill
-                                className="w-full h-[400px] object-cover object-center rounded-xl"
+                                className=" object-cover object-center rounded-xl"
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
@@ -141,7 +141,7 @@ export default function NationalContext() {
                         LA TRANSFORMATION NUMÉRIQUE EN RÉPUBLIQUE DÉMOCRATIQUE DU CONGO
                     </motion.span>
                     <motion.div
-                        className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 pt-6 border-t border-gray-200"
+                        className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 pt-6 border-t border-gray-200"
                         variants={stagger}
                         initial="hidden"
                         whileInView="visible"

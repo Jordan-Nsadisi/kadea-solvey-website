@@ -131,7 +131,7 @@ export default function Sessions() {
                 </motion.div>
 
                 {/* Session cards */}
-                <div className="flex flex-col gap-8 lg:gap-10">
+                <div className="flex flex-col gap-8 lg:gap-12">
                     {SESSIONS.map((session, si) => (
                         <motion.div
                             key={session.id}
@@ -141,7 +141,7 @@ export default function Sessions() {
                             viewport={{ once: true, amount: 0.15 }}
                             transition={{ duration: 0.5, delay: si * 0.05, ease: "easeOut" }}
                         >
-                            <div className="p-8 lg:p-10">
+                            <div className="p-8 lg:p-12">
                                 <div className="grid md:grid-cols-[1fr_2fr] gap-8 lg:gap-12 items-start">
 
                                     {/* Meta colonne */}
