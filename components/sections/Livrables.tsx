@@ -71,7 +71,7 @@ export default function Livrables() {
                     <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
                         05 · Ce que chaque institution emporte
                     </span>
-                    <h2 className="text-2xl md:text-4xl font-extrabold text-white leading-tight">
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
                         4 Livrables Opérationnels
                     </h2>
                     <p className="text-white/60 text-base mt-3 max-w-xl mx-auto leading-relaxed">

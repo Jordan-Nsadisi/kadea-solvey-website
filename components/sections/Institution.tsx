@@ -8,7 +8,7 @@ const INSTITUTION_PHOTO = "https://images.unsplash.com/photo-1529156069898-49953
 const SCHOOL_STATS = [
     { val: "25 000+", label: "Alumni" },
     { val: "4 200", label: "Étudiants/an" },
-    { val: "1er", label: "Choix des recruteurs" },
+    { val: "1er", label: "Choix des recruteurs en Belgique" },
 ];
 
 const stagger = {
@@ -38,7 +38,7 @@ export default function Institution() {
                             <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest mb-4 block">
                                 02 · L&apos;Institution
                             </span>
-                            <h2 className="text-2xl md:text-4xl font-extrabold text-[#0A2540] leading-tight">
+                            <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight">
                                 ULB-Solvay Lifelong Learning :{" "}
                                 <span className="text-[#f6a822]">l&apos;excellence qui arrive en RDC</span>
                             </h2>

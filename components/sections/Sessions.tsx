@@ -122,7 +122,7 @@ export default function Sessions() {
                     <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
                         04 · Les Sessions
                     </span>
-                    <h2 className="text-2xl md:text-4xl font-extrabold text-[#0A2540] leading-tight mb-4">
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight mb-4">
                         3 Sessions · 9 Jours · 3 Villes
                     </h2>
                     <p className="text-gray-500 text-base">
