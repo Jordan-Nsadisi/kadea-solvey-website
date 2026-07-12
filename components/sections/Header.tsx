@@ -27,7 +27,7 @@ export default function Header() {
                             alt="Kadea Executive"
                             width={160}
                             height={32}
-                            className="w-28 md:w-40 h-auto"
+                            className="w-26 md:w-40 h-auto"
                         />
                     </Link>
                 </div>
