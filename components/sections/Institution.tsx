@@ -45,12 +45,12 @@ export default function Institution() {
                         </div>
                         <p className="text-gray-600 leading-relaxed text-base">
                             Fondée en 1903 par Ernest Solvay, la{" "}
-                            <strong>Solvay Brussels School of Economics &amp; Management</strong> figure parmi les
+                            <strong>Solvay Brussels School of Economics &amp; Management</strong>{" "} figure parmi les
                             écoles de management les plus reconnues d&apos;Europe, et fut la première école de
                             commerce francophone belge accréditée à l&apos;international.
                         </p>
                         <p className="text-gray-600 leading-relaxed text-base">
-                            <strong>Solvay Lifelong Learning</strong> est l&apos;Executive Education de la Solvay
+                            <strong>Solvay Lifelong Learning</strong>{" "} est l&apos;Executive Education de la Solvay
                             Brussels School Economics &amp; Management. Une référence internationale qui se déploie
                             aujourd&apos;hui au service des institutions publiques congolaises.
                         </p>
