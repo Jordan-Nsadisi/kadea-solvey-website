@@ -70,8 +70,9 @@ export default function Hero() {
                         transition={{ delay: 0.45, duration: 0.4 }}
                         className="w-fit"
                     >
+                        {/* TODO: ajouter le lien d'inscription */}
                         <a
-                            href="#admission"
+                            href=""
                             className="inline-flex items-center gap-2 bg-[#f6a822] text-white font-semibold px-5 py-2 rounded-md hover:bg-[#6D28D9] transition-all hover:gap-3 shadow-lg shadow-purple-900/30 shrink-0"
                         >
                             Rejoindre la Promo 2026 <ArrowRight size={16} />
