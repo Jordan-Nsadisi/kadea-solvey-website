@@ -173,8 +173,9 @@ export default function Programme() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: 0.2 }}
                         >
+                            {/* TODO: Ajouter le lien d'inscription */}
                             <a
-                                href="#admission"
+                                href=""
                                 className="inline-flex items-center gap-2 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#6D28D9] transition shrink-0"
                             >
                                 S&apos;inscrire

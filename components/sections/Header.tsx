@@ -31,7 +31,6 @@ export default function Header() {
                         />
                     </Link>
                 </div>
-                {/* Desktop cta */}
                 <Button
                     className="ml-2 bg-[#f6a822] text-white px-5 py-2 font-semibold text-base md:text-xl rounded-md hover:bg-[#6D28D9] shrink-0 transition-colors"
                 >
