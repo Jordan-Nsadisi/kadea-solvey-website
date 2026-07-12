@@ -77,22 +77,25 @@ export default function NationalContext() {
                     </motion.div>
 
                     {/* Droite — Image*/}
-                    <motion.div
-                        className="relative min-h-[380px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto"
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.55, ease: "easeOut" }}
-                    >
-                        <Image
-                            src={digitalNationImg}
-                            alt="Présidence de la RDC - DRC Digital Nation"
-                            fill
-                            className="w-full h-[400px] object-cover object-center rounded-xl"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
-                    </motion.div>
+                    <div className="hidden md:block rounded-xl overflow-hidden">
+                        <motion.div
+                            className="relative min-h-[380px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto"
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.4 }}
+                        >
+                            <Image
+                                src={digitalNationImg}
+                                alt="Présidence de la RDC - DRC Digital Nation"
+                                fill
+                                className="w-full h-[400px] object-cover object-center rounded-xl"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
+                        </motion.div>
+                    </div>
                 </div>
 
                 {/* Middle Section : Les 3 cadres nationaux */}
