@@ -128,7 +128,6 @@ export default function Programme() {
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.55, ease: "easeOut" }}
                     >
-                        {/* Image unique unifiée avec effet Hover isolé */}
                         <motion.div
                             className="relative w-full min-h-[380px] rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto cursor-pointer"
                             whileHover={{ scale: 1.03 }}
@@ -144,7 +143,6 @@ export default function Programme() {
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
                         </motion.div>
 
-                        {/* Bloc de contenu (Cadre FARI + Boutons) — Totalement insensible au survol de l'image */}
                         <div className="">
                             {/* Cadre FARI */}
                             <div className="border border-gray-100 rounded-2xl p-6 bg-white shadow-sm">
