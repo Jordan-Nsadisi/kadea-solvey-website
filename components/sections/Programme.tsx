@@ -126,11 +126,14 @@ export default function Programme() {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
-                        whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.55, ease: "easeOut" }}
                     >
-                        {/* Image unique unifiée */}
-                        <div className="relative w-full min-h-[380px] rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto">
+                        {/* Image unique unifiée avec effet Hover isolé */}
+                        <motion.div
+                            className="relative w-full min-h-[380px] rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto cursor-pointer"
+                            whileHover={{ scale: 1.03 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                        >
                             <Image
                                 src={executiveImg}
                                 alt="Programme Executive Kadea"
@@ -139,9 +142,9 @@ export default function Programme() {
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
-                        </div>
+                        </motion.div>
 
-
+                        {/* Bloc de contenu (Cadre FARI + Boutons) — Totalement insensible au survol de l'image */}
                         <div className="">
                             {/* Cadre FARI */}
                             <div className="border border-gray-100 rounded-2xl p-6 bg-white shadow-sm">
@@ -151,6 +154,7 @@ export default function Programme() {
                                         Cadre de Maturité FARI — 6 Dimensions Clés
                                     </span>
                                 </div>
+
                                 <motion.div
                                     className="grid grid-cols-1 sm:grid-cols-2 gap-3"
                                     variants={stagger}
@@ -165,12 +169,14 @@ export default function Programme() {
                                         </motion.div>
                                     ))}
                                 </motion.div>
+
                                 <p className="text-gray-400 text-sm mt-4 leading-relaxed">
                                     Chaque participant produit un <strong className="text-[#0A2540]">radar sur les 6 dimensions</strong> de
                                     son institution — socle du diagnostic stratégique.
                                 </p>
                             </div>
 
+                            {/* Liens d'action */}
                             <motion.div
                                 className="flex gap-3 flex-wrap mt-2"
                                 initial={{ opacity: 0, y: 12 }}
