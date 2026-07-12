@@ -46,6 +46,7 @@ export default function Institution() {
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/40 to-transparent" />
                         </motion.div>
                     </div>
+
                     {/* Gauche — contenu textuel */}
                     <motion.div
                         className="flex flex-col justify-center gap-5"
