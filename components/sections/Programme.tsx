@@ -140,61 +140,62 @@ export default function Programme() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
                         </div>
-                    </motion.div>
 
-                    <div >
-                        {/* Cadre FARI */}
-                        <div className="border border-gray-100 rounded-2xl p-6 bg-white shadow-sm">
-                            <div className="flex items-center gap-2 mb-4">
-                                <div className="w-1 h-5 bg-[#f6a822] rounded-full" />
-                                <span className="text-[#0A2540] font-extrabold text-sm uppercase tracking-widest">
-                                    Cadre de Maturité FARI — 6 Dimensions Clés
-                                </span>
+
+                        <div className="">
+                            {/* Cadre FARI */}
+                            <div className="border border-gray-100 rounded-2xl p-6 bg-white shadow-sm">
+                                <div className="flex items-center gap-2 mb-4">
+                                    <div className="w-1 h-5 bg-[#f6a822] rounded-full" />
+                                    <span className="text-[#0A2540] font-extrabold text-sm uppercase tracking-widest">
+                                        Cadre de Maturité FARI — 6 Dimensions Clés
+                                    </span>
+                                </div>
+                                <motion.div
+                                    className="grid grid-cols-1 sm:grid-cols-2 gap-3"
+                                    variants={stagger}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true }}
+                                >
+                                    {FARI_DIMENSIONS.map(({ n, label }) => (
+                                        <motion.div key={n} variants={fadeUp} className="flex items-center gap-2">
+                                            <span className="text-[#f6a822] font-extrabold text-sm w-6">{n}</span>
+                                            <span className="text-[#0A2540] text-sm font-medium">{label}</span>
+                                        </motion.div>
+                                    ))}
+                                </motion.div>
+                                <p className="text-gray-400 text-sm mt-4 leading-relaxed">
+                                    Chaque participant produit un <strong className="text-[#0A2540]">radar sur les 6 dimensions</strong> de
+                                    son institution — socle du diagnostic stratégique.
+                                </p>
                             </div>
-                            <motion.div
-                                className="grid grid-cols-1 sm:grid-cols-2 gap-3"
-                                variants={stagger}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                            >
-                                {FARI_DIMENSIONS.map(({ n, label }) => (
-                                    <motion.div key={n} variants={fadeUp} className="flex items-center gap-2">
-                                        <span className="text-[#f6a822] font-extrabold text-sm w-6">{n}</span>
-                                        <span className="text-[#0A2540] text-sm font-medium">{label}</span>
-                                    </motion.div>
-                                ))}
-                            </motion.div>
-                            <p className="text-gray-400 text-sm mt-4 leading-relaxed">
-                                Chaque participant produit un <strong className="text-[#0A2540]">radar sur les 6 dimensions</strong> de
-                                son institution — socle du diagnostic stratégique.
-                            </p>
-                        </div>
 
-                        <motion.div
-                            className="flex gap-3 flex-wrap mt-2"
-                            initial={{ opacity: 0, y: 12 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.4, delay: 0.2 }}
-                        >
-                            {/* TODO: Ajouter le lien d'inscription */}
-                            <a
-                                href=""
-                                className="inline-flex items-center gap-2 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#6D28D9] transition shrink-0"
+                            <motion.div
+                                className="flex gap-3 flex-wrap mt-2"
+                                initial={{ opacity: 0, y: 12 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: 0.2 }}
                             >
-                                S&apos;inscrire
-                            </a>
-                            <a
-                                href="/docs/Programme_Executive_Transformation_Digitale_IA_Solvay-ULB_2026_compressed.pdf"
-                                target="_blank"
-                                className="inline-flex items-center gap-2 border border-[#f6a822] text-[#f6a822] font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#f6a822] hover:text-white transition shrink-0"
-                            >
-                                <FileDown size={15} />
-                                Brochure PDF
-                            </a>
-                        </motion.div>
-                    </div>
+                                {/* TODO: Ajouter le lien d'inscription */}
+                                <a
+                                    href=""
+                                    className="inline-flex items-center gap-2 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#6D28D9] transition shrink-0"
+                                >
+                                    S&apos;inscrire
+                                </a>
+                                <a
+                                    href="/docs/Programme_Executive_Transformation_Digitale_IA_Solvay-ULB_2026_compressed.pdf"
+                                    target="_blank"
+                                    className="inline-flex items-center gap-2 border border-[#f6a822] text-[#f6a822] font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#f6a822] hover:text-white transition shrink-0"
+                                >
+                                    <FileDown size={15} />
+                                    Brochure PDF
+                                </a>
+                            </motion.div>
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
