@@ -40,7 +40,7 @@ export default function Institution() {
                                 src={INSTITUTION_PHOTO}
                                 alt="Délégation officielle Solvay-Kadea en RDC"
                                 fill
-                                className=" object-cover object-center rounded-xl"
+                                className="object-cover object-center rounded-xl"
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/40 to-transparent" />

@@ -135,7 +135,7 @@ export default function Programme() {
                                 src={executiveImg}
                                 alt="Programme Executive Kadea"
                                 fill
-                                className="object-cover object-center"
+                                className="object-cover object-center rounded-xl"
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
