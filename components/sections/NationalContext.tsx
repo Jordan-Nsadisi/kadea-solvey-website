@@ -88,7 +88,7 @@ export default function NationalContext() {
                             src={digitalNationImg}
                             alt="Présidence de la RDC - DRC Digital Nation"
                             fill
-                            className="object-cover object-center"
+                            className="w-full h-[400px] object-cover object-center rounded-xl"
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
