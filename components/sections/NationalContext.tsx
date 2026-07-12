@@ -43,7 +43,7 @@ export default function NationalContext() {
         <section
             className="py-10   bg-[#F8FAFC]"
         >
-            <div className="w-full container mx-auto px-5 flex flex-col gap-12 md:gap-16">
+            <div className="w-full container mx-auto px-5 flex flex-col gap-12 md:gap-0">
 
                 {/* Top Section */}
                 <div className="grid md:grid-cols-2 gap-12 lg:gap-14 items-center">
@@ -68,11 +68,12 @@ export default function NationalContext() {
                         <p className="text-gray-600 text-base leading-relaxed">
                             Sous l&apos;impulsion de la Présidence, la République Démocratique du Congo engage un tournant
                             décisif vers le numérique et l&apos;intelligence artificielle, porté par une nouvelle génération
-                            de stratégies nationales.
-                        </p>
-                        <p className="text-[#0A2540] font-bold text-base leading-relaxed">
-                            ULB-Solvay Lifelong Learning accompagne la Présidence dans cette réflexion et outille ses
+                            de stratégies nationales. {" "}
+                            <span className="text-[#0A2540] font-bold text-base leading-relaxed">ULB-Solvay Lifelong Learning
+                            </span>{" "}
+                            accompagne la Présidence dans cette réflexion et outille ses
                             décideurs pour piloter la transformation digitale & l&apos;IA des institutions publiques.
+
                         </p>
                     </motion.div>
 
@@ -133,7 +134,7 @@ export default function NationalContext() {
                 {/* Bottom Section : Les 4 statistiques */}
                 <div>
                     <motion.span
-                        className="text-[#0A2540]/60 font-extrabold text-sm uppercase tracking-widest block mb-8 text-center md:text-left"
+                        className="text-[#0A2540]/60 font-extrabold text-sm uppercase tracking-widest block pt-12 mb-8 text-center md:text-left"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
