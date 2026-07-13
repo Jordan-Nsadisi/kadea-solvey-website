@@ -163,7 +163,7 @@ export default function Programme() {
                                     "C-Level des entreprises privées de la RDC",
                                 ].map((item) => (
                                     <li key={item} className="flex items-start gap-2">
-                                        <span className="text-[#f6a822] mt-0.5 shrink-0">·</span>
+                                        <span className="text-black mt-0.5 shrink-0">·</span>
                                         <span className="text-gray-600 text-base leading-relaxed">{item}</span>
                                     </li>
                                 ))}

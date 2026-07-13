@@ -61,7 +61,7 @@ export default function Admission() {
                         {/* Certification ULB */}
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                             <div className="flex items-center gap-3 mb-4">
-                                <Award size={18} className="text-[#f6a8f6a82222]" />
+                                <Award size={18} className="text-[#f6a822]" />
                                 <span className="text-white font-extrabold text-base">Micro-Accréditation ULB</span>
                             </div>
                             <p className="text-white/60 text-sm leading-relaxed mb-3">
