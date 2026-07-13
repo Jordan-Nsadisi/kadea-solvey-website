@@ -39,7 +39,7 @@ export default function Institution() {
                                 01 · L&apos;Institution
                             </span>
                             <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight">
-                                ULB-Solvay Lifelong Learning :{" "}
+                                ULB-Solvay Lifelong Learning,{" "} <br />
                                 <span className="text-[#f6a822]">l&apos;excellence qui arrive en RDC</span>
                             </h2>
                         </div>
