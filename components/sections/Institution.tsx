@@ -111,7 +111,9 @@ export default function Institution() {
                                     <motion.div
                                         key={logo.id}
                                         variants={fadeUp}
-                                        className="flex items-center justify-center grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-default"
+                                        // className="flex items-center justify-center grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-default"
+                                        className="flex items-center justify-center"
+
                                     >
                                         <Image
                                             src={logo.src}
@@ -119,7 +121,7 @@ export default function Institution() {
                                             width={logo.width}
                                             height={logo.height}
                                             className="object-contain h-8 w-auto"
-                                            unoptimized={process.env.NODE_ENV === "development"}
+                                            unoptimized={process.env.NODE_ENV === "production"}
                                         />
                                     </motion.div>
                                 ))}
