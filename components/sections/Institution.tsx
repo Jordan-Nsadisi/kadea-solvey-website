@@ -28,8 +28,8 @@ export default function Institution() {
 
                     {/* Gauche — contenu textuel */}
                     <motion.div
-                        className="flex flex-col justify-center gap-5"
-                        initial={{ opacity: 0, x: -30 }}
+                        className="flex flex-col justify-center gap-5 w-full max-w-full overflow-hidden"
+                        initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.55, ease: "easeOut" }}
@@ -44,22 +44,23 @@ export default function Institution() {
                             </h2>
                         </div>
 
-                        {/* image mobile*/}
-                        <div className="rounded-xl overflow-hidden md:hidden">
+                        {/* image mobile corrigée */}
+                        <div className="rounded-3xl overflow-hidden md:hidden w-full block">
                             <motion.div
-                                className="relative min-h-[380px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto"
-                                initial={{ opacity: 0, x: 30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                className="relative h-[260px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, amount: 0.3 }}
-                                whileHover={{ scale: 1.05 }}
+                                whileHover={{ scale: 1.02 }}
                                 transition={{ duration: 0.55, ease: "easeOut" }}
                             >
                                 <Image
                                     src={INSTITUTION_PHOTO}
                                     alt="Délégation officielle Solvay-Kadea en RDC"
                                     fill
-                                    className="object-cover object-center rounded-xl"
+                                    className="object-cover object-center rounded-3xl"
                                     sizes="(max-width: 768px) 100vw, 50vw"
+                                    priority
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/40 to-transparent" />
                             </motion.div>
@@ -87,8 +88,8 @@ export default function Institution() {
                         >
                             {SCHOOL_STATS.map(({ val, label }) => (
                                 <motion.div key={label} variants={fadeUp}>
-                                    <div className="text-[#0A2540] font-extrabold text-2xl">{val}</div>
-                                    <div className="text-gray-400 text-sm mt-1">{label}</div>
+                                    <div className="text-[#0A2540] font-extrabold text-xl sm:text-2xl">{val}</div>
+                                    <div className="text-gray-400 text-xs sm:text-sm mt-1">{label}</div>
                                 </motion.div>
                             ))}
                         </motion.div>
