@@ -47,6 +47,28 @@ export default function NationalContext() {
 
                 {/* Top Section */}
                 <div className="grid md:grid-cols-2 gap-12 lg:gap-14 items-center">
+
+                    {/* Droite — Image*/}
+                    <div className="rounded-xl overflow-hidden">
+                        <motion.div
+                            className="relative min-h-[380px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto"
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.55, ease: "easeOut" }}
+                        >
+                            <Image
+                                src={digitalNationImg}
+                                alt="Présidence de la RDC - DRC Digital Nation"
+                                fill
+                                className=" object-cover object-center rounded-xl"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
+                        </motion.div>
+                    </div>
+
                     {/* Gauche — Texte */}
                     <motion.div
                         className="flex flex-col justify-center gap-5"
@@ -76,27 +98,6 @@ export default function NationalContext() {
 
                         </p>
                     </motion.div>
-
-                    {/* Droite — Image*/}
-                    <div className="rounded-xl overflow-hidden">
-                        <motion.div
-                            className="relative min-h-[380px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto"
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            whileHover={{ scale: 1.05 }}
-                            transition={{ duration: 0.55, ease: "easeOut" }}
-                        >
-                            <Image
-                                src={digitalNationImg}
-                                alt="Présidence de la RDC - DRC Digital Nation"
-                                fill
-                                className=" object-cover object-center rounded-xl"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
-                        </motion.div>
-                    </div>
                 </div>
 
                 {/* Middle Section : Les 3 cadres nationaux */}
