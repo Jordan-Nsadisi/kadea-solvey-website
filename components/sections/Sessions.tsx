@@ -173,7 +173,7 @@ export default function Sessions() {
                                         <p className="text-gray-500 text-base leading-relaxed">{session.intro}</p>
 
                                         {/* Livrable badge */}
-                                        <div className="flex items-start gap-2 text-sm font-semibold px-3 py-2 rounded-lg bg-gray-50 text-[#0A2540] leading-relaxed">
+                                        <div className="flex items-start gap-2 text-sm font-semibold px-3 py-2 rounded-lg bg-[#e7ecf5] text-[#0A2540] leading-relaxed">
                                             <ClipboardList size={16} className="shrink-0 mt-[2px] text-[#f6a822]" />
                                             <span>{session.deliverable}</span>
                                         </div>
@@ -201,7 +201,7 @@ export default function Sessions() {
                                             <motion.div
                                                 key={day.label}
                                                 variants={fadeUp}
-                                                className="bg-gray-50 rounded-xl p-4 flex flex-col gap-2 border border-gray-100"
+                                                className="bg-[#e7ecf5] rounded-xl p-4 flex flex-col gap-2 border border-gray-100"
                                             >
                                                 <span className="text-sm font-bold uppercase tracking-widest text-[#0A2540]">
                                                     {day.label}

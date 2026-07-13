@@ -83,10 +83,10 @@ export default function Programme() {
                                         <motion.div
                                             key={label}
                                             variants={fadeUp}
-                                            className="bg-gray-50 border border-gray-100 rounded-xl p-4 flex gap-4 items-center"
+                                            className="bg-[#e7ecf5] border border-gray-100 rounded-xl p-4 flex gap-4 items-center"
                                         >
-                                            <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center shrink-0">
-                                                <Icon size={18} className="text-[#f6a822]" />
+                                            <div className="w-10 h-10 rounded-lg bg-[#f6a822] shadow-sm flex items-center justify-center shrink-0">
+                                                <Icon size={18} className="text-white" />
                                             </div>
                                             <div className="flex flex-col">
                                                 <span className="text-[#0A2540] font-bold text-base">{label}</span>
