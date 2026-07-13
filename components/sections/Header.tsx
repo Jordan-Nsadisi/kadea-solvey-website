@@ -32,7 +32,7 @@ export default function Header() {
                     </Link>
                 </div>
                 <Button
-                    className="ml-2 bg-[#f6a822] text-white px-5 py-2 font-semibold text-sm md:text-[15px] rounded-md hover:bg-[#6D28D9] shrink-0 transition-colors"
+                    className="ml-2 bg-[#f6a822] text-white px-5 py-2 font-semibold text-sm md:text-[15px] rounded-md hover:bg-[#f6a822]/90/90/90 shrink-0 transition-colors"
                 >
                     S'inscrire
                 </Button>
