@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { CheckCircle, ArrowRight, Phone, Mail, Award, CreditCard, FileText, UserCheck } from "lucide-react";
+import { CheckCircle, ArrowRight, Landmark, Building, Mail, Award, CreditCard, FileText, UserCheck } from "lucide-react";
 import { subscribeLink } from "@/data/subscribe-link";
 
 const TIMELINE = [
@@ -12,8 +12,8 @@ const TIMELINE = [
 ];
 
 const PROMOTIONS = [
-    { label: "Institutions Publiques", places: "20 places", icon: "🏛️" },
-    { label: "Entreprises Privées", places: "20 places", icon: "🏢" },
+    { label: "Institutions Publiques", places: "20 places", icon: <Landmark size={16} className="text-[#f6a822]" /> },
+    { label: "Entreprises Privées", places: "20 places", icon: <Building size={16} className="text-[#f6a822]" /> },
 ];
 
 const stagger = {
