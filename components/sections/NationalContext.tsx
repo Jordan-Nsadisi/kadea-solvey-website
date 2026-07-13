@@ -79,7 +79,7 @@ export default function NationalContext() {
                     >
                         <div>
                             <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-4">
-                                02 · Contexte National
+                                02 · <span className="text-[#15294e]">Contexte National</span>
                             </span>
                             <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight">
                                 Le numérique & l&apos;IA, <br className="hidden md:block" />
@@ -91,9 +91,9 @@ export default function NationalContext() {
                             Sous l&apos;impulsion de la Présidence, la République Démocratique du Congo engage un tournant
                             décisif vers le numérique et l&apos;intelligence artificielle, porté par une nouvelle génération
                             de stratégies nationales. {" "}
-                            <span className="text-[#0A2540] font-bold text-base leading-relaxed">ULB-Solvay Lifelong Learning
+                            <span className="text-[#0A2540] font-bold text-base leading-relaxed">ULB-Solvay Lifelong Learning accompagne la Présidence
                             </span>{" "}
-                            accompagne la Présidence dans cette réflexion et outille ses
+                            dans cette réflexion et outille ses
                             décideurs pour piloter la transformation digitale & l&apos;IA des institutions publiques.
 
                         </p>
