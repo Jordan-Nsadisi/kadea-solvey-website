@@ -39,7 +39,7 @@ export default function Admission() {
                     transition={{ duration: 0.5 }}
                 >
                     <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
-                        06 · <span className="text-white">Certification &amp; Admission</span>
+                        05 · <span className="text-white">Certification &amp; Admission</span>
                     </span>
                     <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
                         Rejoignez la Promotion 2026
