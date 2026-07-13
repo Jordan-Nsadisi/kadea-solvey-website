@@ -99,6 +99,28 @@ export default function Programme() {
                             <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight max-w-2xl mb-4">
                                 Piloter le <span className="text-[#f6a822]">digital & l&apos;IA</span> de votre organisation
                             </h2>
+
+                            {/* image mobile */}
+                            <div className="rounded-3xl overflow-hidden md:hidden w-full block mb-4">
+                                <motion.div
+                                    className="relative h-[260px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.3 }}
+                                    whileHover={{ scale: 1.02 }}
+                                    transition={{ duration: 0.55, ease: "easeOut" }}
+                                >
+                                    <Image
+                                        src={executiveImg}
+                                        alt="Délégation officielle Solvay-Kadea en RDC"
+                                        fill
+                                        className="object-cover object-center rounded-3xl"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        priority
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/40 to-transparent" />
+                                </motion.div>
+                            </div>
                             <p className="text-gray-500 text-base leading-relaxed max-w-2xl">
                                 Parcours executive qui outille les décideurs pour initier et conduire la
                                 transformation digitale et lʼadoption de lʼIA, en cohérence le Plan National
