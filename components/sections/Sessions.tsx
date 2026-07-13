@@ -123,7 +123,7 @@ export default function Sessions() {
                         04 · Les Sessions
                     </span>
                     <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight mb-4">
-                        3 Sessions · 9 Jours · 3 Villes
+                        3 Sessions · 3 mois · 3 Villes
                     </h2>
                     <p className="text-gray-500 text-base">
                         Présence requise aux trois sessions pour l&apos;obtention de la micro-accréditation ULB.
