@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { CheckCircle, ArrowRight, Phone, Mail, Award, CreditCard, FileText, UserCheck } from "lucide-react";
+import { subscribeLink } from "@/data/subscribe-link";
 
 const TIMELINE = [
     { icon: Mail, label: "Manifestation d'intérêt", desc: "Envoi de votre candidature par email" },
@@ -82,11 +83,6 @@ export default function Admission() {
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                             <div className="text-white/50 text-sm font-semibold mb-1">Valeur du programme</div>
                             <div className="text-white font-extrabold text-3xl">7 500 $</div>
-                            {/* <div className="text-white/40 text-sm mt-1">USD · par participant</div> */}
-                            {/* <div className="mt-4 pt-4 border-t border-white/10 text-white/50 text-sm leading-relaxed">
-                                💡 <strong className="text-white/70">Financement possible :</strong> prise en charge
-                                entreprise, subvention institutionnelle ou paiement échelonné. Contactez-nous.
-                            </div> */}
                         </div>
                     </motion.div>
 
@@ -99,11 +95,6 @@ export default function Admission() {
                         transition={{ duration: 0.5, delay: 0.1 }}
                     >
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                            {/* <div className="flex items-center gap-2 mb-4">
-                                <span className="bg-[#EC4899] text-white text-sm font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
-                                    ⚠ Places Limitées
-                                </span>
-                            </div> */}
                             <p className="text-white font-semibold text-base mb-5 leading-relaxed">
                                 <strong className="text-[#f6a822]">40 places disponibles maximum.</strong>{" "}
                                 Recrutement sélectif réparti en 2 promotions strictes :
@@ -182,7 +173,9 @@ export default function Admission() {
                 {/* CTA principal */}
                 {/* TODO: ajouter le lien d'inscription */}
                 <a
-                    href=""
+                    href={subscribeLink.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center mt-5 md:mt-1 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#f6a822]/90 transition shrink-0"
                 >
                     Candidater à la Promotion 2026
