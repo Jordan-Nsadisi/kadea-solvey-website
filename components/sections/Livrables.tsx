@@ -69,7 +69,7 @@ export default function Livrables() {
                     transition={{ duration: 0.5 }}
                 >
                     <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
-                        05 · Ce que chaque institution emporte
+                        04 · <span className="text-white">Ce que chaque institution emporte</span>
                     </span>
                     <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
                         4 Livrables Opérationnels

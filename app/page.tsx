@@ -18,12 +18,12 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <NationalContext />
         <Institution />
         <Programme />
         <Sessions />
         <Livrables />
         <Admission />
+        <NationalContext />
         <OtherFieldsSection />
       </main>
       <Footer />

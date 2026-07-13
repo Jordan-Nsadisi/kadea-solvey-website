@@ -3,6 +3,9 @@ import { ImageWithFallback } from "../ui/ImageWithFallback";
 import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa"
 
 export default function Footer() {
+
+    const currentYear = new Date().getFullYear();
+
     return (
         <>
             <footer className="w-full bg-white">
@@ -44,7 +47,7 @@ export default function Footer() {
                     <div className="w-full h-px bg-gray-100 my-2 max-w-lg" />
 
                     <p className="text-gray-400 text-sm text-center">
-                        © 2026 Kadea Executive × ULB-Solvay Lifelong Learning. Tous droits réservés.
+                        © {currentYear} Kadea Executive × ULB-Solvay Lifelong Learning. Tous droits réservés.
                     </p>
 
                 </div>
