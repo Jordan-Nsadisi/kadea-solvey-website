@@ -36,7 +36,7 @@ export default function Institution() {
                     >
                         <div>
                             <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest mb-4 block">
-                                01 · L&apos;Institution
+                                01 · <span className="text-[#15294e]">L&apos; Institution</span>
                             </span>
                             <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight">
                                 ULB-Solvay Lifelong Learning,{" "} <br />
@@ -44,7 +44,7 @@ export default function Institution() {
                             </h2>
                         </div>
                         <p className="text-gray-600 leading-relaxed text-base">
-                            Fondée en 1903 par Ernest Solvay, la{" "}
+                            Fondée en <strong>1903</strong> par Ernest Solvay, la{" "}
                             <strong>Solvay Brussels School of Economics &amp; Management</strong>{" "} figure parmi les
                             écoles de management les plus reconnues d&apos;Europe, et fut la première école de
                             commerce francophone belge accréditée à l&apos;international.

@@ -120,7 +120,7 @@ export default function Sessions() {
                     transition={{ duration: 0.5 }}
                 >
                     <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
-                        04 · Les Sessions
+                        04 · <span className="text-[#15294e]">Les Sessions</span>
                     </span>
                     <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight mb-4">
                         3 Sessions · 3 mois · 3 Villes

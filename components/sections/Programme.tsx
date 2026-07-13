@@ -47,7 +47,7 @@ export default function Programme() {
                             transition={{ duration: 0.5 }}
                         >
                             <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
-                                03 · Le Programme
+                                03 · <span className="text-[#15294e]">Le Programme</span>
                             </span>
                             <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight max-w-2xl mb-4">
                                 Piloter le digital &amp; l&apos;IA de votre organisation
