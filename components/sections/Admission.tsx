@@ -97,7 +97,7 @@ export default function Admission() {
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                             <p className="text-white font-semibold text-base mb-5 leading-relaxed">
                                 <strong className="text-[#f6a822]">40 places disponibles maximum.</strong>{" "}
-                                Recrutement sélectif réparti en 2 promotions strictes :
+                                Recrutement sélectif réparti en 2 promotions :
                             </p>
                             <motion.div
                                 className="flex flex-col gap-3"
