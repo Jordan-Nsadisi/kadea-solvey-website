@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { MapPin, Calendar, Clock, ChevronRight, ClipboardList } from "lucide-react";
+import { subscribeLink } from "@/data/subscribe-link";
 
 const SESSIONS = [
     {
@@ -180,7 +181,9 @@ export default function Sessions() {
 
                                         <div className="flex gap-3 flex-wrap pt-1">
                                             <a
-                                                href=""
+                                                href={subscribeLink.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
                                                 className="inline-flex items-center gap-1.5 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#f6a822]/90 transition shrink-0"
                                             >
                                                 S&apos;inscrire
