@@ -103,10 +103,10 @@ export default function Institution() {
                             viewport={{ once: true }}
                         >
                             {/* Capsule contenant les logos */}
-                            <div className="flex items-center gap-5 bg-gray-50/80 px-4 py-2 rounded-2xl border border-gray-100/60 shadow-inner">
+                            <div className="flex items-center gap-6 bg-gray-50/80 px-5 py-3 rounded-2xl border border-gray-100/60 shadow-inner">
                                 {[
-                                    { id: "equis-brand", src: "/logos/equis.webp", alt: "Accréditation internationale EQUIS", width: 62, height: 26 },
-                                    { id: "amba-brand", src: "/logos/amba.jpeg", alt: "Accréditation internationale AMBA", width: 75, height: 24 }
+                                    { id: "equis-brand", src: "/logos/equis.webp", alt: "Accréditation internationale EQUIS", width: 85, height: 36 },
+                                    { id: "amba-brand", src: "/logos/amba.jpeg", alt: "Accréditation internationale AMBA", width: 100, height: 32 }
                                 ].map((logo) => (
                                     <motion.div
                                         key={logo.id}
@@ -118,7 +118,7 @@ export default function Institution() {
                                             alt={logo.alt}
                                             width={logo.width}
                                             height={logo.height}
-                                            className="object-contain h-6 w-auto"
+                                            className="object-contain h-8 w-auto"
                                             unoptimized={process.env.NODE_ENV === "development"}
                                         />
                                     </motion.div>
