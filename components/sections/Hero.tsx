@@ -7,6 +7,7 @@ import heroImg from "@/public/assets/images/hero.png";
 import microsoftLogo from "@/public/assets/partners/microsoft.png";
 import gizLogo from "@/public/assets/partners/giz.png";
 import wbiLogo from "@/public/assets/partners/wallonie.png";
+import { subscribeLink } from "@/data/subscribe-link";
 
 const stats = [
     { val: "3 mois", label: "de Formation Intensive" },
@@ -70,9 +71,10 @@ export default function Hero() {
                         transition={{ delay: 0.45, duration: 0.4 }}
                         className="w-fit"
                     >
-                        {/* TODO: ajouter le lien d'inscription */}
                         <a
-                            href=""
+                            href={subscribeLink.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 bg-[#f6a822] text-white font-semibold px-5 py-2 rounded-md hover:bg-[#f6a822]/90 transition-all hover:gap-3 shadow-lg shadow-purple-900/30 shrink-0"
                         >
                             Rejoindre la Promo 2026 <ArrowRight size={16} />
