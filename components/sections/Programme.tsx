@@ -15,10 +15,10 @@ const FARI_DIMENSIONS = [
 ];
 
 const DOMAINS = [
-    { icon: BarChart2, label: "Stratégie Digitale", desc: "Vision, ambition et feuille de route organisationnelle" },
-    { icon: Repeat, label: "Transformation", desc: "Conduite du changement et adoption à grande échelle" },
-    { icon: TrendingUp, label: "Processus & Performance", desc: "Automatisation, optimisation et mesure d'impact" },
-    { icon: GitMerge, label: "Alignement Métier & IT", desc: "Architecture d'entreprise et gouvernance des données" },
+    { icon: BarChart2, label: "Stratégie", desc: "Vision digitale, analyse comparative, gestion des risques et construction du business case." },
+    { icon: Repeat, label: "Transformation", desc: "Orientation valeur, innovation & IA, modèle opérationnel cible et conduite du changement." },
+    { icon: TrendingUp, label: "Processus & Performance", desc: "Cartographie et modélisation des processus, optimisation et pilotage de la performance." },
+    { icon: GitMerge, label: "Alignement Métier & IT", desc: "Conception de la solution, gouvernance des données, cas d'usage et système d'information cible." },
 ];
 
 const stagger = {
@@ -115,7 +115,7 @@ export default function Programme() {
                             {/* 4 Domaines en liste propre */}
                             <div>
                                 <span className="text-[#0A2540] font-bold text-base block mb-4">
-                                    4 Domaines d&apos;expertise couverts :
+                                    4 Domaines, une approche grandes écoles
                                 </span>
                                 <motion.div
                                     className="flex flex-col gap-3"
