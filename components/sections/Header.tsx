@@ -1,18 +1,18 @@
 "use client";
 
-import { useState } from "react";
 import { ImageWithFallback } from "../ui/ImageWithFallback";
 import { Button } from "../ui/atoms/button";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { subscribeLink } from "@/data/subscribe-link";
 
 export default function Header() {
-
+    const router = useRouter();
     return (
         <header className="w-full bg-white sticky top-0 left-0 z-50 bg-white/95 backdrop-blur">
             <div className="w-full container mx-auto p-5 md:py-1 flex items-center justify-between">
                 {/* Logos */}
                 <div>
-                    {/* TODO- ajouter l'url sur les logos une fois deployer */}
                     <Link href={"/"} className="flex items-center gap-2 md:gap-4 shrink-0">
                         <ImageWithFallback
                             src="/logos/Black.png"
@@ -33,6 +33,7 @@ export default function Header() {
                 </div>
                 <Button
                     className="ml-2 bg-[#f6a822] text-white px-5 py-2 font-semibold text-sm md:text-[15px] rounded-md hover:bg-[#f6a822]/90/90/90 shrink-0 transition-colors"
+                    onClick={() => router.push(subscribeLink.url, "_blank" as any)}
                 >
                     S'inscrire
                 </Button>
