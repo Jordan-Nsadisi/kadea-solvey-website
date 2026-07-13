@@ -5,6 +5,7 @@ import { BarChart2, Repeat, TrendingUp, GitMerge, FileDown } from "lucide-react"
 import Image from "next/image";
 import executiveImg from "@/public/assets/images/executive.jpeg";
 import { subscribeLink } from "@/data/subscribe-link";
+import { tuitionLink } from "@/data/tuition";
 
 const FARI_DIMENSIONS = [
     { n: "01", label: "Données" },
@@ -163,7 +164,7 @@ export default function Programme() {
                                     S&apos;inscrire
                                 </a>
                                 <a
-                                    href="/docs/Programme_Executive_Transformation_Digitale_IA_Solvay-ULB_2026_compressed.pdf"
+                                    href={tuitionLink.url}
                                     target="_blank"
                                     className="inline-flex items-center gap-2 border border-[#f6a822] text-[#f6a822] font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#f6a822]/90 hover:text-white transition shrink-0"
                                 >
