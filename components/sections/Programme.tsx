@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { BarChart2, Repeat, TrendingUp, GitMerge, FileDown } from "lucide-react";
 import Image from "next/image";
 import executiveImg from "@/public/assets/images/executive.jpeg";
+import { subscribeLink } from "@/data/subscribe-link";
 
 const FARI_DIMENSIONS = [
     { n: "01", label: "Données" },
@@ -154,7 +155,9 @@ export default function Programme() {
                             >
                                 {/* TODO: Ajouter le lien d'inscription */}
                                 <a
-                                    href=""
+                                    href={subscribeLink.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#f6a822]/90 transition shrink-0"
                                 >
                                     S&apos;inscrire
