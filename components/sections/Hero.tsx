@@ -59,7 +59,7 @@ export default function Hero() {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.3, duration: 0.4 }}
                     >
-                        Un parcours conçu par ULB-Solvay Lifelong Learning pour outiller les dirigeants des
+                        Parcours Conçu par ULB-Solvay Lifelong Learning en partenariat avec Kadea Executive et avec lʼapport technique de Microsoft pour outiller les dirigeants des
                         Institutions Publiques et les entreprises privées à piloter la transformation digitale
                         et l&apos;adoption de l&apos;IA.
                     </motion.p>
@@ -70,9 +70,10 @@ export default function Hero() {
                         transition={{ delay: 0.45, duration: 0.4 }}
                         className="w-fit"
                     >
+                        {/* TODO: ajouter le lien d'inscription */}
                         <a
-                            href="#admission"
-                            className="inline-flex items-center gap-2 bg-[#f6a822] text-white font-semibold px-5 py-2 text-base md:text-xl rounded-md hover:bg-[#6D28D9] transition-all hover:gap-3 shadow-lg shadow-purple-900/30 shrink-0"
+                            href=""
+                            className="inline-flex items-center gap-2 bg-[#f6a822] text-white font-semibold px-5 py-2 rounded-md hover:bg-[#6D28D9] transition-all hover:gap-3 shadow-lg shadow-purple-900/30 shrink-0"
                         >
                             Rejoindre la Promo 2026 <ArrowRight size={16} />
                         </a>
@@ -104,7 +105,7 @@ export default function Hero() {
                                     alt={p.name}
                                     width={p.w}
                                     height={p.h}
-                                    className="h-7 w-auto object-contain brightness-0 invert"
+                                    className="h-8 w-auto object-contain brightness-0 invert"
                                 />
                             </motion.div>
                         ))}
@@ -124,7 +125,6 @@ export default function Hero() {
                         fill
                         priority
                         className="object-contain object-bottom md:object-right-bottom"
-                        sizes="(max-width: 768px) 100vw, 50vw"
                     />
                 </motion.div>
             </div>

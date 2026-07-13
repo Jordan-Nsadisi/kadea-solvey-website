@@ -35,7 +35,7 @@ const items = [
     },
     {
         color: "bg-[#00B500] text-white",
-        hoverBorder: "hover:border-[#0A2540]/40",
+        hoverBorder: "hover:border-[#00B500]/40",
         title: "Kadea Executive",
         description:
             "Programmes Executive & Certifiants pour le Top Management. Façonnez les leaders de demain grâce à nos formations continues haut de gamme pour les entreprises et institutions publiques.",
@@ -56,8 +56,8 @@ const cardVariant = {
 
 export default function OtherFieldsSection() {
     return (
-        <section className="w-full bg-[#F8FAFC] py-16 md:py-24">
-            <div className="container mx-auto px-5 flex flex-col gap-12">
+        <section className="w-full bg-[#F8FAFC] py-10  ">
+            <div className="container mx-auto px-5 flex flex-col gap-10">
 
                 <motion.div
                     className="text-center"
@@ -66,12 +66,12 @@ export default function OtherFieldsSection() {
                     viewport={{ once: true, amount: 0.4 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <h2 className="font-extrabold text-3xl md:text-4xl text-[#0A2540] mb-4">
-                        Kadea, c&apos;est aussi :
+                    <h2 className="font-extrabold text-2xl md:text-3xl text-[#0A2540] mb-4">
+                        Kadea c&apos;est aussi :
                     </h2>
-                    <p className="text-gray-400 text-base max-w-lg mx-auto">
+                    {/* <p className="text-gray-400 text-base max-w-lg mx-auto">
                         Découvrez l&apos;ensemble de l&apos;écosystème Kadea au service de votre croissance.
-                    </p>
+                    </p> */}
                 </motion.div>
 
                 <motion.div
@@ -119,7 +119,7 @@ export default function OtherFieldsSection() {
                                 <Link
                                     href={item.link}
                                     target="_blank"
-                                    className={`inline-flex items-center gap-1.5 w-fit ${item.color} font-semibold px-5 py-2 rounded-md text-base md:text-xl hover:brightness-110 transition shrink-0`}
+                                    className={`inline-flex items-center gap-1.5 w-fit ${item.color}  px-5 py-2 rounded-md hover:brightness-110 transition shrink-0`}
                                 >
                                     En savoir plus
                                 </Link>

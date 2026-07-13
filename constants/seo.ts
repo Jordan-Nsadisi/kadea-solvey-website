@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const homeMetadata: Metadata = {
     title: "Transformation Digitale & IA en RDC | Programme Executive 2026",
-    description: "Parcours d'excellence conçu par ULB-Solvay Lifelong Learning et Kadea Executive pour outiller les dirigeants, DSI et DRH de la RDC à piloter l'adoption de l'IA et du digital.",
+    description: "Parcours d'excellence Conçu par ULB-Solvay Lifelong Learning en partenariat avec Kadea Executive et avec lʼapport technique de Microsoft pour outiller les dirigeants, DSI et DRH de la RDC à piloter l'adoption de l'IA et du digital.",
     keywords: [
         "Transformation digitale RDC",
         "Intelligence Artificielle République Démocratique du Congo",
