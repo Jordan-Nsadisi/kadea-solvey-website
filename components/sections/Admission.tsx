@@ -51,7 +51,6 @@ export default function Admission() {
 
                 <div className="grid md:grid-cols-3 gap-6 md:gap-8">
 
-                    {/* Col 1 — Certification + Prix */}
                     <motion.div
                         className="flex flex-col gap-6"
                         initial={{ opacity: 0, x: -24 }}
@@ -86,7 +85,6 @@ export default function Admission() {
                         </div>
                     </motion.div>
 
-                    {/* Col 2 — Places limitées + promotions */}
                     <motion.div
                         className="flex flex-col gap-6"
                         initial={{ opacity: 0, y: 24 }}
@@ -134,7 +132,7 @@ export default function Admission() {
                         </div>
                     </motion.div>
 
-                    {/* Col 3 — Timeline */}
+                    {/* revoir la pertinence de cette colone  */}
                     <motion.div
                         initial={{ opacity: 0, x: 24 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -171,7 +169,6 @@ export default function Admission() {
                     </motion.div>
                 </div>
                 {/* CTA principal */}
-                {/* TODO: ajouter le lien d'inscription */}
                 <a
                     href={subscribeLink.url}
                     target="_blank"
