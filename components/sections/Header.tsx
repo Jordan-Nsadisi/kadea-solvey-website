@@ -31,12 +31,14 @@ export default function Header() {
                         />
                     </Link>
                 </div>
-                <Button
+                <a
+                    href={subscribeLink.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="ml-2 bg-[#f6a822] text-white px-5 py-2 font-semibold text-sm md:text-[15px] rounded-md hover:bg-[#f6a822]/90/90/90 shrink-0 transition-colors"
-                    onClick={() => router.push(subscribeLink.url, "_blank" as any)}
                 >
                     S'inscrire
-                </Button>
+                </a>
             </div>
         </header>
     )

@@ -1,3 +1,3 @@
 export const subscribeLink = {
-    url: "https://forms.kadea.academy/prisedecontactsolvay"
+    url: "https://forms.kadea.academy/solvayexecutive"
 }
