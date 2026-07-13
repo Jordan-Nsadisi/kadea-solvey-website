@@ -37,6 +37,51 @@ export default function Programme() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-14 items-start">
 
+                    {/* Gauche — grande image + Public cible */}
+                    <motion.div
+                        className="flex flex-col gap-8 md:mt-10"
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.55, ease: "easeOut" }}
+                    >
+                        <div className="rounded-xl overflow-hidden">
+                            <motion.div
+                                className="relative w-full min-h-[380px] rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto cursor-pointer"
+                                whileHover={{ scale: 1.03 }}
+                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                            >
+                                <Image
+                                    src={executiveImg}
+                                    alt="Programme Executive Kadea"
+                                    fill
+                                    className="object-cover object-center rounded-xl"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
+                            </motion.div>
+                        </div>
+                        {/* Public cible */}
+                        <div className="border-l-4 border-[#f6a822] pl-4 py-1">
+                            <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-2">
+                                Public cible
+                            </span>
+                            <ul className="text-[#0A2540] text-base space-y-1">
+                                {[
+                                    "Ministres, Secrétaires Généraux, Directeurs Généraux",
+                                    "DSI / DNUM des institutions publiques",
+                                    "DRH et Directeurs de la Transformation",
+                                    "C-Level des entreprises privées de la RDC",
+                                ].map((item) => (
+                                    <li key={item} className="flex items-start gap-2">
+                                        <span className="text-black mt-0.5 shrink-0">·</span>
+                                        <span className="text-gray-600 text-base leading-relaxed">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </motion.div>
+
                     {/* Droite — FARI + 4 Domaines + CTA */}
                     <div>
                         <motion.div
@@ -47,7 +92,7 @@ export default function Programme() {
                             transition={{ duration: 0.5 }}
                         >
                             <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
-                                03 · <span className="text-[#15294e]">Le Programme</span>
+                                02 · <span className="text-[#15294e]">Le Programme</span>
                             </span>
                             <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight max-w-2xl mb-4">
                                 Piloter le <span className="text-[#f6a822]">digital & l&apos;IA</span> de votre organisation
@@ -125,51 +170,6 @@ export default function Programme() {
                             </motion.div>
                         </div>
                     </div>
-
-                    {/* Gauche — grande image + Public cible */}
-                    <motion.div
-                        className="flex flex-col gap-8 md:mt-10"
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.55, ease: "easeOut" }}
-                    >
-                        <div className="rounded-xl overflow-hidden">
-                            <motion.div
-                                className="relative w-full min-h-[380px] rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto cursor-pointer"
-                                whileHover={{ scale: 1.03 }}
-                                transition={{ duration: 0.3, ease: "easeInOut" }}
-                            >
-                                <Image
-                                    src={executiveImg}
-                                    alt="Programme Executive Kadea"
-                                    fill
-                                    className="object-cover object-center rounded-xl"
-                                    sizes="(max-width: 768px) 100vw, 50vw"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
-                            </motion.div>
-                        </div>
-                        {/* Public cible */}
-                        <div className="border-l-4 border-[#f6a822] pl-4 py-1">
-                            <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-2">
-                                Public cible
-                            </span>
-                            <ul className="text-[#0A2540] text-base space-y-1">
-                                {[
-                                    "Ministres, Secrétaires Généraux, Directeurs Généraux",
-                                    "DSI / DNUM des institutions publiques",
-                                    "DRH et Directeurs de la Transformation",
-                                    "C-Level des entreprises privées de la RDC",
-                                ].map((item) => (
-                                    <li key={item} className="flex items-start gap-2">
-                                        <span className="text-black mt-0.5 shrink-0">·</span>
-                                        <span className="text-gray-600 text-base leading-relaxed">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </motion.div>
                 </div>
             </div>
         </section>
