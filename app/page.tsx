@@ -18,8 +18,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <NationalContext />
         <Institution />
+        <NationalContext />
         <Programme />
         <Sessions />
         <Livrables />

@@ -57,7 +57,7 @@ export default function NationalContext() {
                     >
                         <div>
                             <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-4">
-                                01 · Contexte National
+                                02 · Contexte National
                             </span>
                             <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight">
                                 Le numérique & l&apos;IA, <br className="hidden md:block" />
