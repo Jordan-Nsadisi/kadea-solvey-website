@@ -55,7 +55,7 @@ const SESSIONS = [
             {
                 label: "Jour 5",
                 title: "Outils IA secteur public et gouvernance des données",
-                items: ["Copilot, Power Platform, Azure AI", "Gouvernance des données : le prérequis de l'IA"],
+                items: ["Les outils au service des administrations publiques", "Gouvernance des données : le prérequis de l'IA"],
             },
             {
                 label: "Jour 6",
@@ -85,12 +85,12 @@ const SESSIONS = [
             {
                 label: "Jour 8",
                 title: "Vision à long terme, compétences et immersion terrain",
-                items: ["Prospective stratégique et plan de compétences", "Google Atelier Digital · Benchmark e-gouvernement"],
+                items: ["Prospective stratégique et plan de compétences", "Immersion dans l'écosystème IA européen (2)"],
             },
             {
                 label: "Jour 9",
                 title: "Finalisation de la roadmap et pitch de restitution",
-                items: ["Finalisation de la feuille de route 2–3 ans", "Pitch de restitution · Certification ULB · Dîner Gala Atomium"],
+                items: ["Finalisation de la feuille de route 2–3 ans", "Pitch de restitution, certification & dîner de gala"],
             },
         ],
         deliverable: "L4 — Plan de mobilisation + Digital Roadmap · Pitch devant jury",
@@ -121,7 +121,7 @@ export default function Sessions() {
                     transition={{ duration: 0.5 }}
                 >
                     <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
-                        04 · <span className="text-[#15294e]">Les Sessions</span>
+                        03 · <span className="text-[#15294e]">Les Sessions</span>
                     </span>
                     <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight mb-4">
                         3 Sessions · 3 mois · 3 Villes
