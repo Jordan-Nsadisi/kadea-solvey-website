@@ -81,12 +81,12 @@ export default function Admission() {
                         {/* Prix */}
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                             <div className="text-white/50 text-sm font-semibold mb-1">Valeur du programme</div>
-                            <div className="text-[#84cc16] font-extrabold text-5xl">7 500 $</div>
-                            <div className="text-white/40 text-sm mt-1">USD · par participant</div>
-                            <div className="mt-4 pt-4 border-t border-white/10 text-white/50 text-sm leading-relaxed">
+                            <div className="text-[#84cc16] font-extrabold text-3xl">7 500 $</div>
+                            {/* <div className="text-white/40 text-sm mt-1">USD · par participant</div> */}
+                            {/* <div className="mt-4 pt-4 border-t border-white/10 text-white/50 text-sm leading-relaxed">
                                 💡 <strong className="text-white/70">Financement possible :</strong> prise en charge
                                 entreprise, subvention institutionnelle ou paiement échelonné. Contactez-nous.
-                            </div>
+                            </div> */}
                         </div>
                     </motion.div>
 
@@ -132,25 +132,15 @@ export default function Admission() {
                                     </motion.div>
                                 ))}
                             </motion.div>
-                            <p className="text-white/50 text-sm mt-5 leading-relaxed">
+                            {/* <p className="text-white/50 text-sm mt-5 leading-relaxed">
                                 Règle du <strong className="text-white/70">premier engagé, premier servi</strong>.
                                 Les dossiers sont étudiés par ordre de réception.
                             </p>
                             <a href="#" className="mt-4 inline-flex items-center gap-1 text-[#fde047] text-sm font-bold hover:underline group">
                                 Voir les critères de sélection{" "}
                                 <ArrowRight size={12} className="transform group-hover:translate-x-0.5 transition-transform" />
-                            </a>
+                            </a> */}
                         </div>
-
-                        {/* CTA principal */}
-                        {/* TODO: ajouter le lien d'inscription */}
-                        <a
-                            href=""
-                            className="inline-flex items-center gap-1.5 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#6D28D9] transition shrink-0"
-                        >
-                            Candidater à la Promotion 2026
-                            <ArrowRight size={16} />
-                        </a>
                     </motion.div>
 
                     {/* Col 3 — Timeline */}
@@ -189,6 +179,15 @@ export default function Admission() {
                         </div>
                     </motion.div>
                 </div>
+                {/* CTA principal */}
+                {/* TODO: ajouter le lien d'inscription */}
+                <a
+                    href=""
+                    className="inline-flex items-center mt-5 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#6D28D9] transition shrink-0"
+                >
+                    Candidater à la Promotion 2026
+                    <ArrowRight size={16} />
+                </a>
             </div>
         </section>
     );
