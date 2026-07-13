@@ -130,7 +130,7 @@ export default function Hero() {
             </div>
 
             {/* ── Stats banner ── */}
-            <div className="bg-[#061828] py-5 mt-0">
+            <div className="bg-[#1d9cc2] py-5 mt-0">
                 <div className="w-full container mx-auto px-5">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0 md:divide-x md:divide-white/10">
                         {stats.map(({ val, label }, i) => (
@@ -142,7 +142,7 @@ export default function Hero() {
                                 transition={{ delay: 0.55 + i * 0.1, duration: 0.4 }}
                             >
                                 <div className="text-[#f6a822] font-extrabold text-xl">{val}</div>
-                                <div className="text-white/60 text-sm mt-0.5">{label}</div>
+                                <div className="text-white text-sm mt-0.5">{label}</div>
                             </motion.div>
                         ))}
                     </div>
