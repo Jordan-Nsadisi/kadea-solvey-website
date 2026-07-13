@@ -41,7 +41,7 @@ export default function Programme() {
 
                     {/* Gauche — grande image + Public cible */}
                     <motion.div
-                        className="flex flex-col gap-8 md:mt-10"
+                        className="flex flex-col gap-8 md:mt-10 hidden md:block"
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
