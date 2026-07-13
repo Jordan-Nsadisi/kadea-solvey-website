@@ -11,8 +11,8 @@ const LIVRABLES = [
         subtitle: "12 pages",
         description:
             "Radar FARI sur les 6 dimensions de votre institution. Identification des 2–3 dimensions les plus critiques, des lacunes qui entravent vos ambitions et des axes prioritaires d'action.",
-        color: "bg-[#7C3AED]/20 text-[#7C3AED]",
-        border: "border-[#7C3AED]/30",
+        color: "bg-[#f6a822]/20 text-[#f6a822]",
+        border: "border-[#f6a822]/30",
     },
     {
         id: "L2",
@@ -21,8 +21,8 @@ const LIVRABLES = [
         subtitle: "2 pages",
         description:
             "Synthèse lisible de votre roadmap : 3–4 chantiers prioritaires avec jalons trimestriels, indicateurs de résultat, structure de gouvernance et options de mitigation des 2–3 risques majeurs.",
-        color: "bg-[#7C3AED]/20 text-[#7C3AED]",
-        border: "border-[#7C3AED]/30",
+        color: "bg-[#f6a822]/20 text-[#f6a822]",
+        border: "border-[#f6a822]/30",
     },
     {
         id: "L3",
@@ -31,8 +31,8 @@ const LIVRABLES = [
         subtitle: "2 pages",
         description:
             "À partir du portefeuille construit en Session 2 : justification de vos 2 cas d'usage prioritaires, valeur publique, séquencement stratégique et prérequis de gouvernance des données.",
-        color: "bg-[#EC4899]/20 text-[#EC4899]",
-        border: "border-[#EC4899]/30",
+        color: "bg-[#f6a822]/20 text-[#f6a822]",
+        border: "border-[#f6a822]/30",
     },
     {
         id: "L4",
@@ -41,8 +41,8 @@ const LIVRABLES = [
         subtitle: "12 pages",
         description:
             "Conduite du changement (cartographie parties prenantes, plan de communication 6 mois) et plan de compétences : rôles clés à créer, profils attendus, horizon de montée en compétences.",
-        color: "bg-[#10B981]/20 text-[#10B981]",
-        border: "border-[#10B981]/30",
+        color: "bg-[#f6a822]/20 text-[#f6a822]",
+        border: "border-[#f6a822]/30",
     },
 ];
 
@@ -57,25 +57,25 @@ const fadeUp = {
 
 export default function Livrables() {
     return (
-        <section id="livrables" className="py-16 md:py-24 bg-[#0A2540]">
+        <section id="livrables" className="py-10   bg-[#15294e]">
             <div className="w-full container mx-auto px-5">
 
                 {/* Header */}
                 <motion.div
-                    className="text-center mb-12 md:mb-16"
+                    className="mb-12 md:mb-16"
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <span className="text-[#7C3AED] font-bold text-sm uppercase tracking-widest block mb-3">
+                    <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
                         05 · Ce que chaque institution emporte
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
                         4 Livrables Opérationnels
                     </h2>
-                    <p className="text-white/60 text-base mt-3 max-w-xl mx-auto leading-relaxed">
-                        Ce ne sont pas des rapports académiques — ce sont des documents de direction que vous
+                    <p className="text-white/60 text-base mt-3 max-w-xl leading-relaxed">
+                        Des documents de direction que vous
                         défendrez devant un jury jouant le rôle de votre comité ministériel ou de direction.
                     </p>
                 </motion.div>
@@ -94,8 +94,8 @@ export default function Livrables() {
                             variants={fadeUp}
                             className={`bg-white/5 border ${border} rounded-2xl p-6 flex gap-5 items-start hover:bg-white/8 transition-colors`}
                         >
-                            <div className={`w-11 h-11 rounded-xl ${color} flex items-center justify-center shrink-0`}>
-                                <Icon size={20} />
+                            <div className={`w-10 h-10 rounded-xl ${color} flex items-center justify-center shrink-0`}>
+                                <Icon size={18} />
                             </div>
                             <div className="flex flex-col gap-2">
                                 <div className="flex items-center gap-2">
@@ -110,7 +110,7 @@ export default function Livrables() {
                     ))}
                 </motion.div>
 
-                {/* Format note */}
+                {/* Format note
                 <motion.div
                     className="mt-10 border border-white/10 rounded-xl px-6 py-4 text-center"
                     initial={{ opacity: 0 }}
@@ -122,7 +122,7 @@ export default function Livrables() {
                         <strong className="text-white/70">Format du dossier :</strong> Word ou PDF · 7 à 12 pages hors annexes · Français ·
                         Rédigé à la première personne · Défendu devant le jury lors du pitch de restitution à Bruxelles.
                     </p>
-                </motion.div>
+                </motion.div> */}
 
             </div>
         </section>

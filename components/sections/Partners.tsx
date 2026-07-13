@@ -25,7 +25,7 @@ export default function Partners() {
                 </motion.p>
 
                 <motion.div
-                    className="flex flex-wrap justify-center items-center gap-10 md:gap-16"
+                    className="flex flex-wrap justify-center items-center gap-12 md:gap-16"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}

@@ -7,9 +7,9 @@ import { MapPin, Calendar, Clock, ChevronRight, ClipboardList } from "lucide-rea
 const SESSIONS = [
     {
         id: "01",
-        accentBg: "bg-[#7C3AED]",
-        accentText: "text-[#7C3AED]",
-        accentBorder: "border-t-4 border-[#7C3AED]",
+        accentBg: "bg-[#f6a822]",
+        accentText: "text-[#f6a822]",
+        accentBorder: "border-t-4 border-[#f6a822]",
         title: "Diagnostic & Stratégie Digitale",
         location: "Kinshasa · Hôtel Pullman",
         date: "Septembre 2026",
@@ -33,7 +33,7 @@ const SESSIONS = [
             },
         ],
         deliverable: "L1 — Diagnostic FARI + Business Case institutionnel",
-        chipBg: "bg-[#7C3AED]/15 text-[#78350f]",
+        chipBg: "bg-[#f6a822]/15 text-[#78350f]",
     },
     {
         id: "02",
@@ -108,7 +108,7 @@ const fadeUp = {
 
 export default function Sessions() {
     return (
-        <section id="sessions" className="py-16 md:py-24 bg-[#F8FAFC]">
+        <section id="sessions" className="py-10   bg-[#F8FAFC]">
             <div className="w-full container mx-auto px-5">
 
                 {/* Header */}
@@ -119,11 +119,11 @@ export default function Sessions() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <span className="text-[#7C3AED] font-bold text-sm uppercase tracking-widest block mb-3">
+                    <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
                         04 · Les Sessions
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A2540] leading-tight mb-4">
-                        3 Sessions · 9 Jours · 3 Villes
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight mb-4">
+                        3 Sessions · 3 mois · 3 Villes
                     </h2>
                     <p className="text-gray-500 text-base">
                         Présence requise aux trois sessions pour l&apos;obtention de la micro-accréditation ULB.
@@ -131,7 +131,7 @@ export default function Sessions() {
                 </motion.div>
 
                 {/* Session cards */}
-                <div className="flex flex-col gap-8 lg:gap-10">
+                <div className="flex flex-col gap-8 lg:gap-12">
                     {SESSIONS.map((session, si) => (
                         <motion.div
                             key={session.id}
@@ -141,7 +141,7 @@ export default function Sessions() {
                             viewport={{ once: true, amount: 0.15 }}
                             transition={{ duration: 0.5, delay: si * 0.05, ease: "easeOut" }}
                         >
-                            <div className="p-8 lg:p-10">
+                            <div className="p-8 lg:p-12">
                                 <div className="grid md:grid-cols-[1fr_2fr] gap-8 lg:gap-12 items-start">
 
                                     {/* Meta colonne */}
@@ -150,7 +150,7 @@ export default function Sessions() {
                                             <span className={`font-extrabold text-sm uppercase tracking-widest ${session.accentText}`}>
                                                 Session {session.id}
                                             </span>
-                                            <h3 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight mt-1">
+                                            <h3 className="text-2xl md:text-2xl font-extrabold text-[#0A2540] leading-tight mt-1">
                                                 {session.title}
                                             </h3>
                                         </div>
@@ -173,15 +173,15 @@ export default function Sessions() {
                                         <p className="text-gray-500 text-base leading-relaxed">{session.intro}</p>
 
                                         {/* Livrable badge */}
-                                        <div className="flex items-start gap-2 text-sm font-semibold px-3 py-2 rounded-lg bg-gray-50 text-[#0A2540] border-l-2 border-[#7C3AED] leading-relaxed">
-                                            <ClipboardList size={16} className="shrink-0 mt-[2px] text-[#7C3AED]" />
+                                        <div className="flex items-start gap-2 text-sm font-semibold px-3 py-2 rounded-lg bg-gray-50 text-[#0A2540] leading-relaxed">
+                                            <ClipboardList size={16} className="shrink-0 mt-[2px] text-[#f6a822]" />
                                             <span>{session.deliverable}</span>
                                         </div>
 
                                         <div className="flex gap-3 flex-wrap pt-1">
                                             <a
-                                                href="#admission"
-                                                className="inline-flex items-center gap-1.5 bg-[#7C3AED] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#6D28D9] transition shrink-0"
+                                                href=""
+                                                className="inline-flex items-center gap-1.5 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#6D28D9] transition shrink-0"
                                             >
                                                 S&apos;inscrire
                                                 <ChevronRight size={14} />
@@ -212,7 +212,7 @@ export default function Sessions() {
                                                 <ul className="space-y-1 mt-1">
                                                     {day.items.map((it) => (
                                                         <li key={it} className="text-gray-500 text-sm flex items-start gap-1.5">
-                                                            <span className="text-[#7C3AED] shrink-0 mt-0.5">›</span>
+                                                            <span className="text-[#f6a822] shrink-0 mt-0.5">›</span>
                                                             {it}
                                                         </li>
                                                     ))}

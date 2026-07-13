@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { Archivo, Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./styles/globals.css";
 
+
+const archivo = Archivo({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-archivo',
+});
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -45,10 +51,11 @@ export default function RootLayout({
         ${geistSans.variable} 
         ${geistMono.variable} 
         ${titillium.variable} 
+        ${archivo.variable} 
         h-full antialiased
       `}
     >
-      <body className="min-h-full flex flex-col font-titillium antialiased">
+      <body className="min-h-full flex flex-col font-archivo antialiased">
         <Suspense>{children}</Suspense>
       </body>
     </html>

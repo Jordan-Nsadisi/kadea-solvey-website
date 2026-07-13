@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const homeMetadata: Metadata = {
     title: "Transformation Digitale & IA en RDC | Programme Executive 2026",
-    description: "Parcours d'excellence conçu par ULB-Solvay Lifelong Learning et Kadea Executive pour outiller les dirigeants, DSI et DRH de la RDC à piloter l'adoption de l'IA et du digital.",
+    description: "Parcours d'excellence Conçu par ULB-Solvay Lifelong Learning en partenariat avec Kadea Executive et avec lʼapport technique de Microsoft pour outiller les dirigeants, DSI et DRH de la RDC à piloter l'adoption de l'IA et du digital.",
     keywords: [
         "Transformation digitale RDC",
         "Intelligence Artificielle République Démocratique du Congo",
@@ -18,7 +18,7 @@ export const homeMetadata: Metadata = {
 
     openGraph: {
         title: "Transformation Digitale & IA en RDC · Programme Executive 2026",
-        description: "Un parcours intensif de 9 jours entre Kinshasa et Bruxelles pour les décideurs publics et privés, certifié par une micro-accréditation universitaire ULB-Solvay.",
+        description: "Un parcours intensif de 3 mois entre Kinshasa et Bruxelles pour les décideurs publics et privés, certifié par une micro-accréditation universitaire ULB-Solvay.",
         url: "https://solvay.kadea.co",
         siteName: "ULB-Solvay x Kadea Executive",
         locale: "fr_FR",
@@ -36,7 +36,7 @@ export const homeMetadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Transformation Digitale & IA en RDC | Promo 2026",
-        description: "9 jours de formation intensive pour aligner la stratégie de l'État et des entreprises privées sur les défis de l'IA.", // [cite: 10, 44]
+        description: "3 mois de formation intensive pour aligner la stratégie de l'État et des entreprises privées sur les défis de l'IA.", // [cite: 10, 44]
         images: ["/images/og-image.jpg"],
     },
 

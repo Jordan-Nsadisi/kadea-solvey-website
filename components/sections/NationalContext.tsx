@@ -40,11 +40,13 @@ const fadeUp = {
 
 export default function NationalContext() {
     return (
-        <section id="contexte" className="py-16 md:py-24 bg-[#F8FAFC]">
-            <div className="w-full container mx-auto px-5 flex flex-col gap-12 md:gap-16">
+        <section
+            className="py-10   bg-[#F8FAFC]"
+        >
+            <div className="w-full container mx-auto px-5 flex flex-col gap-12">
 
                 {/* Top Section */}
-                <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
+                <div className="grid md:grid-cols-2 gap-12 lg:gap-14 items-center">
                     {/* Gauche — Texte */}
                     <motion.div
                         className="flex flex-col justify-center gap-5"
@@ -54,55 +56,51 @@ export default function NationalContext() {
                         transition={{ duration: 0.55, ease: "easeOut" }}
                     >
                         <div>
-                            <span className="text-[#7C3AED] font-bold text-sm uppercase tracking-widest block mb-4">
+                            <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-4">
                                 01 · Contexte National
                             </span>
-                            <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A2540] leading-tight">
+                            <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight">
                                 Le numérique & l&apos;IA, <br className="hidden md:block" />
-                                priorité de la <span className="text-[#7C3AED]">Présidence</span> et <br className="hidden md:block" />
-                                <span className="text-[#7C3AED]">Gouvernement de la RDC</span>
+                                priorité de la <span className="text-[#f6a822]">Présidence</span> et <br className="hidden md:block" />
+                                <span className="text-[#f6a822]">Gouvernement de la RDC</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-base leading-relaxed">
                             Sous l&apos;impulsion de la Présidence, la République Démocratique du Congo engage un tournant
                             décisif vers le numérique et l&apos;intelligence artificielle, porté par une nouvelle génération
-                            de stratégies nationales.
-                        </p>
-                        <p className="text-[#0A2540] font-bold text-base leading-relaxed">
-                            ULB-Solvay Lifelong Learning accompagne la Présidence dans cette réflexion et outille ses
+                            de stratégies nationales. {" "}
+                            <span className="text-[#0A2540] font-bold text-base leading-relaxed">ULB-Solvay Lifelong Learning
+                            </span>{" "}
+                            accompagne la Présidence dans cette réflexion et outille ses
                             décideurs pour piloter la transformation digitale & l&apos;IA des institutions publiques.
+
                         </p>
                     </motion.div>
 
-                    {/* Droite — Image (Même hauteur et border-radius que Institution) */}
-                    <motion.div
-                        className="relative min-h-[380px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto"
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.55, ease: "easeOut" }}
-                    >
-                        <Image
-                            src={digitalNationImg}
-                            alt="Présidence de la RDC - DRC Digital Nation"
-                            fill
-                            className="object-cover object-center"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
-                    </motion.div>
+                    {/* Droite — Image*/}
+                    <div className="rounded-xl overflow-hidden">
+                        <motion.div
+                            className="relative min-h-[380px] w-full rounded-3xl overflow-hidden shadow-sm border border-gray-100 aspect-[4/3] md:aspect-auto"
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.55, ease: "easeOut" }}
+                        >
+                            <Image
+                                src={digitalNationImg}
+                                alt="Présidence de la RDC - DRC Digital Nation"
+                                fill
+                                className=" object-cover object-center rounded-xl"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
+                        </motion.div>
+                    </div>
                 </div>
 
                 {/* Middle Section : Les 3 cadres nationaux */}
                 <div>
-                    <motion.span
-                        className="text-[#7C3AED] font-extrabold text-sm uppercase tracking-widest block mb-8 text-center md:text-left"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                    >
-                        EN COHÉRENCE AVEC LES CADRES NATIONAUX DU NUMÉRIQUE & DE L&apos;IA
-                    </motion.span>
                     <motion.div
                         className="grid md:grid-cols-3 gap-6"
                         variants={stagger}
@@ -124,34 +122,6 @@ export default function NationalContext() {
                         ))}
                     </motion.div>
                 </div>
-
-                {/* Bottom Section : Les 4 statistiques */}
-                <div>
-                    <motion.span
-                        className="text-[#0A2540]/60 font-extrabold text-sm uppercase tracking-widest block mb-8 text-center md:text-left"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                    >
-                        LA TRANSFORMATION NUMÉRIQUE EN RÉPUBLIQUE DÉMOCRATIQUE DU CONGO
-                    </motion.span>
-                    <motion.div
-                        className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 pt-6 border-t border-gray-200"
-                        variants={stagger}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
-                    >
-                        {STATS.map(({ value, label }) => (
-                            <motion.div key={label} variants={fadeUp} className="flex flex-col">
-                                {/* Taille exacte calquée sur Institution */}
-                                <div className="text-[#0A2540] font-extrabold text-3xl">{value}</div>
-                                <div className="text-gray-400 text-sm mt-1">{label}</div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                </div>
-
             </div>
         </section>
     );
