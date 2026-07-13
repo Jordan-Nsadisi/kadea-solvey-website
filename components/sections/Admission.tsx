@@ -61,7 +61,7 @@ export default function Admission() {
                         {/* Certification ULB */}
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                             <div className="flex items-center gap-3 mb-4">
-                                <Award size={18} className="text-[#f6a822]" />
+                                <Award size={18} className="text-[#f6a8f6a82222]" />
                                 <span className="text-white font-extrabold text-base">Micro-Accréditation ULB</span>
                             </div>
                             <p className="text-white/60 text-sm leading-relaxed mb-3">
@@ -81,7 +81,7 @@ export default function Admission() {
                         {/* Prix */}
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                             <div className="text-white/50 text-sm font-semibold mb-1">Valeur du programme</div>
-                            <div className="text-[#84cc16] font-extrabold text-3xl">7 500 $</div>
+                            <div className="text-white font-extrabold text-3xl">7 500 $</div>
                             {/* <div className="text-white/40 text-sm mt-1">USD · par participant</div> */}
                             {/* <div className="mt-4 pt-4 border-t border-white/10 text-white/50 text-sm leading-relaxed">
                                 💡 <strong className="text-white/70">Financement possible :</strong> prise en charge
@@ -99,13 +99,13 @@ export default function Admission() {
                         transition={{ duration: 0.5, delay: 0.1 }}
                     >
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                            <div className="flex items-center gap-2 mb-4">
+                            {/* <div className="flex items-center gap-2 mb-4">
                                 <span className="bg-[#EC4899] text-white text-sm font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
                                     ⚠ Places Limitées
                                 </span>
-                            </div>
+                            </div> */}
                             <p className="text-white font-semibold text-base mb-5 leading-relaxed">
-                                <strong className="text-[#fde047]">40 places disponibles maximum.</strong>{" "}
+                                <strong className="text-[#f6a822]">40 places disponibles maximum.</strong>{" "}
                                 Recrutement sélectif réparti en 2 promotions strictes :
                             </p>
                             <motion.div
@@ -128,7 +128,7 @@ export default function Admission() {
                                                 <div className="text-white/40 text-sm">{places}</div>
                                             </div>
                                         </div>
-                                        <CheckCircle size={16} className="text-[#84cc16] shrink-0" />
+                                        <CheckCircle size={16} className="text-[#f6a822] shrink-0" />
                                     </motion.div>
                                 ))}
                             </motion.div>
@@ -164,8 +164,8 @@ export default function Admission() {
                                 {TIMELINE.map(({ icon: Icon, label, desc }, i) => (
                                     <motion.div key={label} variants={fadeUp} className="flex items-start gap-4">
                                         <div className="flex flex-col items-center shrink-0">
-                                            <div className="w-9 h-9 rounded-full bg-[#84cc16]/15 border border-[#84cc16]/30 flex items-center justify-center">
-                                                <Icon size={15} className="text-[#84cc16]" />
+                                            <div className="w-9 h-9 rounded-full bg-[#f6a822]/15 border border-[#84cc16]/30 flex items-center justify-center">
+                                                <Icon size={15} className="text-[#f6a822]" />
                                             </div>
                                             {i < TIMELINE.length - 1 && <div className="w-px h-6 bg-white/10 mt-1.5" />}
                                         </div>
@@ -183,7 +183,7 @@ export default function Admission() {
                 {/* TODO: ajouter le lien d'inscription */}
                 <a
                     href=""
-                    className="inline-flex items-center mt-5 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#6D28D9] transition shrink-0"
+                    className="inline-flex items-center mt-5 md:mt-1 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#6D28D9] transition shrink-0"
                 >
                     Candidater à la Promotion 2026
                     <ArrowRight size={16} />

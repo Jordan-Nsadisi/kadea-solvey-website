@@ -35,7 +35,7 @@ const items = [
     },
     {
         color: "bg-[#00B500] text-white",
-        hoverBorder: "hover:border-[#0A2540]/40",
+        hoverBorder: "hover:border-[#00B500]/40",
         title: "Kadea Executive",
         description:
             "Programmes Executive & Certifiants pour le Top Management. Façonnez les leaders de demain grâce à nos formations continues haut de gamme pour les entreprises et institutions publiques.",
@@ -57,7 +57,7 @@ const cardVariant = {
 export default function OtherFieldsSection() {
     return (
         <section className="w-full bg-[#F8FAFC] py-10  ">
-            <div className="container mx-auto px-5 flex flex-col gap-12">
+            <div className="container mx-auto px-5 flex flex-col gap-10">
 
                 <motion.div
                     className="text-center"
@@ -67,11 +67,11 @@ export default function OtherFieldsSection() {
                     transition={{ duration: 0.5 }}
                 >
                     <h2 className="font-extrabold text-2xl md:text-3xl text-[#0A2540] mb-4">
-                        Kadea, c&apos;est aussi :
+                        Kadea c&apos;est aussi :
                     </h2>
-                    <p className="text-gray-400 text-base max-w-lg mx-auto">
+                    {/* <p className="text-gray-400 text-base max-w-lg mx-auto">
                         Découvrez l&apos;ensemble de l&apos;écosystème Kadea au service de votre croissance.
-                    </p>
+                    </p> */}
                 </motion.div>
 
                 <motion.div
