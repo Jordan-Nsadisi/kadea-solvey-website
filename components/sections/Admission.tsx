@@ -5,8 +5,8 @@ import { CheckCircle, ArrowRight, Landmark, Building, Mail, Award, CreditCard, F
 import { subscribeLink } from "@/data/subscribe-link";
 
 const TIMELINE = [
-    { icon: Mail, label: "Manifestation d'intérêt", desc: "Envoi de votre candidature par email" },
-    { icon: FileText, label: "Étude du dossier", desc: "Examen par ordre de réception" },
+    { icon: Mail, label: "Inscription en ligne", desc: " remplissage du formulaire " },
+    { icon: FileText, label: "Examen du dossier", desc: "Examen par ordre de réception" },
     { icon: UserCheck, label: "Confirmation", desc: "Notification d'acceptation officielle" },
     { icon: CreditCard, label: "Paiement", desc: "Règlement des 7 500 USD par participant" },
 ];
