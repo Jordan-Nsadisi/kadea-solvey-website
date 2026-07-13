@@ -98,6 +98,33 @@ export default function Programme() {
                                 </motion.div>
                             </div>
                         </motion.div>
+
+                        <div className="">
+                            {/* Liens d'action */}
+                            <motion.div
+                                className="flex gap-3 flex-wrap mt-3"
+                                initial={{ opacity: 0, y: 12 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: 0.2 }}
+                            >
+                                {/* TODO: Ajouter le lien d'inscription */}
+                                <a
+                                    href=""
+                                    className="inline-flex items-center gap-2 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#6D28D9] transition shrink-0"
+                                >
+                                    S&apos;inscrire
+                                </a>
+                                <a
+                                    href="/docs/Programme_Executive_Transformation_Digitale_IA_Solvay-ULB_2026_compressed.pdf"
+                                    target="_blank"
+                                    className="inline-flex items-center gap-2 border border-[#f6a822] text-[#f6a822] font-semibold px-5 py-2.5 rounded-md text-base md:text-xl hover:bg-[#f6a822] hover:text-white transition shrink-0"
+                                >
+                                    <FileDown size={15} />
+                                    Brochure PDF
+                                </a>
+                            </motion.div>
+                        </div>
                     </div>
 
                     {/* Gauche — grande image + Public cible */}
