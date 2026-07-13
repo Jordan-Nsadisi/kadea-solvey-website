@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 
-const INSTITUTION_PHOTO = "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&h=500&fit=crop&auto=format";
+const INSTITUTION_PHOTO = "/assets/images/ulb.jpeg";
 
 const SCHOOL_STATS = [
     { val: "25 000+", label: "Alumni" },
