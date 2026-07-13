@@ -10,7 +10,7 @@ import wbiLogo from "@/public/assets/partners/wallonie.png";
 
 const stats = [
     { val: "3 mois", label: "de Formation Intensive" },
-    { val: "3 Sessions", label: "de 3 Jours chacune" },
+    { val: "3 Sessions", label: "de 3 jours en présentiele" },
     { val: "Kinshasa & Bruxelles", label: "Double immersion" },
     { val: "Micro-accréditation", label: "Universitaire ULB" },
 ];
