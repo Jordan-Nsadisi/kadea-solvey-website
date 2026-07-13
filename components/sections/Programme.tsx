@@ -50,13 +50,12 @@ export default function Programme() {
                                 03 · <span className="text-[#15294e]">Le Programme</span>
                             </span>
                             <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight max-w-2xl mb-4">
-                                Piloter le digital &amp; l&apos;IA de votre organisation
+                                Piloter le <span className="text-[#f6a822]">digital & l&apos;IA</span> de votre organisation
                             </h2>
                             <p className="text-gray-500 text-base leading-relaxed max-w-2xl">
-                                Programme intensif conçu pour le{" "}
-                                <strong className="text-[#0A2540]">Top Management, les DSI et les DRH </strong> des
-                                institutions publiques et entreprises privées de la RDC. Il couvre 4 domaines clés :
-                                Stratégie, Transformation, Processus &amp; Performance, Alignement Métier &amp; IT.
+                                Parcours executive qui outille les décideurs pour initier et conduire la
+                                transformation digitale et lʼadoption de lʼIA, en cohérence le Plan National
+                                du Numérique et la Stratégie Digitale 2030.
                             </p>
                         </motion.div>
 

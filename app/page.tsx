@@ -19,11 +19,11 @@ export default function Home() {
       <main>
         <Hero />
         <Institution />
-        <NationalContext />
         <Programme />
         <Sessions />
         <Livrables />
         <Admission />
+        <NationalContext />
         <OtherFieldsSection />
       </main>
       <Footer />
