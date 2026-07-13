@@ -4,26 +4,21 @@ Landing page for the "Programme Executive : Transformation Digitale & IA" in the
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Quick Start
-
-Install dependencies and build the production-ready static assets.
+Run the development server locally:
 
 ```bash
 npm install
+npm run dev
+```
+Open http://localhost:3000 with your browser to see the result. You can start editing the page by modifying app/page.tsx.
+
+## Production Deployment
+Generate the production-ready assets:
+
+```bash
 npm run build
+```
+Deploy the contents of the generated output folder (/out or .next) to your hosting server directory.
+
+Configure your DNS provider to route the subdomain solvay.kadea.academy to your hosting server target.
+
