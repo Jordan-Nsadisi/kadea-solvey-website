@@ -1,18 +1,19 @@
 "use client";
 
 import { motion } from "motion/react";
-import { CheckCircle, ArrowRight, Phone, Mail, Award, CreditCard, FileText, UserCheck } from "lucide-react";
+import { CheckCircle, ArrowRight, Landmark, Building, Mail, Award, CreditCard, FileText, UserCheck } from "lucide-react";
+import { subscribeLink } from "@/data/subscribe-link";
 
 const TIMELINE = [
-    { icon: Mail, label: "Manifestation d'intérêt", desc: "Envoi de votre candidature par email" },
-    { icon: FileText, label: "Étude du dossier", desc: "Examen par ordre de réception" },
+    { icon: Mail, label: "Inscription en ligne", desc: " remplissage du formulaire " },
+    { icon: FileText, label: "Examen du dossier", desc: "Examen par ordre de réception" },
     { icon: UserCheck, label: "Confirmation", desc: "Notification d'acceptation officielle" },
     { icon: CreditCard, label: "Paiement", desc: "Règlement des 7 500 USD par participant" },
 ];
 
 const PROMOTIONS = [
-    { label: "Institutions Publiques", places: "20 places", icon: "🏛️" },
-    { label: "Entreprises Privées", places: "20 places", icon: "🏢" },
+    { label: "Institutions Publiques", places: "20 places", icon: <Landmark size={16} className="text-[#f6a822]" /> },
+    { label: "Entreprises Privées", places: "20 places", icon: <Building size={16} className="text-[#f6a822]" /> },
 ];
 
 const stagger = {
@@ -38,7 +39,7 @@ export default function Admission() {
                     transition={{ duration: 0.5 }}
                 >
                     <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
-                        06 · Certification &amp; Admission
+                        05 · <span className="text-white">Certification &amp; Admission</span>
                     </span>
                     <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
                         Rejoignez la Promotion 2026
@@ -50,7 +51,6 @@ export default function Admission() {
 
                 <div className="grid md:grid-cols-3 gap-6 md:gap-8">
 
-                    {/* Col 1 — Certification + Prix */}
                     <motion.div
                         className="flex flex-col gap-6"
                         initial={{ opacity: 0, x: -24 }}
@@ -61,7 +61,7 @@ export default function Admission() {
                         {/* Certification ULB */}
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                             <div className="flex items-center gap-3 mb-4">
-                                <Award size={18} className="text-[#f6a8f6a82222]" />
+                                <Award size={18} className="text-[#f6a822]" />
                                 <span className="text-white font-extrabold text-base">Micro-Accréditation ULB</span>
                             </div>
                             <p className="text-white/60 text-sm leading-relaxed mb-3">
@@ -82,15 +82,9 @@ export default function Admission() {
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                             <div className="text-white/50 text-sm font-semibold mb-1">Valeur du programme</div>
                             <div className="text-white font-extrabold text-3xl">7 500 $</div>
-                            {/* <div className="text-white/40 text-sm mt-1">USD · par participant</div> */}
-                            {/* <div className="mt-4 pt-4 border-t border-white/10 text-white/50 text-sm leading-relaxed">
-                                💡 <strong className="text-white/70">Financement possible :</strong> prise en charge
-                                entreprise, subvention institutionnelle ou paiement échelonné. Contactez-nous.
-                            </div> */}
                         </div>
                     </motion.div>
 
-                    {/* Col 2 — Places limitées + promotions */}
                     <motion.div
                         className="flex flex-col gap-6"
                         initial={{ opacity: 0, y: 24 }}
@@ -99,14 +93,9 @@ export default function Admission() {
                         transition={{ duration: 0.5, delay: 0.1 }}
                     >
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                            {/* <div className="flex items-center gap-2 mb-4">
-                                <span className="bg-[#EC4899] text-white text-sm font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
-                                    ⚠ Places Limitées
-                                </span>
-                            </div> */}
                             <p className="text-white font-semibold text-base mb-5 leading-relaxed">
                                 <strong className="text-[#f6a822]">40 places disponibles maximum.</strong>{" "}
-                                Recrutement sélectif réparti en 2 promotions strictes :
+                                Recrutement sélectif réparti en 2 promotions :
                             </p>
                             <motion.div
                                 className="flex flex-col gap-3"
@@ -143,7 +132,7 @@ export default function Admission() {
                         </div>
                     </motion.div>
 
-                    {/* Col 3 — Timeline */}
+                    {/* revoir la pertinence de cette colone  */}
                     <motion.div
                         initial={{ opacity: 0, x: 24 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -179,11 +168,13 @@ export default function Admission() {
                         </div>
                     </motion.div>
                 </div>
-                {/* CTA principal */}
-                {/* TODO: ajouter le lien d'inscription */}
+
+                {/* CTA */}
                 <a
-                    href=""
-                    className="inline-flex items-center mt-5 md:mt-1 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#6D28D9] transition shrink-0"
+                    href={subscribeLink.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center mt-5 md:mt-[-50px] bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#f6a822]/90 transition shrink-0"
                 >
                     Candidater à la Promotion 2026
                     <ArrowRight size={16} />

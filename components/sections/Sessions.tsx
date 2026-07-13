@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { MapPin, Calendar, Clock, ChevronRight, ClipboardList } from "lucide-react";
+import { subscribeLink } from "@/data/subscribe-link";
 
 const SESSIONS = [
     {
@@ -54,7 +55,7 @@ const SESSIONS = [
             {
                 label: "Jour 5",
                 title: "Outils IA secteur public et gouvernance des données",
-                items: ["Copilot, Power Platform, Azure AI", "Gouvernance des données : le prérequis de l'IA"],
+                items: ["Les outils au service des administrations publiques", "Gouvernance des données : le prérequis de l'IA"],
             },
             {
                 label: "Jour 6",
@@ -84,12 +85,12 @@ const SESSIONS = [
             {
                 label: "Jour 8",
                 title: "Vision à long terme, compétences et immersion terrain",
-                items: ["Prospective stratégique et plan de compétences", "Google Atelier Digital · Benchmark e-gouvernement"],
+                items: ["Prospective stratégique et plan de compétences", "Immersion dans l'écosystème IA européen (2)"],
             },
             {
                 label: "Jour 9",
                 title: "Finalisation de la roadmap et pitch de restitution",
-                items: ["Finalisation de la feuille de route 2–3 ans", "Pitch de restitution · Certification ULB · Dîner Gala Atomium"],
+                items: ["Finalisation de la feuille de route 2–3 ans", "Pitch de restitution, certification & dîner de gala"],
             },
         ],
         deliverable: "L4 — Plan de mobilisation + Digital Roadmap · Pitch devant jury",
@@ -120,7 +121,7 @@ export default function Sessions() {
                     transition={{ duration: 0.5 }}
                 >
                     <span className="text-[#f6a822] font-bold text-sm uppercase tracking-widest block mb-3">
-                        04 · Les Sessions
+                        03 · <span className="text-[#15294e]">Les Sessions</span>
                     </span>
                     <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] leading-tight mb-4">
                         3 Sessions · 3 mois · 3 Villes
@@ -173,15 +174,17 @@ export default function Sessions() {
                                         <p className="text-gray-500 text-base leading-relaxed">{session.intro}</p>
 
                                         {/* Livrable badge */}
-                                        <div className="flex items-start gap-2 text-sm font-semibold px-3 py-2 rounded-lg bg-gray-50 text-[#0A2540] leading-relaxed">
+                                        <div className="flex items-start gap-2 text-sm font-semibold px-3 py-2 rounded-lg bg-[#e7ecf5] text-[#0A2540] leading-relaxed">
                                             <ClipboardList size={16} className="shrink-0 mt-[2px] text-[#f6a822]" />
                                             <span>{session.deliverable}</span>
                                         </div>
 
                                         <div className="flex gap-3 flex-wrap pt-1">
                                             <a
-                                                href=""
-                                                className="inline-flex items-center gap-1.5 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#6D28D9] transition shrink-0"
+                                                href={subscribeLink.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-1.5 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#f6a822]/90 transition shrink-0"
                                             >
                                                 S&apos;inscrire
                                                 <ChevronRight size={14} />
@@ -201,7 +204,7 @@ export default function Sessions() {
                                             <motion.div
                                                 key={day.label}
                                                 variants={fadeUp}
-                                                className="bg-gray-50 rounded-xl p-4 flex flex-col gap-2 border border-gray-100"
+                                                className="bg-[#e7ecf5] rounded-xl p-4 flex flex-col gap-2 border border-gray-100"
                                             >
                                                 <span className="text-sm font-bold uppercase tracking-widest text-[#0A2540]">
                                                     {day.label}
