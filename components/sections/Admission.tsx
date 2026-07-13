@@ -168,12 +168,13 @@ export default function Admission() {
                         </div>
                     </motion.div>
                 </div>
-                {/* CTA principal */}
+
+                {/* CTA */}
                 <a
                     href={subscribeLink.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center mt-5 md:mt-1 bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#f6a822]/90 transition shrink-0"
+                    className="inline-flex items-center mt-5 md:mt-[-50px] bg-[#f6a822] text-white font-semibold px-5 py-2.5 rounded-md text-base hover:bg-[#f6a822]/90 transition shrink-0"
                 >
                     Candidater à la Promotion 2026
                     <ArrowRight size={16} />
