@@ -96,23 +96,38 @@ export default function Institution() {
 
                         {/* Accréditations */}
                         <motion.div
-                            className="flex items-center gap-3 pt-4 border-t border-gray-100 flex-wrap"
+                            className="flex items-center gap-5 pt-5 border-t border-gray-100 flex-wrap"
                             variants={stagger}
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
                         >
-                            {["EQUIS", "AMBA"].map((label) => (
-                                <motion.span
-                                    key={label}
-                                    variants={fadeUp}
-                                    className="bg-[#f6a822]/15 text-[#f6a822] text-sm font-bold px-3 py-1 rounded-full"
-                                >
-                                    {label}
-                                </motion.span>
-                            ))}
-                            <motion.span variants={fadeUp} className="text-gray-400 text-sm">
-                                Double Accréditation Internationale
+                            {/* Capsule contenant les logos */}
+                            <div className="flex items-center gap-5 bg-gray-50/80 px-4 py-2 rounded-2xl border border-gray-100/60 shadow-inner">
+                                {[
+                                    { id: "equis-brand", src: "/logos/equis.webp", alt: "Accréditation internationale EQUIS", width: 62, height: 26 },
+                                    { id: "amba-brand", src: "/logos/amba.jpeg", alt: "Accréditation internationale AMBA", width: 75, height: 24 }
+                                ].map((logo) => (
+                                    <motion.div
+                                        key={logo.id}
+                                        variants={fadeUp}
+                                        className="flex items-center justify-center grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-default"
+                                    >
+                                        <Image
+                                            src={logo.src}
+                                            alt={logo.alt}
+                                            width={logo.width}
+                                            height={logo.height}
+                                            className="object-contain h-6 w-auto"
+                                            unoptimized={process.env.NODE_ENV === "development"}
+                                        />
+                                    </motion.div>
+                                ))}
+                            </div>
+
+                            {/* Label explicatif */}
+                            <motion.span variants={fadeUp} className="text-gray-400 text-sm font-medium tracking-wide">
+                                Double Accréditation Internationale (Gage d&apos;excellence)
                             </motion.span>
                         </motion.div>
                     </motion.div>
