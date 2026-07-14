@@ -15,9 +15,6 @@ Open http://localhost:3000 with your browser to see the result. You can start ed
 ## Production Deployment
 Generate the production-ready assets:
 
-### Environment Variables
-NEXT_PUBLIC_SUBSCRIBE_URL=[https://forms.kadea.academy/prisedecontactsolvay]
-
 ```bash
 npm install
 npm run build
