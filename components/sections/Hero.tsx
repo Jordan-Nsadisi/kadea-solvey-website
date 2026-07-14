@@ -89,6 +89,15 @@ export default function Hero() {
                     {/* Partner logos — staggered */}
                     <div className="relative w-full overflow-hidden mt-6 marquee-mask">
 
+                        <motion.p
+                            className="ml-6 md:text-center text-blue-100/80 text-md font-semibold max-w-md leading-relaxed z-[99] pb-6"
+                            initial={{ y: 15, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.3, duration: 0.4 }}
+                        >
+                            Ce programme est soutenu par :
+                        </motion.p>
+
                         <motion.div
                             className="flex w-max"
                             initial="hidden"
