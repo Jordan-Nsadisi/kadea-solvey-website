@@ -98,8 +98,6 @@ export default function Hero() {
                     {/* Partner logos — staggered */}
                     <div className="relative w-full overflow-hidden mt-1 marquee-mask">
 
-
-
                         <motion.div
                             className="flex w-max"
                             initial="hidden"
