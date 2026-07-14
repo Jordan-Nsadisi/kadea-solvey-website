@@ -33,7 +33,7 @@ const SESSIONS = [
                 items: ["Le cadre de maturité FARI — 6 dimensions", "Construction du business case et ébauche de roadmap"],
             },
         ],
-        deliverable: "L1 — Diagnostic FARI + Business Case institutionnel",
+        deliverable: "Business Case",
         chipBg: "bg-[#f6a822]/15 text-[#78350f]",
     },
     {
