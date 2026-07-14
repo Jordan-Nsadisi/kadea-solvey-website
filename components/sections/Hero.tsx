@@ -20,6 +20,11 @@ const partners = [
     { name: "Microsoft", logo: microsoftLogo, w: 200, h: 60 },
     { name: "GIZ", logo: gizLogo, w: 200, h: 60 },
     { name: "wbi", logo: wbiLogo, w: 200, h: 60 },
+    { name: "ADN", logo: wbiLogo, w: 200, h: 60 },
+    { name: "MinFP", logo: wbiLogo, w: 200, h: 60 },
+    { name: "PPP", logo: wbiLogo, w: 200, h: 60 },
+    { name: "Vodacom", logo: wbiLogo, w: 200, h: 60 },
+    { name: "Enabel", logo: wbiLogo, w: 200, h: 60 },
 ];
 
 export default function Hero() {
