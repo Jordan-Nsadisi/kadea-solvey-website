@@ -87,36 +87,72 @@ export default function Hero() {
                     </motion.div>
 
                     {/* Partner logos — staggered */}
-                    <motion.div
-                        className="flex items-center gap-5 flex-wrap mt-2"
-                        initial="hidden"
-                        animate="visible"
-                        variants={{
-                            hidden: { opacity: 0 },
-                            visible: {
-                                opacity: 1,
-                                transition: { staggerChildren: 0.12, delayChildren: 0.5 },
-                            },
-                        }}
-                    >
-                        {partners.map((p) => (
-                            <motion.div
-                                key={p.name}
-                                className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2 flex items-center justify-center"
-                                variants={{ hidden: { scale: 0, opacity: 0 }, visible: { scale: 1, opacity: 1 } }}
-                                whileHover={{ scale: 1.06 }}
-                                transition={{ type: "spring", stiffness: 260, damping: 18 }}
-                            >
-                                <Image
-                                    src={p.logo}
-                                    alt={p.name}
-                                    width={p.w}
-                                    height={p.h}
-                                    className="h-8 w-auto object-contain brightness-0 invert"
-                                />
-                            </motion.div>
-                        ))}
-                    </motion.div>
+                    <div className="relative w-full overflow-hidden mt-6 marquee-mask">
+
+                        <motion.div
+                            className="flex w-max"
+                            initial="hidden"
+                            animate="visible"
+                            variants={{
+                                hidden: { opacity: 0 },
+                                visible: {
+                                    opacity: 1,
+                                    transition: { staggerChildren: 0.12, delayChildren: 0.5 },
+                                },
+                            }}
+                        >
+                            <div className="animate-marquee flex gap-5 py-2">
+
+                                <div className="flex gap-5 shrink-0">
+                                    {partners.map((p) => (
+                                        <motion.div
+                                            key={`${p.name}-primary`}
+                                            className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2 flex items-center justify-center shrink-0 cursor-default"
+                                            variants={{
+                                                hidden: { scale: 0, opacity: 0 },
+                                                visible: { scale: 1, opacity: 1 }
+                                            }}
+                                            whileHover={{ scale: 1.06 }}
+                                            transition={{ type: "spring", stiffness: 260, damping: 18 }}
+                                        >
+                                            <Image
+                                                src={p.logo}
+                                                alt={p.name}
+                                                width={p.w}
+                                                height={p.h}
+                                                className="h-8 w-auto object-contain brightness-0 invert"
+                                            />
+                                        </motion.div>
+                                    ))}
+                                </div>
+
+                                {/*copie conforme pour la boucle */}
+                                <div className="flex gap-5 shrink-0" aria-hidden="true">
+                                    {partners.map((p) => (
+                                        <motion.div
+                                            key={`${p.name}-duplicate`}
+                                            className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2 flex items-center justify-center shrink-0 cursor-default"
+                                            variants={{
+                                                hidden: { scale: 0, opacity: 0 },
+                                                visible: { scale: 1, opacity: 1 }
+                                            }}
+                                            whileHover={{ scale: 1.06 }}
+                                            transition={{ type: "spring", stiffness: 260, damping: 18 }}
+                                        >
+                                            <Image
+                                                src={p.logo}
+                                                alt={p.name}
+                                                width={p.w}
+                                                height={p.h}
+                                                className="h-8 w-auto object-contain brightness-0 invert"
+                                            />
+                                        </motion.div>
+                                    ))}
+                                </div>
+
+                            </div>
+                        </motion.div>
+                    </div>
                 </motion.div>
 
                 {/* Right — portrait */}
