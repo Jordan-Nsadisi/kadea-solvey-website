@@ -16,6 +16,7 @@ Open http://localhost:3000 with your browser to see the result. You can start ed
 Generate the production-ready assets:
 
 ```bash
+npm install
 npm run build
 ```
 Deploy the contents of the generated output folder (/out or .next) to your hosting server directory.

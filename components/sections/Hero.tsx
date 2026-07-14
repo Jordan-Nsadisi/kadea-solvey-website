@@ -20,6 +20,11 @@ const partners = [
     { name: "Microsoft", logo: microsoftLogo, w: 200, h: 60 },
     { name: "GIZ", logo: gizLogo, w: 200, h: 60 },
     { name: "wbi", logo: wbiLogo, w: 200, h: 60 },
+    { name: "ADN", logo: "/logos/adn.png", w: 200, h: 60 },
+    { name: "PPP", logo: "/logos/ppp.png", w: 200, h: 60 },
+    { name: "Vodacom", logo: "/logos/vodacom.png", w: 200, h: 60 },
+    { name: "MinFP", logo: "/logos/minpf.png", w: 200, h: 60 },
+    { name: "Enabel", logo: "/logos/enabel.png", w: 200, h: 60 },
 ];
 
 export default function Hero() {
@@ -81,37 +86,82 @@ export default function Hero() {
                         </a>
                     </motion.div>
 
-                    {/* Partner logos — staggered */}
-                    <motion.div
-                        className="flex items-center gap-5 flex-wrap mt-2"
-                        initial="hidden"
-                        animate="visible"
-                        variants={{
-                            hidden: { opacity: 0 },
-                            visible: {
-                                opacity: 1,
-                                transition: { staggerChildren: 0.12, delayChildren: 0.5 },
-                            },
-                        }}
+                    <motion.p
+                        className="text-blue-100/80 text-md font-semibold max-w-md leading-relaxed z-[99] pt-4"
+                        initial={{ y: 15, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.3, duration: 0.4 }}
                     >
-                        {partners.map((p) => (
-                            <motion.div
-                                key={p.name}
-                                className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2 flex items-center justify-center"
-                                variants={{ hidden: { scale: 0, opacity: 0 }, visible: { scale: 1, opacity: 1 } }}
-                                whileHover={{ scale: 1.06 }}
-                                transition={{ type: "spring", stiffness: 260, damping: 18 }}
-                            >
-                                <Image
-                                    src={p.logo}
-                                    alt={p.name}
-                                    width={p.w}
-                                    height={p.h}
-                                    className="h-8 w-auto object-contain brightness-0 invert"
-                                />
-                            </motion.div>
-                        ))}
-                    </motion.div>
+                        Ce programme est soutenu par :
+                    </motion.p>
+
+                    {/* Partner logos — staggered */}
+                    <div className="relative w-full overflow-hidden mt-1 marquee-mask">
+
+                        <motion.div
+                            className="flex w-max"
+                            initial="hidden"
+                            animate="visible"
+                            variants={{
+                                hidden: { opacity: 0 },
+                                visible: {
+                                    opacity: 1,
+                                    transition: { staggerChildren: 0.12, delayChildren: 0.5 },
+                                },
+                            }}
+                        >
+                            <div className="animate-marquee flex gap-5 py-2">
+
+                                <div className="flex gap-5 shrink-0">
+                                    {partners.map((p) => (
+                                        <motion.div
+                                            key={`${p.name}-primary`}
+                                            className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2 flex items-center justify-center shrink-0 cursor-default"
+                                            variants={{
+                                                hidden: { scale: 0, opacity: 0 },
+                                                visible: { scale: 1, opacity: 1 }
+                                            }}
+                                            whileHover={{ scale: 1.06 }}
+                                            transition={{ type: "spring", stiffness: 260, damping: 18 }}
+                                        >
+                                            <Image
+                                                src={p.logo}
+                                                alt={p.name}
+                                                width={p.w}
+                                                height={p.h}
+                                                className="h-8 w-auto object-contain brightness-0 invert"
+                                            />
+                                        </motion.div>
+                                    ))}
+                                </div>
+
+                                {/*copie conforme pour la boucle */}
+                                <div className="flex gap-5 shrink-0" aria-hidden="true">
+                                    {partners.map((p) => (
+                                        <motion.div
+                                            key={`${p.name}-duplicate`}
+                                            className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2 flex items-center justify-center shrink-0 cursor-default"
+                                            variants={{
+                                                hidden: { scale: 0, opacity: 0 },
+                                                visible: { scale: 1, opacity: 1 }
+                                            }}
+                                            whileHover={{ scale: 1.06 }}
+                                            transition={{ type: "spring", stiffness: 260, damping: 18 }}
+                                        >
+                                            <Image
+                                                src={p.logo}
+                                                alt={p.name}
+                                                width={p.w}
+                                                height={p.h}
+                                                className="h-8 w-auto object-contain brightness-0 invert"
+                                            />
+                                        </motion.div>
+                                    ))}
+                                </div>
+
+                            </div>
+                        </motion.div>
+                    </div>
                 </motion.div>
 
                 {/* Right — portrait */}
